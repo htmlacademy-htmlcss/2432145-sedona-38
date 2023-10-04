@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
   </head>
+
   <body>
     <header class="page-header">
       <nav class="navigation">
-        <img src="" alt="Лого Седона">
+        <img class="logo" src="" alt="Логотип Седона.">
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="main-page.html">Главная</a>
+            <a class="navigation-link" href="index.html">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">О седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="catalog.html">Гостиницы</a>
+            <a class="navigation-link" href="catalog.html" aria-current="page">Гостиницы</a>
           </li>
         </ul>
         <ul class="navigation-list navigation-user">
@@ -40,5 +42,70 @@
         </ul>
       </nav>
     </header>
+    <main class="main-index">
+      <img class="mounts-of-sedona" src="" alt="Горы Седоны">
+      <h1 class="visually-hidden">Город Седона</h1>
+      <section class="reasons">
+        <h2 class="visually-hidden">Причины почему надо посетить Седону</h2>
+        <h3 class="reasons-description">Седона — небольшой городок в Аризоне,<br>
+          заслуживающий большего!</h3>
+        <p class="reasons-comparison">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+        <ul class="reasons-list">
+          <h4 class="reasons-title">Настоящий городок</h4>
+          <li class="reasons-list-start-item">Седона — не аттракцион<br>для туристов, там течёт своя<br>жизнь
+            <img class="sedona-description" src="" alt="Седона-живой город">
+          </li>
+          <h4 class="reasons-title">Небольшая<br>площадь</h4>
+          <li class="reasons-list-item">Все достопримечательности<br>находятся очень близко
+          </li>
+          <h4 class="reasons-title">Красивая<br>дорога</h4>
+          <li class="reasons-list-item">Ехать в Седону из Лас-Вегаса<br>совсем не скучно!
+          </li>
+          <h4 class="reasons-title">Мало туристов</h4>
+          <li class="reasons-list-item">Большинство едет в Гранд<br>Каньон и толпится там
+          </li>
+          <h4 class="reasons-title">Там есть<br>мост дьявола</h4>
+          <li class="reasons-list-end-item">Да, по нему можно пройти!<br>Если вы осмелитесь,<br>разумеется
+            <img class="sedona-nature" src="" alt="Природа Седоны.Красиво">
+          </li>
+        </ul>
+      </section>
+      <section class="services">
+        <h2 class="visually-hidden">Услуги</h2>
+        <h3 class="services-head">Приезжайте в Седону отдохнуть в комфорте и уюте!</h3>
+        <p class="services-reason">Опытный персонал и качественное обслуживание</p>
+        <dl class="services-list">
+          <dt class="services-list-item-term">
+          <dd class="services-list-item-description-grey">
+            <h4>Жилье</h4>
+            <p>Рекомендуем пожить<br>в настоящем мотеле,<br>
+              всё как в кино!</p>
+          <dd class="services-list-item-description-white">
+            <h4>Еда</h4>
+            <p>Всегда заказывайте<br>топовый фирменный бургер,<br>вы не разочаруетесь!</p>
+          <dd class="services-list-item-description-grey">
+            <h4>Сувениры</h4>
+            <p>Не только китайского,<br>но и настоящего местного<br>производства!</p>
+          </dd>
+          </dt>
+        </dl>
+      </section>
+      <section class="total">
+        <h2 class="total-question-interest">Заинтересовались?</h2>
+        <p class="total-dates">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <a class="total-button-brown" href="catalog.html">Поиск гостиницы в Седоне</a>
+      </section>
+      <section class="newsletter">
+        <h2 class="visually-hidden">Рассылка</h2>
+        <h3 class="newsletter-head">Подпишись на рассылку</h3>
+        <p class="newsletter-description">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
+        <form>
+          <label class="button-subscribe-newsletter">Подписаться
+            <input class="field-subscribe-newsletter" type="email" placeholder="Ваш e-mail">
+          </label>
+        </form>
+      </section>
+    </main>
   </body>
+
 </html>
