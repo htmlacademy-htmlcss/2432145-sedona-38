@@ -7,7 +7,7 @@
   </head>
 
   <body>
-    <header class="page-header">
+    <header class="page-header" data-test="header">
       <nav class="navigation">
         <img class="logo-image" src="" alt="Логотип Седона.">
         <ul class="navigation-list">
@@ -23,17 +23,13 @@
         </ul>
         <ul class="navigation-list navigation-user">
           <li class="navigation-list-item">
-            <a class="navigation-list-link" href="search.html">
-              <span class="visually-hidden">
-                Поиск по сайту
-              </span>
+            <a class="navigation-list-link" href="search.html" data-test="search">
+              <span class="visually-hidden">Поиск по сайту</span>
             </a>
           </li>
           <li class="navigation-list-item">
             <a class="navigation-list-link" href="#">
-              <span class="visually-hidden">
-                Понравилось?
-              </span>
+              <span class="visually-hidden">Понравилось?</span>
             </a>
           </li>
           <li class="navigation-list-item">
@@ -42,33 +38,33 @@
         </ul>
       </nav>
     </header>
-    <main class="main-index">
-      <img class="welcome-to-sedona" src="" alt="Горы Седоны">
+    <main class="main-index" data-test="main">
+      <section class="hero" data-test="hero">
+      <img class="welcome-to-sedona-image" src="" alt="Горы Седоны">
       <h1 class="visually-hidden">Город Седона</h1>
-      <section class="reasons">
-        <h2 class="visually-hidden">Причины почему надо посетить Седону</h2>
-        <h3 class="reasons-description">Седона — небольшой городок в Аризоне,<br>
-          заслуживающий большего!</h3>
-        <p class="reasons-comparison">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
-        <ul class="reasons-list">
-          <h4 class="reasons-title-blue">Настоящий городок</h4>
-          <li class="reasons-list-start-item-blue">Седона — не аттракцион<br>для туристов, там течёт своя<br>жизнь
-            <img class="sedona-description-image" src="" alt="Седона-живой город">
-          </li>
-          <h4 class="reasons-title">Небольшая<br>площадь</h4>
-          <li class="reasons-list-item">Все достопримечательности<br>находятся очень близко
-          </li>
-          <h4 class="reasons-title-grey">Красивая<br>дорога</h4>
-          <li class="reasons-list-item-grey">Ехать в Седону из Лас-Вегаса<br>совсем не скучно!
-          </li>
-          <h4 class="reasons-title">Мало туристов</h4>
-          <li class="reasons-list-item">Большинство едет в Гранд<br>Каньон и толпится там
-          </li>
-          <h4 class="reasons-title-blue">Там есть<br>мост дьявола</h4>
-          <li class="reasons-list-item-blue">Да, по нему можно пройти!<br>Если вы осмелитесь,<br>разумеется
-            <img class="sedonas-nature-image" src="" alt="Природа Седоны.Красиво">
-          </li>
-        </ul>
+      <h2 class="visually-hidden">Причины почему надо посетить Седону</h2>
+      <h3 class="hero-description">Седона — небольшой городок в Аризоне,<br>
+        заслуживающий большего!</h3>
+      <p class="reasons-comparison" data-test="advantages">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+      <ul class="reasons-list">
+        <h4 class="reasons-title-blue">Настоящий городок</h4>
+        <li class="reasons-list-start-item-blue">Седона — не аттракцион<br>для туристов, там течёт своя<br>жизнь
+          <img class="sedona-description-image" src="" alt="Седона-живой город">
+        </li>
+        <h4 class="reasons-title">Небольшая<br>площадь</h4>
+        <li class="reasons-list-item">Все достопримечательности<br>находятся очень близко
+        </li>
+        <h4 class="reasons-title-grey">Красивая<br>дорога</h4>
+        <li class="reasons-list-item-grey">Ехать в Седону из Лас-Вегаса<br>совсем не скучно!
+        </li>
+        <h4 class="reasons-title">Мало туристов</h4>
+        <li class="reasons-list-item">Большинство едет в Гранд<br>Каньон и толпится там
+        </li>
+        <h4 class="reasons-title-blue">Там есть<br>мост дьявола</h4>
+        <li class="reasons-list-item-blue">Да, по нему можно пройти!<br>Если вы осмелитесь,<br>разумеется
+          <img class="sedonas-nature-image" src="" alt="Природа Седоны.Красиво">
+        </li>
+      </ul>
       </section>
       <section class="services">
         <h2 class="visually-hidden">Услуги</h2>
@@ -85,27 +81,29 @@
             <p>Всегда заказывайте<br>топовый фирменный бургер,<br>вы не разочаруетесь!</p>
           <dd class="services-list-item-description-grey">
             <h4 class="services-souvenirs">Сувениры</h4>
-            <p class="services-souvenirs-description">Не только китайского,<br>но и настоящего местного<br>производства!</p>
+            <p class="services-souvenirs-description">Не только китайского,<br>но и настоящего местного<br>производства!
+            </p>
           </dd>
           </dt>
         </dl>
       </section>
       <section class="total">
         <h2 class="total-question-interest">Заинтересовались?</h2>
-        <p class="total-dates">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-      <a class="total-button-brown" href="catalog.html">Поиск гостиницы в Седоне</a>
+        <p class="total-dates">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в
+          Седоне</p>
+        <a class="total-button-brown" href="catalog.html">Поиск гостиницы в Седоне</a>
       </section>
-      <section class="newsletter">
+      <section class="newsletter" data-test="subscribe">
         <h2 class="visually-hidden">Рассылка</h2>
         <h3 class="newsletter-head">Подпишись на рассылку</h3>
         <p class="newsletter-description">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
         <form action="https://echo.htmlacademy.ru/" method="post">
-            <input class="field-subscribe-newsletter" name="field-newsletter" type="email" placeholder="Ваш e-mail">
-            <button class="button-subscribe-newsletter" type="submit">Подписаться</button>
+          <input class="field-subscribe-newsletter" name="field-newsletter" type="email" placeholder="Ваш e-mail">
+          <button class="button-subscribe-newsletter" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer" data-test="footer">
       <section class="footer-socials">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social-list">
@@ -129,8 +127,8 @@
       <section class="footer-contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <adress class="contacts-phone">
-        <a class="phone" href="tel:78128121212">+7 (812) 812-12-12</a>
-      </adress>
+          <a class="phone" href="tel:78128121212">+7 (812) 812-12-12</a>
+        </adress>
       </section>
       <section class="footer-logo">
         <a class='logo-htmlacademy' href="https://htmlacademy.ru/">
