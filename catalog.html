@@ -20,7 +20,8 @@
             <a class="navigation-list-link" href="#">О седоне</a>
           </li>
           <li class="navigation-list-item">
-            <a class="navigation-list-link navigation-list-link-current" href="catalog.html" aria-current="page">Гостиницы</a>
+            <a class="navigation-list-link navigation-list-link-current" href="catalog.html"
+              aria-current="page">Гостиницы</a>
           </li>
         </ul>
         <ul class="navigation-list navigation-user">
@@ -88,27 +89,50 @@
               <li class="hotel-filters-housing-list-item">
                 <label class="housing">
                   <input class="housing-radio" type="radio" name="housing-radio-group" value="hotel">
-                  Гостиница
+                  <span class="hotel-filters-housing-point">Гостиница</span>
                 </label>
               <li class="hotel-filters-housing-list-item">
                 <label class="housing">
                   <input class="housing-radio" type="radio" name="housing-radio-group" value="Motel">
-                  Мотель
+                  <span class="hotel-filters-housing-point">Мотель</span>
                 </label>
               <li class="hotel-filters-housing-list-item">
                 <label class="housing">
                   <input class="housing-radio" type="radio" name="housing-radio-group" value="Apartments">
-                  Апартаменты
+                  <span class="hotel-filters-housing-point">Апартаменты</span>
                 </label>
               </li>
             </ul>
           </fieldset>
 
-          <fieldset class="hotel-filters-housing-list-item">
+          <fieldset class="hotel-filters-group">
             <legend class="hotel-filters-title">Стоимость, ₽</legend>
+            <div class="hotel-filters-price">
+              <div class="hotel-filters-price-inputs">
+                <label class="hotel-filters-price-control">
+                  <span class="visually-hidden">Минимальная цена</span>
+                  <input class="hotel-filters-price-control-min" type="number" name="minimal-price" value="0" required>
+                </label>
+                <label class="hotel-filters-price-control">
+                  <span class="visually-hidden">Максимальная цена</span>
+                  <input class="hotel-filters-price-control-max" type="number" name="maximal-price" value="1000000"
+                    required>
+                </label>
+                <div class="hotel-filters-scale">
+                  <button class="hotel-filters-scale-toogle-lower" type="button">
+                    <span class="visually-hidden">Цена меньше</span>
+                  </button>
+                  <button class="hotel-filters-scale-toogle-greater" type="button">
+                    <span class="visually-hidden">Цена больше</span>
+                  </button>
+                </div>
+              </div>
+            </div>
           </fieldset>
-
-          <button class="button-filters" type="submit">Применить</button>
+          <div class="control-buttons">
+            <button class="button-filters-apply" type="submit">Применить</button>
+            <button class="button-filters-reset" type="reset">Применить</button>
+          </div>
         </form>
       </section>
     </main>
