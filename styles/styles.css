@@ -24,7 +24,9 @@ body {
 
 .page-header {
   background: rgb(255, 255, 255);
-  color:rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-weight: 700;
 
 }
 
@@ -34,8 +36,79 @@ body {
 }
 
 .navigation-list-link {
-  color:rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
   text-decoration: none;
   line-height: 24px;
   font-size: 20px;
+}
+
+.favorite-count {
+  border-radius: 10px;
+  background-color: rgba(125, 181, 79, 1);
+  font-size: 10px;
+  line-height: 10px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.title-h2 {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+
+}
+
+.text-description-h2 {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+
+}
+
+.white-text {
+  color: white;
+}
+
+.newsletter-container {
+  background-color: rgba(130, 179, 211, 1);
+  background-image: url("../images/Subscribe.jpg");
+  width: 1200px;
+  height: 414.86;
+}
+
+.title-reasons-and-services {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.description-reasons-and-services {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+  text-transform: none;
+}
+
+
+
+.container-blue {
+  background-color: rgba(130, 179, 211, 1);
+}
+
+
+.container-gray {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.phone {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 1);
 }
