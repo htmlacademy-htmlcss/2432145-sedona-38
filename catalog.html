@@ -9,7 +9,7 @@
 
   <body>
     <div class=page-container>
-      <header class="page-header">
+      <header class="page-header" data-test="header">
         <nav class="navigation">
           <a class="logo-image" href="index.html">
             <img class="logo-image" src="images/images_header/logo_header.svg" width="140" height="70.05"
@@ -51,8 +51,8 @@
           </ul>
         </nav>
       </header>
-      <main class="main-inner">
-        <section class="filter-container">
+      <main class="main-inner" data-test="main">
+        <section class="filter-container" data-test="filter">
           <header class=" inner-header">
             <h1 class="inner-header-title">Гостиницы Седоны</h1>
             <img class="breadcrumbles-home-image" src="images/Catalog/Breadcrumbles/Vector.svg" width="12" height="12"
@@ -147,7 +147,7 @@
             </div>
           </form>
         </section>
-        <header class="catalog">
+        <header class="catalog" data-test="catalog">
           <h2 class="hotel-search">Найдено гостиниц: 38</h2>
           <select class="select-list-sort" name="hotel-sorting-results">
             <option class="cheap-first" selected>Сначала дешевые</option>
@@ -265,7 +265,7 @@
             </li>
           </ul>
         </div>
-          <section class="newsletter-catalog">
+          <section class="newsletter-catalog" data-test="subscribe">
             <h2 class="visually-hidden">Рассылка</h2>
             <h3 class="newsletter-head-catalog">Подпишись на рассылку</h3>
             <p class="newsletter-description-catalog">Только полезная информация и никакого спама,<br>честное
@@ -278,7 +278,7 @@
           </section>
         </section>
       </main>
-      <footer class="page-footer">
+      <footer class="page-footer" data-test="footer">
         <div class="footer-socials">
           <ul class="social-list">
             <li class="social-list-item">
