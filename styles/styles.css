@@ -233,7 +233,7 @@ body {
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
-  color: white;
+  color: rgb(255, 255, 255);
   background-color: rgba(130, 179, 211, 1);
   border: none;
   width: 60px;
