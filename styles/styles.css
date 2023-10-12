@@ -73,9 +73,9 @@ body {
 
 .newsletter-container {
   background-color: rgba(130, 179, 211, 1);
-  background-image: url("../images/Subscribe.jpg");
+  background-image: url("../images/subscribe.jpg");
   width: 1200px;
-  height: 414.86;
+  height: 414.86px;
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
