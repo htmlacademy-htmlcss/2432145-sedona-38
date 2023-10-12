@@ -12,8 +12,7 @@
       <header class="page-header">
         <nav class="navigation">
           <a class="logo-image" href="index.html">
-            <img class="logo-image" src="images/logo_header.svg" width="140" height="70.05"
-              alt="Логотип Седона.">
+            <img class="logo-image" src="images/logo_header.svg" width="140" height="70.05" alt="Логотип Седона.">
           </a>
           <ul class="navigation-list">
             <li class="navigation-list-item">
@@ -32,8 +31,7 @@
           <ul class="navigation-list navigation-user">
             <li class="navigation-list-item">
               <a class="navigation-list-link" href="search.html">
-                <img class="header-search-image" src="images/icons/search.svg" width="20" height="20"
-                  alt="Поиск">
+                <img class="header-search-image" src="images/icons/search.svg" width="20" height="20" alt="Поиск">
                 <span class="visually-hidden">Поиск по сайту</span>
               </a>
             </li>
@@ -53,25 +51,27 @@
       </header>
       <main class="main-inner">
         <section class="filter-container">
-          <header class=" inner-header">
-            <h1 class="inner-header-title title-h1 white-text text-uppercase">Гостиницы Седоны</h1>
-            <img class="breadcrumbles-home-image" src="images/icons/breadcrumbs_vector.svg" width="12" height="12"
-              alt="На главную страницу">
-            <img class="breadcrumbles-swipe-image" src="images/icons/breadcrumbs_vector-1.svg" width="6.39"
-              height="9.94" alt="Переход к следующему">
-            <ol class="breadcrumbs-list">
-              <li class="breadcrumbs-list-items">
-                <a class="breadcrumbs-list-links" href="index.html">
-                  <span class="visually-hidden">Главная</span>
-                </a>
-              </li>
-              <li class="breadcrumbs-list-items">
-                <a class="breadcrumbs-list-links">Гостиницы</a>
-              </li>
-            </ol>
-          </header>
+          <div class="conatiner">
+            <header class=" inner-header">
+              <h1 class="inner-header-title title-h1 white-text text-uppercase">Гостиницы Седоны</h1>
+              <ol class="breadcrumbs-list">
+                <li class="breadcrumbs-list-items">
+                  <a class="breadcrumbs-list-links" href="index.html">
+                    <span class="visually-hidden">Главная</span>
+                    <img class="breadcrumbles-home-image" src="images/icons/breadcrumbs_vector.svg" width="12"
+                      height="12" alt="На главную страницу">
+                  </a>
+                </li>
+                <li class="breadcrumbs-list-items">
+                  <a class="breadcrumbs-list-links">Гостиницы
+                    <img class="breadcrumbles-swipe-image" src="images/icons/breadcrumbs_vector-1.svg" width="6.39"
+                      height="9.94" alt="Переход к следующему">
+                  </a>
+                </li>
+              </ol>
+            </header>
+          </div>
           <form class="form-filters" action="https://echo.htmlacademy.ru/" method="post">
-
             <fieldset class="forms-group">
               <legend class="forms-group-title">Инфраструктура</legend>
               <ul class="form-filters-list">
@@ -95,7 +95,6 @@
                 </li>
               </ul>
             </fieldset>
-
             <fieldset class="forms-group">
               <legend class="forms-group-title">Тип Жилья:</legend>
               <ul class="forms-filters-list">
@@ -110,7 +109,7 @@
                     <input class="input-checkbox-text type=" type="radio" name="housing-radio-group" value="Motel">
                     <span class="hotel-filters-housing-point">Мотель</span>
                   </label>
-                 </li>
+                </li>
                 <li class="forms-filters-list-item">
                   <label class="housing">
                     <input class="input-checkbox-text" type="radio" name="housing-radio-group" value="Apartments">
@@ -119,7 +118,6 @@
                 </li>
               </ul>
             </fieldset>
-
             <fieldset class="forms-group form-price">
               <legend class="forms-group-title">Стоимость, ₽</legend>
               <div class="forms-filters-price">
@@ -268,17 +266,17 @@
             </li>
           </ul>
         </div>
-          <section class="newsletter-catalog">
-            <h2 class="visually-hidden">Рассылка</h2>
-            <h3 class="newsletter-head-catalog title-h3 text-uppercase">Подпишись на рассылку</h3>
-            <p class="newsletter-description-catalog">Только полезная информация и никакого спама,<br>честное
-              бойскаутское!
-            </p>
-            <form action="https://echo.htmlacademy.ru/" method="post">
-              <input class="input-newsletter-text" name="field-newsletter" type="email" placeholder="Ваш e-mail">
-              <button class="button button-subscribe" type="submit">Подписаться</button>
-            </form>
-          </section>
+        <section class="newsletter-catalog">
+          <h2 class="visually-hidden">Рассылка</h2>
+          <h3 class="newsletter-head-catalog title-h3 text-uppercase">Подпишись на рассылку</h3>
+          <p class="newsletter-description-catalog">Только полезная информация и никакого спама,<br>честное
+            бойскаутское!
+          </p>
+          <form action="https://echo.htmlacademy.ru/" method="post">
+            <input class="input-newsletter-text" name="field-newsletter" type="email" placeholder="Ваш e-mail">
+            <button class="button button-subscribe" type="submit">Подписаться</button>
+          </form>
+        </section>
       </main>
       <footer class="page-footer">
         <div class="footer-socials">
@@ -298,17 +296,16 @@
             </li>
             <li class="social-list-item">
               <a class="social-button" href="https://www.youtube.com/user/htmlacademyru">
-                <img class="footer-icon-image" src="images/icons/youtube_logo.svg" width="22" height="17"
-                  alt="Youtube">
+                <img class="footer-icon-image" src="images/icons/youtube_logo.svg" width="22" height="17" alt="Youtube">
                 <span class="visually-hidden">Youtube</span>
               </a>
             </li>
           </ul>
         </div>
         <div class="footer-contacts">
-          <adress class="contacts-phone">
+          <address class="contacts-phone">
             <a class="phone" href="tel:78128121212">+7 (812) 812-12-12</a>
-          </adress>
+          </address>
         </div>
         <div class="footer-logo">
           <a class="logo-htmlacademy" href="https://htmlacademy.ru/">
