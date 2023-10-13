@@ -30,17 +30,6 @@ body {
 }
 
 
-.page-header {
-  font-size: 20px;
-  line-height: 24px;
-
-}
-
-.navigation-list {
-  font-size: 20px;
-  line-height: 24px;
-}
-
 .navigation-list-link {
   color: rgb(0, 0, 0);
   text-decoration: none;
