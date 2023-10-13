@@ -19,22 +19,16 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: rgb(51, 51, 51);
-  background-color: rgb(242, 242, 242);
-  max-width: 1, 280px;
+  background-color: rgb(255, 255, 255);
+  max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .page-container {
-  background-color: rgb(255, 255, 255);
   box-shadow: rgba(0, 0, 0, 0.2);
 }
 
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 770px;
-}
 
 .page-header {
   font-size: 20px;
@@ -106,13 +100,13 @@ body {
   color: white;
 }
 
-.newsletter-container {
+.newsletter-with-background {
   background-color: rgb(130, 179, 211);
   background-image: url("../images/subscribe.jpg");
   width: 1200px;
   height: 414.86px;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
 }
 
 .title-reasons-and-services {
@@ -137,7 +131,7 @@ body {
 
 
 .card-middle {
-  background-color: rgba(131, 179, 211, 0.2);
+  background-color: rgba(131, 179, 211, 0.20);
 }
 
 .phone {
@@ -304,9 +298,9 @@ body {
   width: 452px;
   height: 52px;
   background-color: rgb(242, 242, 242);
-  border: none;
-
+  border-radius: 4px 0 0 4px;
 }
+
 
 .button {
   background-size: 232px 52px;
