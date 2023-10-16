@@ -19,11 +19,11 @@ html {
   height: 100%;
 }
 
-*,
+/* *,
 *::after,
 *::before {
   box-sizing: border-box;
-}
+} */
 
 
 body {
@@ -34,14 +34,19 @@ body {
   line-height: 21px;
   color: rgb(51, 51, 51);
   background-color: rgb(255, 255, 255);
+  height: 100%;
 }
 
 .page-container {
+  display: flex;
+  flex-wrap: wrap;
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
   max-width: 1280px;
+  min-height: 100%;
   margin-left: auto;
   margin-right: auto;
 }
+
 /* Basic */
 
 
@@ -80,6 +85,7 @@ body {
 .text-align-center {
   text-align: center;
 }
+
 /* Modes */
 
 
@@ -87,6 +93,7 @@ body {
 .navigation {
   display: flex;
   margin: 0 auto;
+  padding: 0 70px 0 70px;
 }
 
 .navigation-list {
@@ -121,19 +128,21 @@ body {
   line-height: 10px;
   text-align: center;
 }
+
 /* Header */
 
 
 /* Main */
-.main-index,
-.main-catalog {
+.main-index {
   flex-grow: 1;
 }
 
 .main-container {
   width: 1200px;
   margin: 0 auto;
+  flex-grow: 1;
 }
+
 /* Main */
 
 
@@ -141,6 +150,7 @@ body {
 .page-footer-container {
   display: flex;
   margin: 0 auto;
+  padding: 0 70px 0 70px;
   width: 1200px;
   justify-content: space-between;
 }
@@ -151,7 +161,7 @@ body {
   line-height: 40px;
   text-decoration: none;
   color: rgb(0, 0, 0);
-  width: 331px;
+  width: 330px;
 }
 
 .social-list {
@@ -163,7 +173,9 @@ body {
 
 .footer-logo {
   display: block;
+  margin-right: 70px;
 }
+
 /* Footer */
 
 .text-description-h2 {
@@ -192,6 +204,7 @@ body {
   background-color: rgb(242, 242, 242);
   border-radius: 4px 0 0 4px;
 }
+
 /* Рассылка */
 
 
@@ -239,6 +252,7 @@ body {
 .card-middle {
   background-color: rgba(131, 179, 211, 0.20);
 }
+
 /* Услуги и преимущества */
 
 
@@ -250,6 +264,13 @@ body {
   background-size: 100% 100%;
 }
 
+.form-filters {
+  display: flex;
+  width: 1200px;
+  padding: 0 70px 0 70px;
+  flex-wrap: wrap;
+}
+
 .forms-group-title {
   font-size: 20px;
   font-weight: 700;
@@ -258,7 +279,9 @@ body {
 
 .forms-group {
   border: none;
+  width: 150px;
 }
+
 
 .form-filters-list {
   list-style-type: none;
@@ -275,6 +298,7 @@ body {
 .input-checkbox-text {
   line-height: 23px;
 }
+
 /* Фильтер */
 
 
@@ -288,14 +312,22 @@ body {
   margin: 0;
   padding: 0;
 }
+
 /* Хлебные крошки */
 
 
-/* Вид меню отображения каталога */
+/* Сортировка */
 .view-image {
   border: 16px solid rgb(255, 255, 255);
 }
-/* Вид меню отображения каталога */
+
+.sorting-container {
+  display: flex;
+  width: 1060px;
+  margin-right: 70px;
+  justify-content: space-between;
+}
+/* Сортировка */
 
 
 /* Каталог */
@@ -312,15 +344,38 @@ body {
   background-color: rgb(242, 242, 242);
 }
 
-.hotel-sorting-list {
-  list-style-type: none;
+.hotel-view-list {
+  width: 190px;
+  margin-left: auto;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
+
+.select-list-sort {
+  width: 292px;
+  margin-left: auto;
+}
+
+.catalog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 1060px;
+}
+
 /* Каталог */
 
 
+
 /* Пагинация */
+.pagination-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 1060px;
+  padding: 0 70px 0 70px;
+}
+
 .button-pagination {
   font-size: 20px;
   font-weight: 700;
@@ -388,13 +443,19 @@ body {
   background-color: rgb(130, 179, 211);
 }
 
+.button-reset {
+  width: 191px;
+  height: 36px;
+  background-color: transparent;
+}
+
 .button-catalog-more-details {
   background-color: rgb(117, 97, 87);
   width: 140px;
   height: 46px;
 }
 
-.button-to-favorites {
+.button-action {
   background-color: rgb(130, 179, 211);
 }
 
@@ -403,4 +464,5 @@ body {
   width: 376px;
   height: 52px;
 }
+
 /* Кнопки */
