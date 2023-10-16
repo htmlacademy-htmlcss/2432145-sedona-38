@@ -1,0 +1,465 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* Basic */
+html {
+  height: 100%;
+}
+
+/* *,
+*::after,
+*::before {
+  box-sizing: border-box;
+} */
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: rgb(51, 51, 51);
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+}
+
+.page-container {
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+  max-width: 1280px;
+  min-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Basic */
+
+
+/* Modes */
+.title-h1,
+.title-h2,
+.title-h3 {
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+}
+
+.title-h1 {
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.title-h2 {
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.title-h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-white {
+  color: rgb(255, 255, 255);
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+/* Modes */
+
+
+/* Header */
+.navigation {
+  display: flex;
+  margin: 0 auto;
+  padding: 0 70px 0 70px;
+}
+
+.navigation-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 449px;
+}
+
+.navigation-list-user {
+  width: 310px;
+  margin-left: auto;
+}
+
+.navigation-list-link {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  line-height: 24px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.logo-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.favorite-count {
+  border-radius: 10px 10px;
+  background-color: rgb(125, 181, 79);
+  font-size: 10px;
+  line-height: 10px;
+  text-align: center;
+}
+
+/* Header */
+
+
+/* Main */
+.main-container {
+  width: 1200px;
+  margin: 0 auto;
+  flex-grow: 1;
+  height: 100%;
+}
+
+/* Main */
+
+
+/* Footer */
+.page-footer-container {
+  display: flex;
+  margin: 0 auto;
+  padding: 0 70px 0 70px;
+  width: 1200px;
+  justify-content: space-between;
+}
+
+.phone {
+  font-size: 40px;
+  font-style: normal;
+  line-height: 40px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  width: 330px;
+}
+
+.social-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 170px;
+}
+
+.footer-logo {
+  display: block;
+  margin-right: 70px;
+}
+
+/* Footer */
+
+.text-description-h2 {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+
+/* Рассылка */
+.newsletter-with-background {
+  background-color: rgb(130, 179, 211);
+  background-image: url("../images/subscribe.jpg");
+  width: 1200px;
+  height: 414.86px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.input-newsletter-text {
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  width: 452px;
+  height: 52px;
+  background-color: rgb(242, 242, 242);
+  border-radius: 4px 0 0 4px;
+}
+
+/* Рассылка */
+
+
+/* Услуги и преимущества */
+.reasons-page-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+}
+
+.reasons-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.reasons-list-item {
+  width: 400px;
+}
+
+.reasons-image {
+  width: 800px;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.services-list-item {
+  width: 400px;
+}
+
+.card-large {
+  background-color: rgb(130, 179, 211);
+}
+
+.card-small {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.card-middle {
+  background-color: rgba(131, 179, 211, 0.20);
+}
+
+/* Услуги и преимущества */
+
+
+/* Фильтер */
+.filter-container {
+  background-color: rgb(130, 179, 211);
+  background-image: url("../images/catalog/filter.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.form-filters {
+  display: flex;
+  width: 1200px;
+  padding: 0 70px 0 70px;
+  flex-wrap: wrap;
+}
+
+.forms-group-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.forms-group {
+  border: none;
+  width: 150px;
+}
+
+
+.form-filters-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.radio-filters-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.input-checkbox-text {
+  line-height: 23px;
+}
+
+/* Фильтер */
+
+
+/* Хлебные крошки */
+.breadcrumbs-list-links {
+  font-size: 16px;
+}
+
+.breadcrumbs-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Хлебные крошки */
+
+
+/* Сортировка */
+.view-image {
+  border: 16px solid rgb(255, 255, 255);
+}
+
+.sorting-container {
+  display: flex;
+  width: 1060px;
+  margin-right: 70px;
+  justify-content: space-between;
+}
+/* Сортировка */
+
+
+/* Каталог */
+.catalog-list {
+  padding: 20px;
+  margin: 0;
+  list-style-type: none;
+}
+
+.catalog-card-rate {
+  font-size: 16px;
+  line-height: 20px;
+  border: 4px solid rgb(242, 242, 242);
+  background-color: rgb(242, 242, 242);
+}
+
+.hotel-view-list {
+  width: 190px;
+  margin-left: auto;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.select-list-sort {
+  width: 292px;
+  margin-left: auto;
+}
+
+.catalog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 1060px;
+}
+
+/* Каталог */
+
+
+
+/* Пагинация */
+.pagination-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 1060px;
+  padding: 0 70px 0 70px;
+}
+
+.button-pagination {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  background-color: rgb(130, 179, 211);
+  border: none;
+  width: 60px;
+  height: 60px;
+  margin: 8px;
+}
+
+.current-pagination {
+  background-color: rgb(242, 242, 242);
+  color: rgb(0, 0, 0)
+}
+
+.empty-pagination {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+}
+
+.pagination-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Пагинация */
+
+
+/* Кнопки */
+.button {
+  background-size: 232px 52px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 8px 50px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  border-radius: 4px;
+}
+
+.button-catalog-active {
+  background-color: rgb(125, 181, 79);
+}
+
+.button-subscribe {
+  width: 232px;
+  height: 52px;
+  background-color: rgb(130, 179, 211);
+}
+
+.button-navigation-list-link {
+  background-color: rgb(117, 97, 87);
+  width: 160px;
+  height: 36px;
+}
+
+.button-apply {
+  width: 191px;
+  height: 36px;
+  background-color: rgb(130, 179, 211);
+}
+
+.button-reset {
+  width: 191px;
+  height: 36px;
+  background-color: transparent;
+}
+
+.button-catalog-more-details {
+  background-color: rgb(117, 97, 87);
+  width: 140px;
+  height: 46px;
+}
+
+.button-action {
+  background-color: rgb(130, 179, 211);
+}
+
+.button-large-to-catalog {
+  background-color: rgb(117, 97, 87);
+  width: 376px;
+  height: 52px;
+}
+
+/* Кнопки */
