@@ -47,7 +47,7 @@
       <main class="main-catalog main-container">
         <section class="filter-container text-white">
           <header class="inner-header">
-            <h1 class="inner-header-title title-h1 text-white text-uppercase">Гостиницы Седоны</h1>
+            <h1 class="inner-header-title title-h1 text-white">Гостиницы Седоны</h1>
             <ol class="breadcrumbs-list">
               <li class="breadcrumbs-list-items">
                 <a class="breadcrumbs-list-links" href="index.html">
@@ -57,31 +57,32 @@
                 </a>
               </li>
               <li class="breadcrumbs-list-items">
-                <a class="breadcrumbs-list-links">Гостиницы
+                <a class="breadcrumbs-list-links">
                   <img class="breadcrumbles-swipe-image" src="images/icons/breadcrumbs-vector-1.svg" width="6.39"
                     height="9.94" alt="Переход к следующему">
+                  <span class="breadcrumbs-title">Гостиницы</span>
                 </a>
               </li>
             </ol>
           </header>
-          <form class="form-filters" action="https://echo.htmlacademy.ru/" method="post">
+          <form class="forms-filters" action="https://echo.htmlacademy.ru/" method="post">
             <fieldset class="forms-group">
               <legend class="forms-group-title">Инфраструктура</legend>
-              <ul class="form-filters-list">
-                <li class="filter-list-item">
-                  <label class="infrastructure">
+              <ul class="forms-filters-list">
+                <li class="forms-filters-list-item">
+                  <label class="forms-infrastructure forms-input-points">
                     <input class="form-checkbox" type="checkbox" name="swimming-pool" checked>
                     <span class="input-checkbox-text">Бассейн</span>
                   </label>
                 </li>
-                <li class="form-filters-list-item">
-                  <label class="infrastructure">
+                <li class="forms-filters-list-item">
+                  <label class="forms-infrastructure forms-input-points">
                     <input class="form-checkbox" type="checkbox" name="parking" checked>
                     <span class="input-checkbox-text">Парковка</span>
                   </label>
                 </li>
-                <li class="form-filters-list-item">
-                  <label class="infrastructure">
+                <li class="forms-filters-list-item">
+                  <label class="forms-infrastructure forms-input-points">
                     <input class="form-checkbox" type="checkbox" name="wi-fi">
                     <span class="input-checkbox-text">Wi-Fi</span>
                   </label>
@@ -90,21 +91,21 @@
             </fieldset>
             <fieldset class="forms-group">
               <legend class="forms-group-title">Тип Жилья:</legend>
-              <ul class="radio-filters-list">
-                <li class="radio-filters-list-item">
-                  <label class="housing">
+              <ul class="forms-radio-filters-list">
+                <li class="forms-filters-list-item radio-filters-list-item">
+                  <label class="forms-housing forms-input-points">
                     <input class="input-checkbox-text" type="radio" name="housing-radio-group" value="hotel">
                     <span class="hotel-filters-housing-point">Гостиница</span>
                   </label>
                 </li>
-                <li class="radio-filters-list-item">
-                  <label class="housing">
+                <li class="forms-filters-list-item radio-filters-list-item">
+                  <label class="forms-housing forms-input-points">
                     <input class="input-checkbox-text type=" type="radio" name="housing-radio-group" value="Motel">
                     <span class="hotel-filters-housing-point">Мотель</span>
                   </label>
                 </li>
-                <li class="radio-filters-list-item">
-                  <label class="housing">
+                <li class="forms-filters-list-item radio-filters-list-item">
+                  <label class="forms-housing forms-input-points">
                     <input class="input-checkbox-text" type="radio" name="housing-radio-group" value="Apartments">
                     <span class="hotel-filters-housing-point">Апартаменты</span>
                   </label>
@@ -117,49 +118,57 @@
                 <span class="visually-hidden">Минимальная цена</span>
                 <input class="hotel-filters-price-control-min" type="number" name="min-price" value="0" required>
               </label>
-              <label class="hotel-filters-price-control">
+              <label class="forms-filters-price-control">
                 <span class="visually-hidden">Максимальная цена</span>
                 <input class="hotel-filters-price-control-max" type="number" name="max-price" value="1000000" required>
               </label>
-              <button class="hotel-filters-scale-toogle-lower" type="button">
+              <button class="forms-filters-scale-toogle-lower" type="button">
                 <span class="visually-hidden">Цена меньше</span>
               </button>
-              <button class="hotel-filters-scale-toogle-greater" type="button">
+              <button class="forms-filters-scale-toogle-greater" type="button">
                 <span class="visually-hidden">Цена больше</span>
               </button>
             </fieldset>
-            <button class="button button-apply" type="submit">Применить</button>
-            <button class="button button-reset" type="reset">Сбросить</button>
+            <fieldset class="forms-group forms-buttons-apply-reset-container">
+              <button class="button button-apply" type="submit">Применить</button>
+              <button class="button button-reset" type="reset">Сбросить</button>
+            </fieldset>
           </form>
         </section>
         <header class="catalog">
           <div class="sorting-container">
-            <h2 class="hotel-search title-h2 text-uppercase">Найдено гостиниц: 38</h2>
+            <h2 class="sorting-search-title title-h2 text-uppercase">Найдено гостиниц: 38</h2>
             <select class="select-sort-list" name="hotel-sorting-results">
               <option class="cheap-first" selected>Сначала дешевые</option>
               <option class="expinsive-first">Сначала дорогие</option>
             </select>
-            <ul class="hotel-view-list">
-              <li class="hotel-view-list-item">
-                <a class="hotel-view-list-link" href="#">
-                  <img class="view-image" src="images/icons/view-cards.svg" width="16" height="14"
-                    alt="Переключить отображение на карточный вид">
-                  <span class="visually-hidden">Карточный вид</span>
-                </a>
+            <ul class="view-list">
+              <li class="view-list-item">
+                <div class="view-button-container">
+                  <a class="view-list-link" href="#">
+                    <img class="view-image" src="images/icons/view-cards.svg" width="16" height="14"
+                      alt="Переключить отображение на карточный вид">
+                    <span class="visually-hidden">Карточный вид</span>
+                  </a>
+                </div>
               </li>
-              <li class="hotel-view-list-item">
-                <a class="hotel-view-list-link" href="#">
-                  <img class="view-image view-not-checked" src="images/icons/view-slider.svg" width="16" height="14"
-                    alt="Переключить отображение вид слайдера">
-                  <span class="visually-hidden">Вид слайдера</span>
-                </a>
+              <li class="view-list-item">
+                <div class="view-button-container view-not-checked">
+                  <a class="view-list-link" href="#">
+                    <img class="view-image view-not-checked" src="images/icons/view-slider.svg" width="16" height="14"
+                      alt="Переключить отображение вид слайдера">
+                    <span class="visually-hidden">Вид слайдера</span>
+                  </a>
+                </div>
               </li>
-              <li class="hotel-view-list-item">
-                <a class="hotel-view-list-link" href="#">
-                  <img class="view-image view-not-checked" src="images/icons/view-list.svg" width="16" height="14"
-                    alt="Переключить отображение вид списка">
-                  <span class="visually-hidden">Вид списка</span>
-                </a>
+              <li class="view-list-item">
+                <div class="view-button-container view-not-checked">
+                  <a class="view-list-link" href="#">
+                    <img class="view-image view-not-checked" src="images/icons/view-list.svg" width="16" height="14"
+                      alt="Переключить отображение вид списка">
+                    <span class="visually-hidden">Вид списка</span>
+                  </a>
+                </div>
               </li>
             </ul>
           </div>
@@ -252,8 +261,8 @@
         </ul>
         <section class="newsletter text-align-center">
           <h2 class="visually-hidden">Рассылка</h2>
-          <h3 class="title-h2 text-uppercase">Подпишись на рассылку</h3>
-          <p class="text-description-h2">Только полезная информация и никакого спама,<br>честное
+          <h3 class="newsletter-title title-h2 text-uppercase">Подпишись на рассылку</h3>
+          <p class="newsletter-description text-description-h2">Только полезная информация и никакого спама,<br>честное
             бойскаутское!
           </p>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
