@@ -58,6 +58,10 @@ body {
   overflow: hidden;
 }
 
+.container {
+  padding: 0 70px
+}
+
 /* End Basic */
 
 
@@ -125,7 +129,6 @@ body {
 
 /* Кнопки */
 .button {
-  background-size: 232px 52px;
   border: 1px solid transparent;
   text-decoration: none;
   color: rgb(255, 255, 255);
@@ -164,9 +167,12 @@ body {
 
 .button-catalog-more-details {
   background-color: rgb(117, 97, 87);
-  min-width: 140px;
-  height: 46px;
-  margin-right: 40px;
+}
+
+.buttons-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
 }
 
 /* Почему не работает значение auto */
@@ -224,7 +230,6 @@ body {
 .navigation-list-menu {
   display: flex;
   width: 340px;
-  margin-left: 30px;
 }
 
 .navigation-list-user {
@@ -232,12 +237,10 @@ body {
   flex-wrap: wrap;
   align-items: center;
   width: 310px;
-  margin-left: auto;
 }
 
 .logo-image {
   display: block;
-  margin: 0 70px;
 }
 
 .favorite-count {
@@ -302,7 +305,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 40px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  justify-content: space-between;
+  margin: 0 auto;
+  gap: 22px;
 }
 
 .phone {
@@ -312,24 +319,20 @@ body {
   text-decoration: none;
   color: rgb(0, 0, 0);
   width: 330px;
-  margin-left: 195px;
-  margin-right: 195px;
 }
 
 .social-list {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
-  margin: 0 auto;
   padding: 0;
-  min-width: 110px;
+  gap: 25px;
 }
 
 
 .footer-logo {
   display: block;
   margin: 0;
-  margin-right: 70px;
 }
 
 /* End Footer */
@@ -363,6 +366,7 @@ body {
   background-color: rgb(242, 242, 242);
   border-radius: 4px 0 0 4px;
   border: none;
+  padding-left: 20px;
 }
 
 /* End Рассылка */
@@ -437,11 +441,14 @@ body {
   background-image: url("../images/catalog/filter.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  padding: 35px 70px 70px 70px;
+  padding-top: 35px;
+  padding-bottom: 70px;
 }
 
 .forms-filters {
   display: flex;
+  justify-content: space-between;
+  margin: 0 -15px;
 }
 
 .inner-header-title {
@@ -449,18 +456,16 @@ body {
   margin-bottom: 8px;
 }
 
+.forms-group {
+  border: none;
+  padding: 0;
+}
+
 .forms-group-title {
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
   margin-bottom: 32px;
-}
-
-.forms-group {
-  border: none;
-  min-width: 160px;
-  margin-right: 70px;
-  padding: 0;
 }
 
 .forms-filters-list {
@@ -495,8 +500,6 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 32px;
-  justify-content: flex-end;
-
 }
 
 /* End Фильтр */
@@ -516,6 +519,8 @@ body {
   display: inline-block;
   margin-right: -20px;
 }
+
+/* Спросить про как лучше оформить отступы в хлебных крошках */
 
 .breadcrumbs-list-links {
   font-size: 16px;
@@ -537,8 +542,8 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 1060px;
-  margin: 0 70px;
   margin-bottom: 40px;
+  box-sizing: content-box;
 }
 
 .sorting-search-title {
@@ -555,21 +560,18 @@ body {
   margin-left: auto;
   padding: 0;
   list-style-type: none;
-}
-
-.view-list-item {
-  margin-right: 8px;
-}
-
-.view-list-item:nth-child(3) {
-  margin-right: 0;
+  gap: 8px;
 }
 
 .view-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 3px solid rgb(0, 0, 0);
-  padding: 14px 12px;
+  padding: 0;
+  width: 48px;
+  height: 48px;
   border-radius: 4px 4px;
-  gap: 8px;
 }
 
 
@@ -595,19 +597,14 @@ body {
 
 
 /* Каталог */
-.catalog-container {
+.catalog-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   width: 1060px;
   gap: 20px;
-  margin: 0 70px;
-  margin-bottom: 80px;
-}
-
-.catalog-list {
   padding: 0;
-  margin: 0;
+  margin-bottom: 80px;
   list-style-type: none;
 }
 
@@ -629,11 +626,11 @@ body {
   margin: 0;
 }
 
-.catalog-card-type {
-  margin-right: 130px;
+.catalog-card-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 135px;
 }
-
-/* Почему не работает значение auto */
 
 .catalog-card-rate {
   font-size: 16px;
@@ -654,13 +651,16 @@ body {
 
 
 /* Пагинация */
-.pagination-container {
+.pagination-list {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 1060px;
-  margin: 0 70px;
   margin-bottom: 60px;
+  list-style-type: none;
+  gap: 8px;
+  padding: 0;
+  /*  border-top: 2px solid  rgb(230, 230, 230); */
 
 }
 
@@ -688,6 +688,11 @@ body {
 }
 
 .pagination-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 1060px;
+  margin-bottom: 60px;
   list-style-type: none;
   gap: 8px;
   padding: 0;
