@@ -190,10 +190,6 @@ body {
 
 /* Вопрос! про кнопка на индекс "Поиск Гостиниц" */
 
-.button-favorite {
-  margin: 0 auto;
-}
-
 .buttons-group-catalog {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -255,6 +251,7 @@ body {
   line-height: 10px;
   text-align: center;
 }
+
 /* Вопрос! Вырванивание хедера */
 
 /* End Header */
@@ -628,8 +625,8 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
-  /*  display: grid;
-  grid-template-columns: repeat(2, 140);
+  /*   display: grid;
+  grid-template-columns: repeat(2, 140px);
   grid-template-rows: 212px 1fr; */
   width: 340px;
   min-height: 438px;
@@ -651,19 +648,28 @@ body {
   gap: 135px;
 }
 
+.card-rating-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: 20px;
+
+}
+
 .catalog-card-rate {
-  /*   display: block; */
+  display: block;
   font-size: 16px;
   line-height: 20px;
   border: 4px solid rgb(242, 242, 242);
   background-color: rgb(242, 242, 242);
   /*  margin-left: auto; */
-  padding: 8px 21px;
+  padding: 8px 15px;
+  border-radius: 4px;
 }
 
-/* .catalog-stars {
+.catalog-stars {
   display: block;
-} */
+}
 
 /* Вопрос! Реитинг и звезды */
 
