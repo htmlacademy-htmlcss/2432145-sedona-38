@@ -151,6 +151,7 @@ body {
   background-color: rgb(117, 97, 87);
   width: 160px;
   height: 36px;
+  padding: 8px 50px;
 }
 
 .button-apply {
@@ -169,14 +170,6 @@ body {
   background-color: rgb(117, 97, 87);
 }
 
-.buttons-group {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-}
-
-/* Почему не работает значение auto */
-
 .button-action {
   background-color: rgb(130, 179, 211);
 }
@@ -186,13 +179,25 @@ body {
 }
 
 .button-large-to-catalog {
+  display: block;
   background-color: rgb(117, 97, 87);
   width: 376px;
   height: 52px;
+  font-size: 20px;
+  line-height: 36px;
+  margin: 0 auto;
 }
+
+/* Вопрос! про кнопка на индекс "Поиск Гостиниц" */
 
 .button-favorite {
   margin: 0 auto;
+}
+
+.buttons-group-catalog {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
 }
 
 /* End Кнопки */
@@ -201,21 +206,22 @@ body {
 /* Header */
 .navigation {
   display: flex;
-  margin-bottom: -2px;
   align-items: center;
+  margin-bottom: -2px;
 }
 
 .navigation-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 449px;
+  width: 439px;
+  justify-content: center;
 }
 
 .navigation-list-button {
   background-color: transparent;
   border: none;
-  padding: 22px 12px 22px 12px;
+  padding: 22px 12px;
 }
 
 .navigation-list-link {
@@ -224,19 +230,18 @@ body {
   line-height: 24px;
   font-size: 20px;
   font-weight: 700;
-  padding: 20px 16px 20px 16px;
+  padding: 20px 16px;
 }
 
 .navigation-list-menu {
   display: flex;
-  width: 340px;
 }
 
 .navigation-list-user {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   align-items: center;
-  width: 310px;
 }
 
 .logo-image {
@@ -250,6 +255,7 @@ body {
   line-height: 10px;
   text-align: center;
 }
+/* Вопрос! Вырванивание хедера */
 
 /* End Header */
 
@@ -329,6 +335,10 @@ body {
   gap: 25px;
 }
 
+.social-button {
+  padding: 11px 11px 11px 11px;
+}
+
 
 .footer-logo {
   display: block;
@@ -356,13 +366,18 @@ body {
   margin-bottom: 54px;
 }
 
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+}
+
 .input-newsletter-text {
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
-  width: 452px;
-  height: 52px;
+  min-width: 452px;
+  min-height: 52px;
   background-color: rgb(242, 242, 242);
   border-radius: 4px 0 0 4px;
   border: none;
@@ -383,7 +398,6 @@ body {
   margin-bottom: auto;
   padding: 10px;
   aspect-ratio: 80/77;
-  /* Спросить- список преимуществ; Почеиу надо вешать непосрдестенно на li */
 }
 
 .reasons-list {
@@ -520,11 +534,12 @@ body {
   margin-right: -20px;
 }
 
-/* Спросить про как лучше оформить отступы в хлебных крошках */
+/* Вопрос! Спросить про как лучше оформить отступы в хлебных крошках */
 
 .breadcrumbs-list-links {
   font-size: 16px;
   margin-left: 20px;
+  padding: 3px 3px;
 }
 
 .breadcrumbles-swipe-image {
@@ -598,12 +613,12 @@ body {
 
 /* Каталог */
 .catalog-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
   width: 1060px;
   gap: 20px;
   padding: 0;
+  margin: 0;
   margin-bottom: 80px;
   list-style-type: none;
 }
@@ -613,14 +628,18 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
+  /*  display: grid;
+  grid-template-columns: repeat(2, 140);
+  grid-template-rows: 212px 1fr; */
   width: 340px;
   min-height: 438px;
   padding: 20px;
-  gap: 16px;
+  gap: 16px 20px;
   border-radius: 4px;
   border: 1px solid rgb(230, 230, 230);
-  box-sizing: border-box;
 }
+
+/* Вопрос! Не выходит сделать внтуренние части карточки на гридах */
 
 .catalog-card-title {
   margin: 0;
@@ -633,12 +652,20 @@ body {
 }
 
 .catalog-card-rate {
+  /*   display: block; */
   font-size: 16px;
   line-height: 20px;
   border: 4px solid rgb(242, 242, 242);
   background-color: rgb(242, 242, 242);
-  margin-left: auto;
+  /*  margin-left: auto; */
+  padding: 8px 21px;
 }
+
+/* .catalog-stars {
+  display: block;
+} */
+
+/* Вопрос! Реитинг и звезды */
 
 .select-list-sort {
   width: 292px;
@@ -660,8 +687,6 @@ body {
   list-style-type: none;
   gap: 8px;
   padding: 0;
-  /*  border-top: 2px solid  rgb(230, 230, 230); */
-
 }
 
 .button-pagination {
