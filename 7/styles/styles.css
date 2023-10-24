@@ -1,0 +1,732 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* Basic */
+html {
+  height: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+
+/* Basic */
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: rgb(51, 51, 51);
+  background-color: rgb(243, 243, 243);
+  margin: 0;
+  height: 100%;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+  max-width: 1200px;
+  min-height: 100%;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+
+.container {
+  padding: 0 70px
+}
+
+/* End Basic */
+
+
+/* Modificators */
+.test-class-outline-blue {
+  outline: 2px solid blue;
+}
+
+.test-class-outline-green {
+  outline: 2px solid greenyellow;
+}
+
+.test-class-outline-orange {
+  outline: 2px solid orangered;
+}
+
+.test-class-outline-yellow {
+  outline: 2px solid yellow;
+}
+
+.title-h1,
+.title-h2,
+.title-h3 {
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+}
+
+.title-h1 {
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.title-h2 {
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.title-h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.text-description-h2 {
+  font-size: 22px;
+  line-height: 26px;
+  margin: 0;
+  margin-bottom: 100px;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-white {
+  color: rgb(255, 255, 255);
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+/* End Modificators */
+
+
+/* Кнопки */
+.button {
+  border: 1px solid transparent;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 8px 10px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  border-radius: 4px;
+}
+
+.button-subscribe {
+  width: 232px;
+  height: 52px;
+  background-color: rgb(130, 179, 211);
+}
+
+.button-navigation-list-link {
+  background-color: rgb(117, 97, 87);
+  width: 160px;
+  height: 36px;
+  padding: 8px 50px;
+}
+
+.button-apply {
+  width: 191px;
+  height: 36px;
+  background-color: rgb(130, 179, 211);
+}
+
+.button-reset {
+  width: 191px;
+  height: 36px;
+  background-color: transparent;
+}
+
+.button-catalog-more-details {
+  background-color: rgb(117, 97, 87);
+}
+
+.button-action {
+  background-color: rgb(130, 179, 211);
+}
+
+.button-active {
+  background-color: rgb(125, 181, 79);
+}
+
+.button-large-to-catalog {
+  display: block;
+  background-color: rgb(117, 97, 87);
+  width: 376px;
+  height: 52px;
+  font-size: 20px;
+  line-height: 36px;
+  margin: 0 auto;
+}
+
+/* Вопрос! про кнопка на индекс "Поиск Гостиниц" */
+
+.buttons-group-catalog {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* End Кнопки */
+
+
+/* Header */
+.navigation {
+  display: flex;
+  align-items: center;
+  margin-bottom: -2px;
+}
+
+.navigation-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 439px;
+  justify-content: center;
+}
+
+.navigation-list-button {
+  background-color: transparent;
+  border: none;
+  padding: 22px 12px;
+}
+
+.navigation-list-link {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  line-height: 24px;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 20px 16px;
+}
+
+.navigation-list-menu {
+  display: flex;
+}
+
+.navigation-list-user {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.logo-image {
+  display: block;
+}
+
+.favorite-count {
+  border-radius: 10px 10px;
+  background-color: rgb(125, 181, 79);
+  font-size: 10px;
+  line-height: 10px;
+  text-align: center;
+}
+
+/* Вопрос! Вырванивание хедера */
+
+/* End Header */
+
+
+/* Main */
+.main-container {
+  margin: 0 auto;
+  flex-grow: 1;
+
+}
+
+.hero {
+  margin-bottom: 69px;
+}
+
+.reasons-title {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.reasons {
+  margin-bottom: 64px;
+}
+
+.services-title-low {
+  margin: 0;
+  margin-bottom: 64px;
+}
+
+.services {
+  margin: 0;
+  margin-bottom: 96px;
+}
+
+.total-title {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.total-title-low {
+  margin-bottom: 54px;
+}
+
+.button-catalog-wrapper {
+  margin-bottom: 96px;
+}
+
+/* End Main */
+
+
+/* Footer */
+.page-footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  justify-content: space-between;
+  margin: 0 auto;
+  gap: 22px;
+}
+
+.phone {
+  font-size: 40px;
+  font-style: normal;
+  line-height: 40px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  width: 330px;
+}
+
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  gap: 25px;
+}
+
+.social-button {
+  padding: 11px 11px 11px 11px;
+}
+
+
+.footer-logo {
+  display: block;
+  margin: 0;
+}
+
+/* End Footer */
+
+
+/* Рассылка */
+.newsletter {
+  padding-top: 96px;
+  padding-bottom: 104px;
+}
+
+.newsletter-with-background {
+  background-color: rgb(130, 179, 211);
+  background-image: url("../images/subscribe.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.newsletter-description {
+  margin: 0;
+  margin-bottom: 54px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+}
+
+.input-newsletter-text {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  min-width: 452px;
+  min-height: 52px;
+  background-color: rgb(242, 242, 242);
+  border-radius: 4px 0 0 4px;
+  border: none;
+  padding-left: 20px;
+}
+
+/* End Рассылка */
+
+
+/* Услуги и преимущества */
+.reasons-and-services-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 400px;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 10px;
+  aspect-ratio: 80/77;
+}
+
+.reasons-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.image-service {
+  display: block;
+  margin: 0 auto;
+}
+
+.card-primary {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(130, 179, 211);
+  width: 100%;
+}
+
+.card-index {
+  width: 400px;
+}
+
+.card-minor {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.card-accent {
+  background-color: rgba(131, 179, 211, 0.20);
+}
+
+.card-reverse {
+  flex-direction: row-reverse;
+}
+
+/* End Услуги и преимущества */
+
+
+/* Фильтр */
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(130, 179, 211);
+  background-image: url("../images/catalog/filter.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-top: 35px;
+  padding-bottom: 70px;
+}
+
+.forms-filters {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -15px;
+}
+
+.inner-header-title {
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.forms-group {
+  border: none;
+  padding: 0;
+}
+
+.forms-group-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 32px;
+}
+
+.forms-filters-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.forms-filters-list-item {
+  margin-bottom: 10px;
+}
+
+.forms-filters-list-item:nth-last-child(1) {
+  margin-bottom: 0;
+}
+
+.forms-radio-filters-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.forms-filters-price-control {
+  min-width: 287px;
+}
+
+.input-checkbox-text {
+  line-height: 23px;
+}
+
+.forms-buttons-apply-reset-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+
+/* End Фильтр */
+
+
+/* Хлебные крошки */
+.breadcrumbs-list {
+  display: flex;
+  gap: 10px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.breadcrumbs-list-items {
+  display: inline-block;
+  margin-right: -20px;
+}
+
+/* Вопрос! Спросить про как лучше оформить отступы в хлебных крошках */
+
+.breadcrumbs-list-links {
+  font-size: 16px;
+  margin-left: 20px;
+  padding: 3px 3px;
+}
+
+.breadcrumbles-swipe-image {
+  margin-right: 5px;
+}
+
+
+/* End Хлебные крошки */
+
+
+/* Сортировка */
+.sorting-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 1060px;
+  margin-bottom: 40px;
+  box-sizing: content-box;
+}
+
+.sorting-search-title {
+  margin-right: auto;
+}
+
+.view-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 160px;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+  list-style-type: none;
+  gap: 8px;
+}
+
+.view-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid rgb(0, 0, 0);
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 4px 4px;
+}
+
+
+.view-not-checked {
+  border-color: rgb(229, 229, 229);
+}
+
+
+.select-sort-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 292px;
+  height: 49px;
+  padding: 14px 20px;
+  border: 2px solid rgb(229, 229, 229);
+  border-radius: 4px;
+  margin-right: 70px;
+}
+
+
+/* End Сортировка */
+
+
+/* Каталог */
+.catalog-list {
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  width: 1060px;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 80px;
+  list-style-type: none;
+}
+
+.catalog-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  /*   display: grid;
+  grid-template-columns: repeat(2, 140px);
+  grid-template-rows: 212px 1fr; */
+  width: 340px;
+  min-height: 438px;
+  padding: 20px;
+  gap: 16px 20px;
+  border-radius: 4px;
+  border: 1px solid rgb(230, 230, 230);
+}
+
+/* Вопрос! Не выходит сделать внтуренние части карточки на гридах */
+
+.catalog-card-title {
+  margin: 0;
+}
+
+.catalog-card-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 135px;
+}
+
+.card-rating-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: 20px;
+
+}
+
+.catalog-card-rate {
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  border: 4px solid rgb(242, 242, 242);
+  background-color: rgb(242, 242, 242);
+  /*  margin-left: auto; */
+  padding: 8px 15px;
+  border-radius: 4px;
+}
+
+.catalog-stars {
+  display: block;
+}
+
+/* Вопрос! Реитинг и звезды */
+
+.select-list-sort {
+  width: 292px;
+  margin-left: auto;
+  margin-right: 70px;
+}
+
+/* End Каталог */
+
+
+
+/* Пагинация */
+.pagination-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 1060px;
+  margin-bottom: 60px;
+  list-style-type: none;
+  gap: 8px;
+  padding: 0;
+}
+
+.button-pagination {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  background-color: rgb(130, 179, 211);
+  border: none;
+  min-width: 60px;
+  height: 60px;
+  margin-right: 8px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.current-pagination {
+  background-color: rgb(242, 242, 242);
+  color: rgb(0, 0, 0)
+}
+
+.empty-pagination {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+}
+
+.pagination-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 1060px;
+  margin-bottom: 60px;
+  list-style-type: none;
+  gap: 8px;
+  padding: 0;
+}
+
+/* End Пагинация */
