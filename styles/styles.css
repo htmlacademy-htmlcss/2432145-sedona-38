@@ -59,7 +59,10 @@ body {
 }
 
 .container {
-  padding: 0 70px
+  padding: 0 70px;
+/*   max-width: 1060px;
+  margin-left: auto;
+  margin-right: auto; */
 }
 
 /* End Basic */
@@ -129,6 +132,7 @@ body {
 
 /* Кнопки */
 .button {
+  font-family: "PT Sans", sans-serif;
   border: 1px solid transparent;
   text-decoration: none;
   color: rgb(255, 255, 255);
@@ -258,8 +262,7 @@ body {
 
 
 /* Main */
-.main-container {
-  margin: 0 auto;
+.main-general {
   flex-grow: 1;
 
 }
@@ -277,14 +280,28 @@ body {
   margin-bottom: 64px;
 }
 
+.services {
+  margin: 0;
+  margin-bottom: 96px;
+}
+
+.services-title {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
 .services-title-low {
   margin: 0;
   margin-bottom: 64px;
 }
 
-.services {
+.services-title-card {
   margin: 0;
-  margin-bottom: 96px;
+  margin-bottom: 30px;
+}
+
+.services-description-card {
+  margin: 0;
 }
 
 .total-title {
@@ -330,6 +347,7 @@ body {
   list-style-type: none;
   padding: 0;
   gap: 25px;
+  margin: 0;
 }
 
 .social-button {
@@ -416,6 +434,7 @@ body {
 .image-service {
   display: block;
   margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 .card-primary {
@@ -445,7 +464,7 @@ body {
 
 
 /* Фильтр */
-.filter-container {
+.filter {
   display: flex;
   flex-direction: column;
   background-color: rgb(130, 179, 211);
@@ -454,12 +473,14 @@ body {
   background-size: 100% 100%;
   padding-top: 35px;
   padding-bottom: 70px;
+  margin-bottom: 55px;
+
 }
 
 .forms-filters {
   display: flex;
   justify-content: space-between;
-  margin: 0 -15px;
+ /*  margin: 0 -15px; */
 }
 
 .inner-header-title {
@@ -526,21 +547,18 @@ body {
   margin-bottom: 40px;
 }
 
-.breadcrumbs-list-items {
-  display: inline-block;
-  margin-right: -20px;
-}
-
 /* Вопрос! Спросить про как лучше оформить хлебные крошки */
 
 .breadcrumbs-list-links {
   font-size: 16px;
-  margin-left: 20px;
+
   padding: 3px 3px;
+  text-decoration: none;
 }
 
 .breadcrumbles-swipe-image {
-  margin-right: 5px;
+  display: block;
+  margin-top: 6.5px;
 }
 
 
@@ -553,12 +571,11 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  width: 1060px;
   margin-bottom: 40px;
-  box-sizing: content-box;
 }
 
 .sorting-search-title {
+  margin: 0;
   margin-right: auto;
 }
 
@@ -575,7 +592,6 @@ body {
   align-items: center;
   min-width: 160px;
   margin: 0;
-  margin-left: auto;
   padding: 0;
   list-style-type: none;
   gap: 8px;
@@ -618,7 +634,6 @@ body {
 .catalog-list {
   display: grid;
   grid-template-columns: repeat(3, 340px);
-  width: 1060px;
   gap: 20px;
   padding: 0;
   margin: 0;
@@ -627,15 +642,10 @@ body {
 }
 
 .catalog-list-item {
-  /*   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-around; */
   display: grid;
   grid-template-columns: repeat(2, 140px);
- /*  grid-template-rows: 212px 1fr; */
+   grid-template-rows: 212px 1fr;
   align-items: center;
-  width: 340px;
   min-height: 438px;
   padding: 20px;
   gap: 16px 20px;
@@ -643,8 +653,13 @@ body {
   border: 1px solid rgb(230, 230, 230);
 }
 
+.catalog-card-type {
+  margin: 0;
+}
+
 .catalog-card-price {
   text-align: right;
+  margin: 0;
 
 }
 
@@ -700,6 +715,7 @@ body {
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 1060px;
+  margin: 0;
   margin-bottom: 60px;
   list-style-type: none;
   gap: 8px;
@@ -712,11 +728,10 @@ body {
   line-height: 36px;
   background-color: rgb(130, 179, 211);
   border: none;
+  border-radius: 4px;
   min-width: 60px;
   height: 60px;
-  margin-right: 8px;
   padding: 0 10px;
-  box-sizing: border-box;
 }
 
 .current-pagination {
@@ -727,17 +742,6 @@ body {
 .empty-pagination {
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
-}
-
-.pagination-list {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  width: 1060px;
-  margin-bottom: 60px;
-  list-style-type: none;
-  gap: 8px;
-  padding: 0;
 }
 
 /* End Пагинация */
