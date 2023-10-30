@@ -59,14 +59,11 @@ body {
 }
 
 .container {
-  /*   padding: 0 70px; */
   max-width: 1060px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
 }
-
-/* Вопрос! Фон в фильтре не растягивается на всю ширину при использовании варианта с макс. шириной. */
 
 /* End Basic */
 
@@ -135,6 +132,7 @@ body {
 
 /* Кнопки */
 .button {
+  display: inline-block;
   font-family: "PT Sans", sans-serif;
   border: 1px solid transparent;
   text-decoration: none;
@@ -149,6 +147,41 @@ body {
   cursor: pointer;
 }
 
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-primary-decoration:hover {
+  background-color: rgb(104, 162, 202);
+}
+
+.button-primary-decoration:focus {
+  background-color: rgb(104, 162, 202);
+  outline: none;
+}
+
+.button-link-decoration:hover {
+  background-color: rgb(97, 80, 72);
+}
+
+.button-link-decoration:focus {
+  background-color: rgb(97, 80, 72);
+  outline: none;
+}
+
+.button-active:hover {
+  background-color: rgb(108, 158, 66);
+}
+
+.button-active:focus {
+  background-color: rgb(108, 158, 66);
+  outline: none;
+}
+
+.button-locked {
+  background-color: rgb(229, 229, 229);
+}
+
 .button-subscribe {
   width: 232px;
   height: 52px;
@@ -160,6 +193,7 @@ body {
   min-width: 160px;
   height: 36px;
   padding: 8px 50px;
+  position: relative;
 }
 
 .button-apply {
@@ -172,6 +206,11 @@ body {
   min-width: 191px;
   height: 36px;
   background-color: transparent;
+}
+
+.button-reset:focus {
+  border-radius: 4px;
+  outline: 3px solid rgb(131, 179, 211);
 }
 
 .button-catalog-more-details {
@@ -196,8 +235,6 @@ body {
   margin: 0 auto;
 }
 
-/* Вопрос! про кнопка на индекс "Поиск Гостиниц" */
-
 .buttons-group-catalog {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -208,10 +245,15 @@ body {
 
 
 /* Header */
+.page-header {
+  margin-bottom: -8px;
+  z-index: 2;
+  padding-bottom: 4px;
+}
+
 .navigation {
   display: flex;
   align-items: center;
-  margin-bottom: -3px;
   gap: 28px;
 }
 
@@ -227,13 +269,40 @@ body {
   padding: 22px 12px;
 }
 
+.navigation-search {
+  background-image: url("../images/icons/search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.navigation-favorite {
+  background-image: url("../images/icons/favorite.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  cursor: pointer;
+}
+
 .navigation-list-link {
+  position: relative;
   color: rgb(0, 0, 0);
   text-decoration: none;
   line-height: 24px;
   font-size: 20px;
   font-weight: 700;
   padding: 20px 16px;
+}
+
+.navigation-list-link:hover::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(117, 98, 87);
+  height: 2px;
+  left: 12px;
+  right: 12px;
+  bottom: 0;
+
 }
 
 .navigation-list-menu {
@@ -246,19 +315,24 @@ body {
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
+  gap: 25px;
 }
 
 .logo-image {
   display: block;
-  z-index: 2;
 }
 
 .favorite-count {
-  border-radius: 10px 10px;
+  font-family: "PT Sans", sans-serif;
+  border-radius: 10px;
   background-color: rgb(125, 181, 79);
   font-size: 10px;
   line-height: 10px;
   text-align: center;
+  padding: 4px;
+  position: absolute;
+  top: 5px;
+  left: 12px;
 }
 
 
@@ -326,12 +400,15 @@ body {
 
 
 /* Footer */
+.page-footer {
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
 .page-footer-container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding-top: 40px;
-  padding-bottom: 30px;
   justify-content: space-between;
   margin: 0 auto;
   gap: 22px;
@@ -346,6 +423,15 @@ body {
   width: 330px;
 }
 
+.phone:hover {
+  color: rgb(117, 97, 87);
+}
+
+.phone:focus {
+  color: rgb(117, 97, 87);
+  outline: none;
+}
+
 .social-list {
   display: flex;
   justify-content: space-between;
@@ -356,13 +442,23 @@ body {
 }
 
 .social-button {
-  padding: 11px 11px 11px 11px;
+  padding: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.footer-logo:hover {
+  fill: rgb(104, 162, 202);
+}
 
 .footer-logo {
   display: block;
   margin: 0;
+}
+
+.htmlacademy-logo {
+  display: block;
 }
 
 /* End Footer */
@@ -398,7 +494,6 @@ body {
 
 .input-newsletter-text {
   font-family: "PT Sans", sans-serif;
-  font-weight: 400;
   font-size: 18px;
   line-height: 24px;
   min-width: 452px;
@@ -409,6 +504,7 @@ body {
   padding-left: 20px;
 }
 
+
 /* End Рассылка */
 
 
@@ -418,6 +514,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
   min-width: 400px;
   margin-top: auto;
   margin-bottom: auto;
@@ -433,9 +530,25 @@ body {
   padding: 0;
 }
 
+
 .title-reasons {
   margin-bottom: 62px;
 }
+
+.title-reasons::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
+  bottom: 188px;
+  left: 170px;
+  right: 170px;
+}
+
+.reasons-primary-decoration::after {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 
 .reasons-description {
   margin: 0;
@@ -496,8 +609,32 @@ body {
 
 .forms-filters {
   display: flex;
-  justify-content: space-between;
-  /*  margin: 0 -15px; */
+  /* justify-content: space-between; */
+}
+
+.checkbox-infrastructure {
+  margin-right: 70px;
+}
+
+.radio-housing {
+  margin-right: auto;
+}
+
+.form-price {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2px;
+  margin-right: 70px;
+}
+
+.forms-input-points:hover {
+  opacity: 0.6;
+}
+
+.input-decoration:focus {
+  border-radius: 4px;
+  outline: 3px solid rgb(131, 179, 211);
 }
 
 .inner-header-title {
@@ -538,7 +675,42 @@ body {
 }
 
 .forms-filters-price-control {
-  min-width: 287px;
+  position: relative;
+}
+
+.price-from::after {
+  content: "от";
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  line-height: 21px;
+  color: rgb(0, 0, 0);
+  opacity: 0.4;
+}
+
+.price-to::after {
+  content: "до";
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  line-height: 21px;
+  color: rgb(0, 0, 0);
+  opacity: 0.4;
+}
+
+.forms-hotel-filters-price-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 143px;
+  padding: 12px 20px;
+  border-radius: 4px 4px;
+  border: none;
+  background-color: rgb(242, 242, 242);
+  font-size: 18px;
+  font-family: "PT Sans", sans-serif;
+  line-height: 24px;
+  font-weight: 700;
 }
 
 .input-checkbox-text {
@@ -564,13 +736,19 @@ body {
   margin-bottom: 40px;
 }
 
-/* Вопрос! Спросить про как лучше оформить хлебные крошки */
-
-.breadcrumbs-list-links {
+.breadcrumbs-list-link {
   font-size: 16px;
-
   padding: 3px 3px;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.breadcrumbs-list-item:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumbs-list-item:hover {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .breadcrumbles-swipe-image {
@@ -578,6 +756,18 @@ body {
   margin-top: 6.5px;
 }
 
+/* .class-home {
+  position: relative;
+} */
+
+/* .class-home::after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/icons/breadcrumbs-vector-1.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+} */
+/* Вопрос! Не выходит добавить изображение стрелки через псевдоэлемент */
 
 /* End Хлебные крошки */
 
@@ -613,33 +803,69 @@ body {
   gap: 8px;
 }
 
-.view-button-container {
+.view-list-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid rgb(0, 0, 0);
+  border: 3px solid rgb(229, 229, 229);
   width: 48px;
   height: 48px;
-  border-radius: 4px 4px;
+  border-radius: 4px;
+}
+
+.view-card-list-link {
+  background-image: url("../images/icons/view-cards.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.view-slider-list-link {
+  background-image: url("../images/icons/view-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.view-list-list-link {
+  background-image: url("../images/icons/view-list.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 
-.view-not-checked {
-  border-color: rgb(229, 229, 229);
+.view-list-link:active {
+  border-color: rgb(0, 0, 0);
 }
+
+.view-list-link:hover {
+  border-color: rgb(0, 0, 0);
+}
+
+.view-list-link:focus {
+  outline: 3px solid rgb(104, 162, 202);
+  border: none;
+}
+
 
 
 .select-sort-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 292px;
-  height: 49px;
+  min-width: 292px;
+  min-height: 49px;
   padding: 14px 20px;
   border: 2px solid rgb(229, 229, 229);
   border-radius: 4px;
   margin-right: 70px;
 }
+
+.select-sort-list:focus {
+  border-radius: 4px;
+  outline: 3px solid rgb(131, 179, 211);
+}
+
+.select-sort-list:hover {
+  border-radius: 4px;
+  outline: 3px solid rgb(131, 179, 211);
+}
+
 
 
 /* End Сортировка */
@@ -711,6 +937,16 @@ body {
 /* Пагинация */
 .pagination {
   margin-bottom: 60px;
+  position: relative;
+}
+
+.pagination-list::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background-color: rgb(230, 230, 230);
+  top: -35px;
+  min-width: 1060px;
 }
 
 .pagination-list {
@@ -734,6 +970,11 @@ body {
   min-width: 60px;
   height: 60px;
   padding: 0 10px;
+  cursor: pointer;
+}
+
+.button-pagination:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .current-pagination {
