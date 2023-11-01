@@ -25,8 +25,6 @@ html {
   box-sizing: border-box;
 }
 
-
-/* Basic */
 body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -127,6 +125,18 @@ body {
   text-align: center;
 }
 
+.input-decoration:focus {
+  outline: 3px solid rgb(131, 179, 211);
+}
+
+.input-decoration:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.input-decoration:focus-visible {
+  outline: 3px solid rgb(131, 179, 211);
+}
+
 /* End Modificators */
 
 
@@ -151,13 +161,18 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.button:disabled {
+  color: rgb(255, 255, 255);
+  background-color: rgb(229, 229, 229);
+
+}
+
 .button-primary-decoration:hover {
   background-color: rgb(104, 162, 202);
 }
 
 .button-primary-decoration:focus {
   background-color: rgb(104, 162, 202);
-  outline: none;
 }
 
 .button-link-decoration:hover {
@@ -166,7 +181,6 @@ body {
 
 .button-link-decoration:focus {
   background-color: rgb(97, 80, 72);
-  outline: none;
 }
 
 .button-active:hover {
@@ -175,7 +189,6 @@ body {
 
 .button-active:focus {
   background-color: rgb(108, 158, 66);
-  outline: none;
 }
 
 .button-locked {
@@ -184,32 +197,40 @@ body {
 
 .button-subscribe {
   width: 232px;
-  height: 52px;
+  min-height: 52px;
   background-color: rgb(130, 179, 211);
+  border-radius: 0 4px 4px 0;
 }
 
 .button-navigation-list-link {
   background-color: rgb(117, 97, 87);
   min-width: 160px;
-  height: 36px;
+  min-height: 36px;
   padding: 8px 50px;
   position: relative;
 }
 
 .button-apply {
   min-width: 191px;
-  height: 36px;
+  min-height: 36px;
   background-color: rgb(130, 179, 211);
 }
 
 .button-reset {
   min-width: 191px;
-  height: 36px;
+  min-height: 36px;
   background-color: transparent;
 }
 
 .button-reset:focus {
-  border-radius: 4px;
+  outline: 3px solid rgb(131, 179, 211);
+}
+
+.button-reset:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.button-reset:focus-visible {
   outline: 3px solid rgb(131, 179, 211);
 }
 
@@ -219,6 +240,8 @@ body {
 
 .button-action {
   background-color: rgb(130, 179, 211);
+  min-width: 140px;
+  min-height: 36px;
 }
 
 .button-active {
@@ -229,7 +252,7 @@ body {
   display: block;
   background-color: rgb(117, 97, 87);
   max-width: 376px;
-  height: 52px;
+  min-height: 52px;
   font-size: 20px;
   line-height: 36px;
   margin: 0 auto;
@@ -263,6 +286,20 @@ body {
   padding: 0;
 }
 
+.navigation-current {
+  position: relative;
+}
+
+.navigation-current::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: rgb(117, 98, 87);
+  left: 12px;
+  right: 12px;
+  bottom: 0;
+}
+
 .navigation-list-button {
   background-color: transparent;
   border: none;
@@ -273,6 +310,8 @@ body {
   background-image: url("../images/icons/search.svg");
   background-repeat: no-repeat;
   background-position: center;
+/*   padding-left: 25px;
+  padding-right: 25px; */
   cursor: pointer;
 }
 
@@ -282,6 +321,21 @@ body {
   background-position: center;
   position: relative;
   cursor: pointer;
+}
+
+.navigation-favorite::after {
+  content: "12";
+  font-family: "PT Sans", sans-serif;
+  border-radius: 10px;
+  background-color: rgb(125, 181, 79);
+  color: rgb(255, 255, 255);
+  font-size: 10px;
+  line-height: 10px;
+  text-align: center;
+  padding: 4px;
+  position: absolute;
+  top: 5px;
+  left: 12px;
 }
 
 .navigation-list-link {
@@ -313,28 +367,13 @@ body {
 .navigation-list-user {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: center;
+  align-items: flex-start;
   gap: 25px;
 }
 
 .logo-image {
   display: block;
 }
-
-.favorite-count {
-  font-family: "PT Sans", sans-serif;
-  border-radius: 10px;
-  background-color: rgb(125, 181, 79);
-  font-size: 10px;
-  line-height: 10px;
-  text-align: center;
-  padding: 4px;
-  position: absolute;
-  top: 5px;
-  left: 12px;
-}
-
 
 /* End Header */
 
@@ -423,13 +462,20 @@ body {
   width: 330px;
 }
 
+.phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.phone:visited {
+  text-decoration: none;
+}
+
 .phone:hover {
   color: rgb(117, 97, 87);
 }
 
 .phone:focus {
   color: rgb(117, 97, 87);
-  outline: none;
 }
 
 .social-list {
@@ -448,17 +494,21 @@ body {
   justify-content: center;
 }
 
-.footer-logo:hover {
-  fill: rgb(104, 162, 202);
-}
-
 .footer-logo {
   display: block;
   margin: 0;
 }
 
+.footer-logo:hover {
+  fill: rgb(104, 162, 202);
+}
+
 .htmlacademy-logo {
   display: block;
+}
+
+.htmlacademy-logo:hover {
+  fill: rgba(117, 97, 87, 1);
 }
 
 /* End Footer */
@@ -609,7 +659,7 @@ body {
 
 .forms-filters {
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
 }
 
 .checkbox-infrastructure {
@@ -623,18 +673,18 @@ body {
 .form-price {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 2px;
   margin-right: 70px;
+  position: relative;
 }
 
 .forms-input-points:hover {
   opacity: 0.6;
 }
 
-.input-decoration:focus {
-  border-radius: 4px;
-  outline: 3px solid rgb(131, 179, 211);
+.forms-input-checkbox,
+.forms-input-radio {
+  transform: scale(1.5);
 }
 
 .inner-header-title {
@@ -698,6 +748,12 @@ body {
   opacity: 0.4;
 }
 
+.forms-group-toogle-svg {
+  position: absolute;
+  top: 83px;
+  left: 0;
+}
+
 .forms-hotel-filters-price-control {
   display: flex;
   justify-content: space-between;
@@ -713,7 +769,11 @@ body {
   font-weight: 700;
 }
 
-.input-checkbox-text {
+.input-checkbox-point {
+  line-height: 23px;
+}
+
+.hotel-filters-housing-point {
   line-height: 23px;
 }
 
@@ -721,7 +781,11 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 32px;
+  align-self: flex-end;
+  margin-top: 55px;
 }
+
+/* Вопрос! Выравнивание группы кнопок принять/сбросить. */
 
 /* End Фильтр */
 
@@ -736,11 +800,8 @@ body {
   margin-bottom: 40px;
 }
 
-.breadcrumbs-list-link {
-  font-size: 16px;
-  padding: 3px 3px;
-  text-decoration: none;
-  cursor: pointer;
+.breadcrumbs-list-link:hover {
+  fill: rgba(255, 255, 255, 0.6);
 }
 
 .breadcrumbs-list-item:active {
@@ -751,23 +812,22 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.breadcrumbles-swipe-image {
-  display: block;
-  margin-top: 6.5px;
+.class-home {
+  position: relative;
+  margin-right: 26px;
 }
 
-/* .class-home {
-  position: relative;
-} */
-
-/* .class-home::after {
+.class-home::after {
   content: "";
   position: absolute;
   background-image: url("../images/icons/breadcrumbs-vector-1.svg");
   background-repeat: no-repeat;
   background-position: center;
-} */
-/* Вопрос! Не выходит добавить изображение стрелки через псевдоэлемент */
+  min-width: 8px;
+  min-height: 11px;
+  top: 5px;
+  left: 26px;
+}
 
 /* End Хлебные крошки */
 
@@ -831,21 +891,17 @@ body {
   background-position: center;
 }
 
-
-.view-list-link:active {
-  border-color: rgb(0, 0, 0);
-}
-
 .view-list-link:hover {
   border-color: rgb(0, 0, 0);
 }
 
 .view-list-link:focus {
-  outline: 3px solid rgb(104, 162, 202);
-  border: none;
+  border: 3px solid rgb(104, 162, 202);
 }
 
-
+.view-list-link:active {
+  border-color: rgb(0, 0, 0);
+}
 
 .select-sort-list {
   min-width: 292px;
@@ -856,9 +912,8 @@ body {
   margin-right: 70px;
 }
 
-.select-sort-list:focus {
-  border-radius: 4px;
-  outline: 3px solid rgb(131, 179, 211);
+.select-sort-list:disabled {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .select-sort-list:hover {
@@ -927,7 +982,30 @@ body {
 }
 
 .catalog-stars {
-  display: block;
+  background-image: url("../images/catalog/rate_star_1.svg");
+  background-position: center;
+  background-repeat: space no-repeat;
+  min-height: 17px;
+}
+
+.catalog-card-stars-1 {
+  width: 18px;
+}
+
+.catalog-card-stars-2 {
+  width: 42px;
+}
+
+.catalog-card-stars-3 {
+  width: 66px;
+}
+
+.catalog-card-stars-4 {
+  width: 89px;
+}
+
+.catalog-card-stars-5 {
+  width: 113px;
 }
 
 /* End Каталог */
@@ -968,7 +1046,7 @@ body {
   border: none;
   border-radius: 4px;
   min-width: 60px;
-  height: 60px;
+  min-height: 60px;
   padding: 0 10px;
   cursor: pointer;
 }
