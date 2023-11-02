@@ -25,8 +25,6 @@ html {
   box-sizing: border-box;
 }
 
-
-/* Basic */
 body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -59,10 +57,10 @@ body {
 }
 
 .container {
-  padding: 0 70px;
-/*   max-width: 1060px;
+  max-width: 1060px;
   margin-left: auto;
-  margin-right: auto; */
+  margin-right: auto;
+  width: 100%;
 }
 
 /* End Basic */
@@ -127,11 +125,24 @@ body {
   text-align: center;
 }
 
+.input-decoration:focus {
+  outline: 3px solid rgb(131, 179, 211);
+}
+
+.input-decoration:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.input-decoration:focus-visible {
+  outline: 3px solid rgb(131, 179, 211);
+}
+
 /* End Modificators */
 
 
 /* Кнопки */
 .button {
+  display: inline-block;
   font-family: "PT Sans", sans-serif;
   border: 1px solid transparent;
   text-decoration: none;
@@ -143,31 +154,84 @@ body {
   font-weight: 700;
   line-height: 20px;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button:disabled {
+  color: rgb(255, 255, 255);
+  background-color: rgb(229, 229, 229);
+
+}
+
+.button-primary-decoration:hover {
+  background-color: rgb(104, 162, 202);
+}
+
+.button-primary-decoration:focus {
+  background-color: rgb(104, 162, 202);
+}
+
+.button-link-decoration:hover {
+  background-color: rgb(97, 80, 72);
+}
+
+.button-link-decoration:focus {
+  background-color: rgb(97, 80, 72);
+}
+
+.button-active:hover {
+  background-color: rgb(108, 158, 66);
+}
+
+.button-active:focus {
+  background-color: rgb(108, 158, 66);
+}
+
+.button-locked {
+  background-color: rgb(229, 229, 229);
 }
 
 .button-subscribe {
   width: 232px;
-  height: 52px;
+  min-height: 52px;
   background-color: rgb(130, 179, 211);
+  border-radius: 0 4px 4px 0;
 }
 
 .button-navigation-list-link {
   background-color: rgb(117, 97, 87);
-  width: 160px;
-  height: 36px;
+  min-width: 160px;
+  min-height: 36px;
   padding: 8px 50px;
+  position: relative;
 }
 
 .button-apply {
-  width: 191px;
-  height: 36px;
+  min-width: 191px;
+  min-height: 36px;
   background-color: rgb(130, 179, 211);
 }
 
 .button-reset {
-  width: 191px;
-  height: 36px;
+  min-width: 191px;
+  min-height: 36px;
   background-color: transparent;
+}
+
+.button-reset:focus {
+  outline: 3px solid rgb(131, 179, 211);
+}
+
+.button-reset:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.button-reset:focus-visible {
+  outline: 3px solid rgb(131, 179, 211);
 }
 
 .button-catalog-more-details {
@@ -176,6 +240,8 @@ body {
 
 .button-action {
   background-color: rgb(130, 179, 211);
+  min-width: 140px;
+  min-height: 36px;
 }
 
 .button-active {
@@ -185,14 +251,12 @@ body {
 .button-large-to-catalog {
   display: block;
   background-color: rgb(117, 97, 87);
-  width: 376px;
-  height: 52px;
+  max-width: 376px;
+  min-height: 52px;
   font-size: 20px;
   line-height: 36px;
   margin: 0 auto;
 }
-
-/* Вопрос! про кнопка на индекс "Поиск Гостиниц" */
 
 .buttons-group-catalog {
   display: grid;
@@ -204,18 +268,37 @@ body {
 
 
 /* Header */
+.page-header {
+  margin-bottom: -8px;
+  z-index: 2;
+  padding-bottom: 4px;
+}
+
 .navigation {
   display: flex;
   align-items: center;
-  margin-bottom: -2px;
+  gap: 28px;
 }
 
 .navigation-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 439px;
-  justify-content: center;
+}
+
+.navigation-current {
+  position: relative;
+}
+
+.navigation-current::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: rgb(117, 98, 87);
+  left: 12px;
+  right: 12px;
+  bottom: 0;
+  top: 62px;
 }
 
 .navigation-list-button {
@@ -224,39 +307,74 @@ body {
   padding: 22px 12px;
 }
 
+.navigation-search {
+  background-image: url("../images/icons/search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.navigation-favorite {
+  background-image: url("../images/icons/favorite.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.navigation-favorite::after {
+  content: "12";
+  font-family: "PT Sans", sans-serif;
+  border-radius: 10px;
+  background-color: rgb(125, 181, 79);
+  color: rgb(255, 255, 255);
+  font-size: 10px;
+  line-height: 10px;
+  text-align: center;
+  padding: 4px;
+  position: absolute;
+  top: 5px;
+  left: 12px;
+}
+
 .navigation-list-link {
+  position: relative;
   color: rgb(0, 0, 0);
   text-decoration: none;
   line-height: 24px;
   font-size: 20px;
   font-weight: 700;
   padding: 20px 16px;
+  display: block;
+}
+
+.navigation-list-link:hover::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(117, 98, 87);
+  height: 2px;
+  left: 12px;
+  right: 12px;
+  bottom: 0;
+  top: 62px;
+
 }
 
 .navigation-list-menu {
   display: flex;
+  flex-grow: 1;
 }
 
 .navigation-list-user {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: center;
+  align-items: flex-start;
+  gap: 25px;
 }
 
 .logo-image {
   display: block;
 }
-
-.favorite-count {
-  border-radius: 10px 10px;
-  background-color: rgb(125, 181, 79);
-  font-size: 10px;
-  line-height: 10px;
-  text-align: center;
-}
-
-/* Вопрос! Вырванивание хедера */
 
 /* End Header */
 
@@ -304,6 +422,10 @@ body {
   margin: 0;
 }
 
+.total {
+  margin-bottom: 96px;
+}
+
 .total-title {
   margin: 0;
   margin-bottom: 25px;
@@ -313,20 +435,20 @@ body {
   margin-bottom: 54px;
 }
 
-.button-catalog-wrapper {
-  margin-bottom: 96px;
-}
 
 /* End Main */
 
 
 /* Footer */
+.page-footer {
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
 .page-footer-container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding-top: 40px;
-  padding-bottom: 30px;
   justify-content: space-between;
   margin: 0 auto;
   gap: 22px;
@@ -341,6 +463,23 @@ body {
   width: 330px;
 }
 
+.phone:focus {
+  color: rgb(117, 97, 87);
+}
+
+.phone:hover {
+  color: rgb(117, 97, 87);
+}
+
+.phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.phone:visited {
+  text-decoration: none;
+}
+
+
 .social-list {
   display: flex;
   justify-content: space-between;
@@ -351,13 +490,40 @@ body {
 }
 
 .social-button {
-  padding: 11px 11px 11px 11px;
+  padding: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(131, 179, 211);
 }
 
+.htmlacademy-logo-link {
+  color: rgb(0, 0, 0);
+}
 
 .footer-logo {
   display: block;
   margin: 0;
+}
+
+.footer-logo:hover {
+  color: rgb(104, 162, 202);
+}
+
+.footer-logo:active {
+  color: rgba(104, 162, 202, 0.3);
+}
+
+.htmlacademy-logo {
+  display: block;
+}
+
+.htmlacademy-logo:hover {
+  color: rgba(117, 97, 87, 1);
+}
+
+.htmlacademy-logo:active {
+  color: rgba(117, 97, 87, 0.3);
 }
 
 /* End Footer */
@@ -376,6 +542,11 @@ body {
   background-size: cover;
 }
 
+.newsletter-title {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
 .newsletter-description {
   margin: 0;
   margin-bottom: 54px;
@@ -388,7 +559,6 @@ body {
 
 .input-newsletter-text {
   font-family: "PT Sans", sans-serif;
-  font-weight: 400;
   font-size: 18px;
   line-height: 24px;
   min-width: 452px;
@@ -399,6 +569,7 @@ body {
   padding-left: 20px;
 }
 
+
 /* End Рассылка */
 
 
@@ -408,6 +579,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
   min-width: 400px;
   margin-top: auto;
   margin-bottom: auto;
@@ -421,6 +593,34 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+
+.title-reasons {
+  position: relative;
+  margin: 0;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+
+.title-reasons::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
+  bottom: 0;
+  left: 50%;
+  width: 60px;
+  transform: translateX(-50%);
+}
+
+.reasons-primary-decoration::after {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+.reasons-description {
+  margin: 0;
 }
 
 .services-list {
@@ -439,7 +639,6 @@ body {
 
 .card-primary {
   display: flex;
-  flex-wrap: wrap;
   background-color: rgb(130, 179, 211);
   width: 100%;
 }
@@ -480,7 +679,31 @@ body {
 .forms-filters {
   display: flex;
   justify-content: space-between;
- /*  margin: 0 -15px; */
+}
+
+.checkbox-infrastructure {
+  margin-right: 70px;
+}
+
+.radio-housing {
+  margin-right: auto;
+}
+
+.form-price {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  margin-right: 70px;
+  position: relative;
+}
+
+.forms-input-points:hover {
+  opacity: 0.6;
+}
+
+.forms-input-checkbox,
+.forms-input-radio {
+  transform: scale(1.5);
 }
 
 .inner-header-title {
@@ -521,10 +744,64 @@ body {
 }
 
 .forms-filters-price-control {
-  min-width: 287px;
+  position: relative;
 }
 
-.input-checkbox-text {
+.price-from::after {
+  content: "от";
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  line-height: 21px;
+  color: rgb(0, 0, 0);
+  opacity: 0.4;
+}
+
+.price-to::after {
+  content: "до";
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  line-height: 21px;
+  color: rgb(0, 0, 0);
+  opacity: 0.4;
+}
+
+.forms-group-toogle-svg {
+  position: absolute;
+  top: 83px;
+  left: 0;
+}
+
+.forms-hotel-filters-price-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 143px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  border: none;
+  background-color: rgb(242, 242, 242);
+  font-size: 18px;
+  font-family: "PT Sans", sans-serif;
+  line-height: 24px;
+  font-weight: 700;
+
+}
+
+.forms-hotel-filters-price-control::-webkit-outer-spin-button,
+.forms-hotel-filters-price-control::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  -moz-appearance:textfield;
+  appearance: none;
+}
+
+.input-checkbox-point {
+  line-height: 23px;
+}
+
+.hotel-filters-housing-point {
   line-height: 23px;
 }
 
@@ -532,7 +809,11 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 32px;
+  align-self: flex-end;
+  margin-top: 55px;
 }
+
+/* Вопрос! Выравнивание группы кнопок принять/сбросить. */
 
 /* End Фильтр */
 
@@ -547,20 +828,39 @@ body {
   margin-bottom: 40px;
 }
 
-/* Вопрос! Спросить про как лучше оформить хлебные крошки */
-
-.breadcrumbs-list-links {
-  font-size: 16px;
-
-  padding: 3px 3px;
-  text-decoration: none;
-}
-
-.breadcrumbles-swipe-image {
+.breadcrumbs-list-link {
+  color: rgb(255, 255, 255);
   display: block;
-  margin-top: 6.5px;
 }
 
+.breadcrumbs-list-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-list-item:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumbs-list-item:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.class-home {
+  position: relative;
+  margin-right: 26px;
+}
+
+.class-home::after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/icons/breadcrumbs-vector-1.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 8px;
+  min-height: 11px;
+  top: 5px;
+  left: 26px;
+}
 
 /* End Хлебные крошки */
 
@@ -590,41 +890,75 @@ body {
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
-  min-width: 160px;
   margin: 0;
   padding: 0;
   list-style-type: none;
   gap: 8px;
 }
 
-.view-button-container {
+.view-list-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid rgb(0, 0, 0);
-  padding: 0;
+  border: 3px solid rgb(229, 229, 229);
   width: 48px;
   height: 48px;
-  border-radius: 4px 4px;
+  border-radius: 4px;
 }
 
-
-.view-not-checked {
-  border-color: rgb(229, 229, 229);
+.view-list-link:hover {
+  border-color: rgb(0, 0, 0);
 }
 
+.view-list-link:focus,
+.view-list-link:focus-visible  {
+  border: 3px solid rgb(104, 162, 202);
+}
+
+.view-list-link:active {
+  border-color: rgb(0, 0, 0);
+}
+
+.view-card-list-link {
+  background-image: url("../images/icons/view-cards.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.view-slider-list-link {
+  background-image: url("../images/icons/view-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.view-list-list-link {
+  background-image: url("../images/icons/view-list.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 .select-sort-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 292px;
-  height: 49px;
+  min-width: 292px;
+  min-height: 49px;
   padding: 14px 20px;
   border: 2px solid rgb(229, 229, 229);
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.select-sort-list:disabled {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.select-sort-list:hover {
+  border-radius: 4px;
+  outline: 3px solid rgb(131, 179, 211);
+}
+
+.select-list-sort-label {
   margin-right: 70px;
 }
+
 
 
 /* End Сортировка */
@@ -644,7 +978,7 @@ body {
 .catalog-list-item {
   display: grid;
   grid-template-columns: repeat(2, 140px);
-   grid-template-rows: 212px 1fr;
+  grid-template-rows: 212px 1fr;
   align-items: center;
   min-height: 438px;
   padding: 20px;
@@ -668,26 +1002,11 @@ body {
   grid-column: 1/span 2;
 }
 
-/* Вопрос! Не выходит сделать внтуренние части карточки на гридах */
 
 .catalog-card-title {
   margin: 0;
   grid-column: 1/span 2;
 }
-
-
-/* .catalog-card-details {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 135px;
-}  */
-
-/* .card-rating-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: end;
-  gap: 20px;
-} */
 
 .catalog-card-rate {
   display: block;
@@ -701,22 +1020,57 @@ body {
 }
 
 .catalog-stars {
-  display: block;
+  background-image: url("../images/catalog/rate_star_1.svg");
+  background-position: center;
+  background-repeat: space no-repeat;
+  min-height: 17px;
 }
 
-/* Вопрос! Реитинг и звезды */
+.catalog-card-stars-1 {
+  width: 18px;
+}
+
+.catalog-card-stars-2 {
+  width: 42px;
+}
+
+.catalog-card-stars-3 {
+  width: 66px;
+}
+
+.catalog-card-stars-4 {
+  width: 89px;
+}
+
+.catalog-card-stars-5 {
+  width: 113px;
+}
+
 /* End Каталог */
 
 
 
 /* Пагинация */
+.pagination {
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.pagination-list::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background-color: rgb(230, 230, 230);
+  top: -35px;
+  min-width: 1060px;
+}
+
 .pagination-list {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 1060px;
   margin: 0;
-  margin-bottom: 60px;
   list-style-type: none;
   gap: 8px;
   padding: 0;
@@ -730,8 +1084,13 @@ body {
   border: none;
   border-radius: 4px;
   min-width: 60px;
-  height: 60px;
+  min-height: 60px;
   padding: 0 10px;
+  cursor: pointer;
+}
+
+.button-pagination:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .current-pagination {
