@@ -20,7 +20,7 @@
                 <a class="navigation-list-link" href="index.html" aria-current="page">Главная</a>
               </li>
               <li class="navigation-list-item">
-                <a class="navigation-list-link" href="#">О седоне</a>
+                <a class="navigation-list-link" href="#">О Седоне</a>
               </li>
               <li class="navigation-list-item">
                 <a class="navigation-list-link navigation-current" href="catalog.html">Гостиницы</a>
@@ -73,7 +73,7 @@
                   </a>
                 </li>
                 <li class="breadcrumbs-list-item">
-                  <a class="breadcrumbs-list-link">
+                  <a class="breadcrumbs-list-link" href="#">
                     <span class="breadcrumbs-title">Гостиницы</span>
                   </a>
                 </li>
@@ -86,21 +86,21 @@
                 <ul class="forms-filters-list">
                   <li class="forms-filters-list-item">
                     <label class="forms-infrastructure forms-input-points">
-                      <input class="visually-hidden forms-control-input" type="checkbox" name="swimming-pool" checked>
+                      <input class="visually-hidden forms-control-input" type="checkbox" name="swimming-pool" tabindex="-1" checked>
                       <span class="control-mark input-decoration" tabindex="0"></span>
                       <span class="input-checkbox-point">Бассейн</span>
                     </label>
                   </li>
                   <li class="forms-filters-list-item">
                     <label class="forms-infrastructure forms-input-points">
-                      <input class="visually-hidden  forms-control-input" type="checkbox" name="parking" checked>
+                      <input class="visually-hidden  forms-control-input" type="checkbox" name="parking" tabindex="-1" checked>
                       <span class="control-mark input-decoration " tabindex="0"></span>
                       <span class="input-checkbox-point">Парковка</span>
                     </label>
                   </li>
                   <li class="forms-filters-list-item">
                     <label class="forms-infrastructure forms-input-points">
-                      <input class="visually-hidden  forms-control-input" type="checkbox" name="wi-fi">
+                      <input class="visually-hidden  forms-control-input" type="checkbox" name="wi-fi" tabindex="-1">
                       <span class="control-mark input-decoration" tabindex="0"></span>
                       <span class="input-checkbox-point">Wi-Fi</span>
                     </label>
@@ -113,7 +113,7 @@
                   <li class="forms-filters-list-item radio-filters-list-item">
                     <label class="forms-housing forms-input-points">
                       <input class="visually-hidden  forms-control-input" type="radio" name="housing-radio-group"
-                        value="hotel" checked>
+                        value="hotel" tabindex="-1" checked>
                       <span class="control-mark input-decoration" tabindex="0"></span>
                       <span class="hotel-filters-housing-point">Гостиница</span>
                     </label>
@@ -121,7 +121,7 @@
                   <li class="forms-filters-list-item radio-filters-list-item">
                     <label class="forms-housing forms-input-points">
                       <input class="visually-hidden  forms-control-input" type="radio" name="housing-radio-group"
-                        value="Motel">
+                        value="Motel" tabindex="-1">
                       <span class="control-mark input-decoration" tabindex="0"></span>
                       <span class="hotel-filters-housing-point">Мотель</span>
                     </label>
@@ -129,7 +129,7 @@
                   <li class="forms-filters-list-item radio-filters-list-item">
                     <label class="forms-housing forms-input-points">
                       <input class="visually-hidden  forms-control-input" type="radio" name="housing-radio-group"
-                        value="Apartments">
+                        value="Apartments" tabindex="-1">
                       <span class="control-mark input-decoration" tabindex="0"></span>
                       <span class="hotel-filters-housing-point">Апартаменты</span>
                     </label>
@@ -206,7 +206,7 @@
                 <li class="catalog-list-item">
                   <img class="catalog-card-image" src="images/catalog/hotel-1.jpg" width="300" height="212"
                     alt="Гостиница Amara Resort & Spa.">
-                  <h3 class="catalog-card-title title-h3">Amara Resort & Spa</h3>
+                  <h3 class="catalog-card-title title-h3">Amara Resort &#38; Spa</h3>
                   <p class="catalog-card-type">Гостиница</p>
                   <p class="catalog-card-price">От 4000 ₽</p>
                   <a class="button button-catalog-more-details button-link-decoration" href="#">Подробнее</a>
@@ -286,7 +286,7 @@
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="news-letter-input">
               <input class="input-newsletter input-decoration" name="field-newsletter" type="email"
-                placeholder="Ваш e-mail">
+                placeholder="Ваш e-mail" required>
             </label>
             <button class="button button-subscribe button-primary-decoration" type="submit">Подписаться</button>
           </form>

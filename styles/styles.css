@@ -111,7 +111,7 @@ body {
   font-size: 22px;
   line-height: 26px;
   margin: 0;
-  margin-bottom: 100px;
+  margin-bottom: 88px;
 }
 
 .text-uppercase {
@@ -201,6 +201,8 @@ body {
 }
 
 .button-subscribe {
+  font-size: 20px;
+  line-height: 36px;
   width: 232px;
   min-height: 52px;
   background-color: rgb(130, 179, 211);
@@ -208,11 +210,11 @@ body {
 }
 
 .button-navigation-list-link {
+  position: relative;
   background-color: rgb(117, 97, 87);
   min-width: 160px;
   min-height: 36px;
-  padding: 8px 50px;
-  position: relative;
+  padding: 8px 30px;
 }
 
 .button-apply {
@@ -322,17 +324,21 @@ body {
   padding: 22px 12px;
 }
 
+
 .navigation-search {
   cursor: pointer;
-  margin-right: 6px;
 }
 
 .navigation-search:hover,
-.navigation-search:focus,
-.navigation-favorite:hover,
-.navigation-favorite:focus {
+.navigation-favorite:hover {
   color: rgb(131, 179, 211);
 }
+
+.navigation-favorite:focus,
+.navigation-search:focus {
+  outline: 3px solid rgb(131, 179, 211);
+}
+
 
 .navigation-search:active,
 .navigation-favorite:active {
@@ -365,6 +371,7 @@ body {
 }
 
 .navigation-list-link {
+  display: block;
   position: relative;
   color: rgb(0, 0, 0);
   text-decoration: none;
@@ -372,7 +379,6 @@ body {
   font-size: 20px;
   font-weight: 700;
   padding: 20px 16px;
-  display: block;
 }
 
 .navigation-list-link:hover::after {
@@ -384,7 +390,14 @@ body {
   right: 12px;
   bottom: 0;
   top: 62px;
+}
 
+.navigation-list-link:focus {
+  outline: 2px solid rgb(104, 162, 202);
+}
+
+.navigation-list-link:active {
+  opacity: 0.6;
 }
 
 .navigation-list-menu {
@@ -402,6 +415,10 @@ body {
   display: block;
 }
 
+.header-logo-link:focus {
+  outline: 3px solid rgb(131, 179, 211);
+}
+
 /* End Header */
 
 
@@ -412,7 +429,7 @@ body {
 }
 
 .hero {
-  margin-bottom: 69px;
+  margin-bottom: 65px;
 }
 
 .reasons-title {
@@ -449,12 +466,12 @@ body {
 }
 
 .total {
-  margin-bottom: 96px;
+  margin-bottom: 94px;
 }
 
 .total-title {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .total-title-low {
@@ -467,7 +484,7 @@ body {
 
 /* Footer */
 .page-footer {
-  padding-top: 40px;
+  padding-top: 45px;
   padding-bottom: 30px;
 }
 
@@ -491,6 +508,7 @@ body {
 
 .phone:focus {
   color: rgb(117, 97, 87);
+  outline: 3px solid rgb(131, 179, 211);
 }
 
 .phone:hover {
@@ -511,7 +529,7 @@ body {
   justify-content: space-between;
   list-style-type: none;
   padding: 0;
-  gap: 25px;
+  gap: 6px;
   margin: 0;
 }
 
@@ -523,8 +541,16 @@ body {
   color: rgb(131, 179, 211);
 }
 
+.social-button:focus {
+  outline: 3px solid rgb(131, 179, 211);
+}
+
 .htmlacademy-logo-link {
   color: rgb(0, 0, 0);
+}
+
+.htmlacademy-logo-link:focus {
+  outline: 3px solid rgb(131, 179, 211);
 }
 
 .footer-logo {
@@ -573,6 +599,8 @@ body {
   margin-bottom: 20px;
 }
 
+/* Вопрос! Не выходит выровнять титульник в рассылке по горизонтали (текс в макете шире) */
+
 .newsletter-description {
   margin: 0;
   margin-bottom: 54px;
@@ -612,6 +640,11 @@ body {
   aspect-ratio: 80/77;
 }
 
+.reasons-list-item:last-child {
+  display:flex;
+  flex-direction: row-reverse;
+}
+
 .reasons-list {
   display: flex;
   flex-wrap: wrap;
@@ -625,7 +658,7 @@ body {
   position: relative;
   margin: 0;
   margin-bottom: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 32px;
 }
 
 .title-reasons::after {
@@ -841,9 +874,6 @@ body {
 }
 
 .forms-hotel-filters-price-control {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 143px;
   padding: 12px 20px;
   border-radius: 4px;
@@ -853,7 +883,7 @@ body {
   font-family: "PT Sans", sans-serif;
   line-height: 24px;
   font-weight: 700;
-
+  padding-right: 40px;
 }
 
 .forms-hotel-filters-price-control::-webkit-outer-spin-button,
@@ -949,20 +979,21 @@ body {
 }
 
 .breadcrumbs-list-link {
-  color: rgb(255, 255, 255);
   display: block;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
 }
 
 .breadcrumbs-list-link:hover {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.breadcrumbs-list-item:active {
-  color: rgba(255, 255, 255, 0.3);
+.breadcrumbs-list-link:focus {
+  outline: 2px solid rgb(104, 162, 202);
 }
 
-.breadcrumbs-list-item:hover {
-  color: rgba(255, 255, 255, 0.6);
+.breadcrumbs-list-link:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .class-home {
@@ -970,7 +1001,7 @@ body {
   margin-right: 26px;
 }
 
-.class-home::after {
+.class-home:not(:last-child)::after {
   content: "";
   position: absolute;
   background-image: url("../images/icons/breadcrumbs-vector-1.svg");
@@ -980,6 +1011,10 @@ body {
   min-height: 11px;
   top: 5px;
   left: 26px;
+}
+
+.class-home:focus {
+  outline: 3px solid rgb(131, 179, 211);
 }
 
 /* End Хлебные крошки */
@@ -1251,6 +1286,7 @@ body {
 .modal-title {
   margin: 0;
   margin-bottom: 64px;
+  padding-right: 40px;
 }
 
 .modal-reservation {
@@ -1338,8 +1374,13 @@ body {
   padding: 12px 36px 12px 20px;
 }
 
-.modal-date-input::placeholder {
-  font-weight: 400;
+.modal-date-input:focus {
+  outline: 2px solid rgb(131, 179, 211);
+  background-color: rgb(230, 230, 230);
+}
+
+.modal-date-input:hover {
+  background-color: rgb(230, 230, 230);
 }
 
 .modal-date-label {
@@ -1359,8 +1400,8 @@ body {
   opacity: 1;
 }
 
-.button-calendar:hover,
 .button-calendar:focus {
+  outline:2px solid rgb(131, 179, 211);
   opacity: 1;
 }
 
@@ -1381,9 +1422,19 @@ body {
   height: 48px;
 }
 
+.modal-category-input:focus {
+  border: 3px solid rgb(131, 179, 211);
+  outline: none;
+  background-color: rgb(230, 230, 230);
+}
+
+.modal-category-input:hover {
+  background-color: rgb(230, 230, 230);
+}
+
 .button-toogle-lower {
-  width: 40px;
-  height: 48px;
+  min-width: 40px;
+  min-height: 48px;
   padding: 0;
   border-radius: 4px 0 0 4px;
 }
@@ -1396,8 +1447,8 @@ body {
 }
 
 .button-toogle-greater {
-  width: 40px;
-  height: 48px;
+  min-width: 40px;
+  min-height: 48px;
   padding: 0;
   border-radius: 0 4px 4px 0;
 }

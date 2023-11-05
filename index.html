@@ -18,7 +18,7 @@
                 <a class="navigation-list-link navigation-current" href="index.html" aria-current="page">Главная</a>
               </li>
               <li class="navigation-list-item">
-                <a class="navigation-list-link" href="#">О седоне</a>
+                <a class="navigation-list-link" href="#">О Седоне</a>
               </li>
               <li class="navigation-list-item">
                 <a class="navigation-list-link" href="catalog.html">Гостиницы</a>
@@ -71,7 +71,7 @@
               <div class="reasons-and-services-container">
                 <h3 class="title-reasons title-h3 text-white text-uppercase reasons-primary-decoration">
                   Настоящий<br>городок</h3>
-                <p class="reasons-description text-white">Седона — не аттракцион<br>для туристов, там
+                <p class="reasons-description text-white">Седона — не аттракцион для<br>туристов, там
                   течёт
                   своя<br>жизнь</p>
               </div>
@@ -110,7 +110,7 @@
         </section>
         <section class="services">
           <h2 class="visually-hidden">Услуги.</h2>
-          <p class="services-title text-align-center title-h2 text-uppercase">Приезжайте в Седону отдохнуть в комфорте и
+          <p class="services-title text-align-center title-h2 text-uppercase">Приезжайте в Седону отдохнуть<br>в комфорте и
             уюте!</p>
           <p class="services-title-low text-description-h2 text-align-center">Опытный персонал и качественное
             обслуживание</p>
@@ -118,7 +118,7 @@
             <li class="services-list-item card-index card-accent">
               <div class="reasons-and-services-container">
                 <img class="image-service" src="images/icons/housing-reasons.svg" width="75" height="72" alt="Дом">
-                <h3 class="services-title-card title-h3 text-uppercase">Жилье</h3>
+                <h3 class="services-title-card title-h3 text-uppercase">Жильё</h3>
                 <p class="services-description-card">Рекомендуем пожить<br>в настоящем мотеле,<br>
                   всё как в кино!</p>
               </div>
@@ -134,7 +134,7 @@
             </li>
             <li class="services-list-item card-index card-accent">
               <div class="reasons-and-services-container">
-                <img class="image-service" src="images/icons/souvenirs-reasons.svg" width="64" height="76"
+                <img class="image-service" src="images/icons/souvenirs-reasons.svg" width="75" height="72"
                   alt="Подарок.">
                 <h3 class="services-title-card title-h3 text-uppercase">Сувениры</h3>
                 <p class="services-description-card">Не только китайского,<br>но и настоящего
@@ -164,7 +164,7 @@
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="newsletter-field-subscribe">
               <input class="input-newsletter input-decoration" name="field-newsletter" type="email"
-                placeholder="Ваш e-mail">
+                placeholder="Ваш e-mail" required>
             </label>
             <button class="button button-subscribe button-primary-decoration" type="submit">Подписаться</button>
           </form>
@@ -216,8 +216,8 @@
           </a>
         </div>
       </footer>
-      <!--       Модальное окно -->
-      <div class="modal-container">
+      <!--Модальное окно -->
+      <div class="modal-container modal-window-close">
         <div class="modal modal-reservation">
           <button class="modal-close-button" type="button">
             <span class="visually-hidden">Закрыть.</span>
@@ -275,14 +275,14 @@
                   <span class="modal-input-title adult-title">Взрослые:</span>
                   <label class="modal-adult" for="adult">
                   </label>
-                  <button class="button button-toogle-lower" type="button">
+                  <button class="button button-toogle-lower" type="button" tabindex="-1">
                     <svg class="minus-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
                       tabindex="0" width="20" height="20" fill="none" viewBox="0 0 20 20">
                       <path fill="currentColor" d="M3 9v2h14V9H3Z" />
                     </svg>
                   </button>
                   <input class="modal-category-input" type="number" name="adult-input" value="2" max="99" id="adult">
-                  <button class="button button-toogle-greater" type="button">
+                  <button class="button button-toogle-greater" type="button" tabindex="-1">
                     <svg class="plus-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
                       tabindex="0" width="20" height="20" fill="none" viewBox="0 0 20 20">
                       <path fill="currentColor" d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" />
@@ -304,7 +304,7 @@
                     </span>
                   </span>
                   <div class="modal-input-group">
-                    <button class="button button-toogle-lower" type="button">
+                    <button class="button button-toogle-lower" type="button" tabindex="-1">
                       <svg class="minus-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
                         tabindex="0" width="20" height="20" fill="none" viewBox="0 0 20 20">
                         <path fill="currentColor" d="M3 9v2h14V9H3Z" />
@@ -312,7 +312,7 @@
                     </button>
                     <input class="modal-category-input" type="number" name="children-input" value="2" max="99"
                       id="children">
-                    <button class="button button-toogle-greater" type="button">
+                    <button class="button button-toogle-greater" type="button" tabindex="-1">
                       <svg class="plus-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
                         tabindex="0" width="20" height="20" fill="none" viewBox="0 0 20 20">
                         <path fill="currentColor" d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" />
@@ -326,7 +326,7 @@
           </section>
         </div>
       </div>
-      <!--    End Модальное окно -->
+      <!--End Модальное окно -->
     </div>
   </body>
 
