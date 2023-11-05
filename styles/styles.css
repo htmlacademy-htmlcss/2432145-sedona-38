@@ -47,7 +47,8 @@ body {
 
 .visually-hidden {
   position: absolute;
-  clip: rect(0, 0, 0);
+  clip: rect(0 0 0);
+  clip-path: inset(100%);
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -119,6 +120,10 @@ body {
 
 .text-white {
   color: rgb(255, 255, 255);
+}
+
+.text-error {
+  color: rgb(255, 87, 87);
 }
 
 .text-align-center {
@@ -259,9 +264,10 @@ body {
 }
 
 .modal-button-find {
+  font-size: 20px;
   min-width: 577px;
-  min-height: 40px;
-  background-color:rgb(131, 179, 211);
+  min-height: 60px;
+  background-color: rgb(131, 179, 211);
 }
 
 .modal-button-find:hover,
@@ -724,6 +730,7 @@ body {
 }
 
 .control-mark {
+  display: block;
   position: absolute;
   width: 20px;
   height: 20px;
@@ -731,9 +738,8 @@ body {
   border: 1px solid rgb(255, 255, 255);
   background-color: rgba(255, 255, 255, 1);
   left: 2px;
+  top: 2px;
 }
-
-/* Вопрос! Не получается повесить фокус на кастомные инпуты */
 
 .forms-control-input[type="checkbox"]:checked + .control-mark::before {
   content: "";
@@ -911,7 +917,7 @@ body {
   transform: translateY(-50%)
 }
 
-/* Вопрос! по позиционирование кнопок ползунков в цене фильтра */
+
 
 .input-checkbox-point {
   line-height: 23px;
@@ -928,8 +934,6 @@ body {
   align-self: flex-end;
   margin-top: 55px;
 }
-
-/* Вопрос! Выравнивание группы кнопок принять/сбросить. */
 
 /* End Фильтр */
 
@@ -1234,7 +1238,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
-/*   display: none; */
+  z-index: 9;
 }
 
 .modal {
@@ -1246,7 +1250,7 @@ body {
 
 .modal-title {
   margin: 0;
-  text-align: left;
+  margin-bottom: 64px;
 }
 
 .modal-reservation {
@@ -1261,9 +1265,6 @@ body {
   height: 53px;
   border: 1px solid transparent;
   background-color: rgb(242, 242, 242);
-  background-image: url("../images/icons/cross.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -1273,25 +1274,235 @@ body {
 }
 
 .modal-close-button:focus {
-  outline: rgb(131, 179, 211);
+  outline: 2px solid rgb(131, 179, 211);
   background-color: rgb(230, 230, 230);
 }
 
 .modal-close-button:active {
-  color: rgb(230, 230, 230);
+  background-color: rgb(230, 230, 230);
+  color: rgb(128, 128, 128);
 }
 
-.modal-field-group {
-  border: none;
+.modal-form-reservation {
+  display: grid;
+  grid-template-columns: 247px 242px;
+  min-width: 577px;
 }
+
+.modal-wrapper-date {
+  display: flex;
+  width: 577px;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.modal-wrapper-category {
+  display: flex;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+
+.modal-field-group:nth-child(1),
+.modal-field-group:nth-child(2) {
+  grid-column: 1/-1;
+}
+
+.modal-input-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-right: auto;
+}
+
+.modal-input-description {
+  font-size: 16px;
+  line-height: 21px;
+  margin: 0;
+  margin-left: 158px;
+  margin-bottom: 23px;
+
+}
+
 
 .modal-date-input {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 24px;
+  font-weight: 700;
   min-width: 440px;
-  min-height: 40px;
+  height: 48px;
   background-color: rgb(242, 242, 242);
   border: none;
-  padding: 12px 20px;
+  border-radius: 4px;
+  padding: 12px 36px 12px 20px;
+}
+
+.modal-date-input::placeholder {
+  font-weight: 400;
+}
+
+.modal-date-label {
+  position: relative;
+}
+
+.button-calendar {
+  position: absolute;
+  padding: 5px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  right: 84px;
+  opacity: 0.3;
+}
+
+.button-calendar:hover {
+  opacity: 1;
+}
+
+.button-calendar:hover,
+.button-calendar:focus {
+  opacity: 1;
+}
+
+.button-calendar:active {
+  opacity: 0.3;
+}
+
+.modal-category-input {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  appearance: none;
+  border: none;
+  background-color: rgb(242, 242, 242);
+  width: 30px;
+  height: 48px;
+}
+
+.button-toogle-lower {
+  width: 40px;
+  height: 48px;
+  padding: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+.minus-svg,
+.plus-svg {
+  display: block;
+  color: rgba(117, 97, 87, 0.3);
+  margin: auto;
+}
+
+.button-toogle-greater {
+  width: 40px;
+  height: 48px;
+  padding: 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.minus-svg:hover,
+.plus-svg:hover {
+  color: rgb(0, 0, 0);
+}
+
+.minus-svg:focus,
+.plus-svg:focus {
+  outline: 3px solid rgb(130, 179, 211);
+}
+
+.minus-svg:active,
+.plus-svg:active {
+  opacity: 0.2;
+  outline: none;
+}
+
+.modal-input-group {
+  display: flex;
+}
+
+.modal-input-title.adult-title {
+  margin-right: 46px;
+}
+
+.modal-input-title.children-title {
+  margin-left: 88px;
+  margin-right: 82px;
+}
+
+.button-tooltip {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(104, 162, 202);
+  ;
+  background-image: url("../images/icons/tooltip.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  top: -40px;
+  left: 110px;
+}
+
+.button-tooltip:hover {
+  background-color: rgb(131, 179, 211);
+}
+
+.button-tooltip:hover + .tooltip-text,
+.button-tooltip:focus + .tooltip-text {
+  display: block;
+}
+
+.button-tooltip:active {
+  opacity: 0.6;
+}
+
+.tooltip {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-top: 27px;
+  transform: translateX(-186px)
+}
+
+.tooltip-text {
+  display: none;
+  background-color: rgb(51, 51, 51);
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  line-height: 20px;
+  padding: 15px 18px 18px 22px;
+  border-radius: 10px;
+  width: 256px;
+  z-index: 8;
+}
+
+
+/* Уголок тултипа */
+.tooltip-text::before {
+  content: "";
+  position: absolute;
+  width: 19px;
+  height: 9px;
+  background-image: url("../images/dark-triangle-tooltip.svg");
+  background-repeat: no-repeat;
+  top: -9px;
+  left: 114px;
+}
+
+/* End Уголок тултипа */
+
+.modal-category-input::-webkit-outer-spin-button,
+.modal-category-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  -moz-appearance: textfield;
+  appearance: none;
+}
+
+.modal-window-close {
+  display: none;
 }
