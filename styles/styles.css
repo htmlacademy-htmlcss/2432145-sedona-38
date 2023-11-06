@@ -216,6 +216,7 @@ body {
   min-width: 160px;
   min-height: 36px;
   padding: 8px 30px;
+  transform: translateX(-3px);
 }
 
 .button-apply {
@@ -314,9 +315,9 @@ body {
   height: 2px;
   background-color: rgb(117, 98, 87);
   left: 12px;
-  right: 17px;
+  right: 12px;
   bottom: 0;
-  top: 62px;
+  top: 63px;
 }
 
 .navigation-list-button {
@@ -388,8 +389,8 @@ body {
   background-color: rgb(117, 98, 87);
   height: 2px;
   left: 12px;
-  right: 17px;
-  top: 62px;
+  right: 12px;
+  top: 63px;
 }
 
 .navigation-list-link:focus {
@@ -403,6 +404,7 @@ body {
 .navigation-list-menu {
   display: flex;
   flex-grow: 1;
+  margin-left: -2px;
 }
 
 .navigation-list-menu .navigation-list-item {
@@ -986,6 +988,7 @@ body {
   flex-direction: column;
   row-gap: 30px;
   margin-top: 55px;
+  transform: translate(-2px);
 }
 
 /* End Фильтр */
@@ -1304,21 +1307,19 @@ body {
   z-index: 9;
 }
 
-.modal {
+.modal-reservation {
   position: relative;
   margin: auto;
   padding: 64px 70px;
   background-color: rgb(255, 255, 255);
+  min-width: 717px;
+  border-radius: 4px;
 }
 
 .modal-title {
   margin: 0;
   margin-bottom: 64px;
   padding-right: 40px;
-}
-
-.modal-reservation {
-  min-width: 717px;
 }
 
 .modal-close-button {
@@ -1331,6 +1332,7 @@ body {
   background-color: rgb(242, 242, 242);
   border-radius: 50%;
   cursor: pointer;
+  transform: translate(11px, 4px);
 }
 
 .modal-close-button:hover {
@@ -1517,13 +1519,12 @@ body {
   border-radius: 50%;
   border: none;
   background-color: rgb(104, 162, 202);
-  ;
   background-image: url("../images/icons/tooltip.svg");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
-  top: -40px;
-  left: 110px;
+  top: -38px;
+  left: 115px;
 }
 
 .button-tooltip:hover {
@@ -1553,10 +1554,12 @@ body {
   color: rgb(255, 255, 255);
   font-size: 16px;
   line-height: 20px;
-  padding: 15px 18px 18px 22px;
+  padding: 19px 18px 18px 22px;
   border-radius: 10px;
   width: 256px;
+  min-height: 143px;
   z-index: 8;
+  transform: translateY(3px);
 }
 
 
@@ -1569,7 +1572,7 @@ body {
   background-image: url("../images/dark-triangle-tooltip.svg");
   background-repeat: no-repeat;
   top: -9px;
-  left: 114px;
+  left: 118px;
 }
 
 /* End Уголок тултипа */
