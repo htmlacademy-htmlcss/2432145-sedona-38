@@ -207,6 +207,7 @@ body {
   min-height: 52px;
   background-color: rgb(130, 179, 211);
   border-radius: 0 4px 4px 0;
+  padding-bottom: 6px;
 }
 
 .button-navigation-list-link {
@@ -288,13 +289,13 @@ body {
 .page-header {
   margin-bottom: -8px;
   z-index: 2;
-  padding-bottom: 4px;
+  padding-bottom: 2px;
 }
 
 .navigation {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 31px;
 }
 
 .navigation-list {
@@ -313,7 +314,7 @@ body {
   height: 2px;
   background-color: rgb(117, 98, 87);
   left: 12px;
-  right: 12px;
+  right: 17px;
   bottom: 0;
   top: 62px;
 }
@@ -352,7 +353,7 @@ body {
 .navigation-favorite {
   position: relative;
   cursor: pointer;
-  margin-right: 20px;
+  margin-right: 25px;
 }
 
 .navigation-favorite::after {
@@ -364,9 +365,9 @@ body {
   font-size: 10px;
   line-height: 10px;
   text-align: center;
-  padding: 4px;
+  padding: 5px;
   position: absolute;
-  top: 10px;
+  top: 8px;
   right: 2px;
 }
 
@@ -387,8 +388,7 @@ body {
   background-color: rgb(117, 98, 87);
   height: 2px;
   left: 12px;
-  right: 12px;
-  bottom: 0;
+  right: 17px;
   top: 62px;
 }
 
@@ -405,10 +405,16 @@ body {
   flex-grow: 1;
 }
 
+.navigation-list-menu .navigation-list-item {
+  margin-bottom: 6px;
+}
+
 .navigation-list-user {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin-bottom: 4px;
+  margin-right: -4px;
 }
 
 .logo-image {
@@ -621,6 +627,7 @@ body {
   border-radius: 4px 0 0 4px;
   border: none;
   padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* End Рассылка */
@@ -641,7 +648,7 @@ body {
 }
 
 .reasons-list-item:last-child {
-  display:flex;
+  display: flex;
   flex-direction: row-reverse;
 }
 
@@ -721,6 +728,15 @@ body {
 
 
 /* Фильтр */
+.inner-header {
+  margin-left: -4px;
+}
+
+.inner-header-title {
+  margin: 0;
+  margin-bottom: 8px;
+}
+
 .filter {
   display: flex;
   flex-direction: column;
@@ -730,7 +746,8 @@ body {
   background-size: 100% 100%;
   padding-top: 35px;
   padding-bottom: 70px;
-  margin-bottom: 55px;
+  padding-left: 9px;
+  margin-bottom: 49px;
 
 }
 
@@ -740,7 +757,8 @@ body {
 }
 
 .checkbox-infrastructure {
-  margin-right: 70px;
+  margin-right: 68px;
+  margin-left: -2px;
 }
 
 .radio-housing {
@@ -770,7 +788,7 @@ body {
   border-radius: 4px;
   border: 1px solid rgb(255, 255, 255);
   background-color: rgba(255, 255, 255, 1);
-  left: 2px;
+  left: -2px;
   top: 2px;
 }
 
@@ -806,11 +824,6 @@ body {
   opacity: 0.6;
 }
 
-.inner-header-title {
-  margin: 0;
-  margin-bottom: 8px;
-}
-
 .forms-group {
   border: none;
   padding: 0;
@@ -821,6 +834,7 @@ body {
   font-weight: 700;
   line-height: 24px;
   margin-bottom: 32px;
+  padding: 0;
 }
 
 .forms-filters-list {
@@ -830,7 +844,7 @@ body {
 }
 
 .forms-filters-list-item {
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 .forms-filters-list-item:nth-last-child(1) {
@@ -894,11 +908,20 @@ body {
   appearance: none;
 }
 
+.range {
+  display: flex;
+  flex-wrap: wrap;
+  width: 288px;
+}
+
+/* Вопрос! Фиксированная ширина контейнера для переполнения. */
+
 .range-wrapper-inputs {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 2px;
-  margin-bottom: 42px;
+  margin-bottom: 37px;
+  flex-wrap: wrap;
 }
 
 .range-scale {
@@ -907,6 +930,7 @@ body {
   background-color: rgb(128, 128, 128);
   border-radius: 4px;
   transform: rotate(180deg);
+  width: 287px;
 }
 
 .range-bar {
@@ -960,8 +984,7 @@ body {
 .forms-buttons-apply-reset-container {
   display: flex;
   flex-direction: column;
-  row-gap: 32px;
-  align-self: flex-end;
+  row-gap: 30px;
   margin-top: 55px;
 }
 
@@ -998,7 +1021,7 @@ body {
 
 .class-home {
   position: relative;
-  margin-right: 26px;
+  margin-right: 17px;
 }
 
 .class-home:not(:last-child)::after {
@@ -1010,7 +1033,7 @@ body {
   min-width: 8px;
   min-height: 11px;
   top: 5px;
-  left: 26px;
+  left: 23px;
 }
 
 .class-home:focus {
@@ -1023,10 +1046,9 @@ body {
 /* Сортировка */
 .sorting-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 37px;
 }
 
 .sorting-search-title {
@@ -1036,7 +1058,6 @@ body {
 
 .view-list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
   margin: 0;
@@ -1090,6 +1111,9 @@ body {
 }
 
 .select-sort-list {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
   min-width: 292px;
   min-height: 49px;
   padding: 14px 20px;
@@ -1099,7 +1123,7 @@ body {
   appearance: none;
   background-image: url("../images/icons/arrow-select.svg");
   background-repeat: no-repeat;
-  background-position: right 20px center;
+  background-position: right 14px center;
   cursor: pointer;
 }
 
@@ -1122,13 +1146,17 @@ body {
 
 
 /* Каталог */
+.catalog-header {
+  margin-left: 4px;
+}
+
 .catalog-list {
   display: grid;
   grid-template-columns: repeat(3, 340px);
-  gap: 20px;
+  gap: 20px 20px;
   padding: 0;
   margin: 0;
-  margin-bottom: 80px;
+  margin-bottom: 81px;
   list-style-type: none;
 }
 
@@ -1173,7 +1201,7 @@ body {
   text-align: center;
   border: 4px solid rgb(242, 242, 242);
   background-color: rgb(242, 242, 242);
-  padding: 5px 17px;
+  padding: 3px 17px;
   border-radius: 4px;
 }
 
@@ -1220,7 +1248,7 @@ body {
   position: absolute;
   height: 1px;
   background-color: rgb(230, 230, 230);
-  top: -35px;
+  top: -40px;
   min-width: 1060px;
 }
 
@@ -1401,7 +1429,7 @@ body {
 }
 
 .button-calendar:focus {
-  outline:2px solid rgb(131, 179, 211);
+  outline: 2px solid rgb(131, 179, 211);
   opacity: 1;
 }
 
