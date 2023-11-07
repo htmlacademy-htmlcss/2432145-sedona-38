@@ -29,8 +29,8 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  color: rgb(51, 51, 51);
-  background-color: rgb(243, 243, 243);
+  color: #333333;
+  background-color: #f3f3f3;
   margin: 0;
   min-width: 1280px;
   height: 100%;
@@ -43,7 +43,7 @@ body {
   max-width: 1200px;
   min-height: 100%;
   margin: 0 auto;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
 }
 
 .visually-hidden {
@@ -69,6 +69,7 @@ img {
   max-width: 100%;
   object-fit: contain;
 }
+/* Вопрос! Почему max-width портит переполнение в хедере-логотип ужимается. */
 
 /* End Basic */
 
@@ -77,7 +78,7 @@ img {
 .title-h1,
 .title-h2,
 .title-h3 {
-  color: rgb(0, 0, 0);
+  color: #000000;
   font-weight: 700;
 }
 
@@ -109,13 +110,13 @@ img {
 }
 
 .text-white {
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 
 
 .text-error,
 .field:invalid {
-  color: rgb(255, 87, 87);
+  color: #ff5757;
 }
 
 .text-align-center {
@@ -143,7 +144,7 @@ img {
   font-family: "PT Sans", sans-serif;
   border: 1px solid transparent;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   text-align: center;
   padding: 8px 10px;
   text-transform: uppercase;
@@ -159,37 +160,37 @@ img {
 }
 
 .button:disabled {
-  color: rgb(255, 255, 255);
-  background-color: rgb(229, 229, 229);
+  color: #ffffff;
+  background-color: #e5e5e5;
 
 }
 
 .button-primary-decoration:hover {
-  background-color: rgb(104, 162, 202);
+  background-color: #68a2ca;
 }
 
 .button-primary-decoration:focus {
-  background-color: rgb(104, 162, 202);
+  background-color: #68a2ca;
 }
 
 .button-link-decoration:hover {
-  background-color: rgb(97, 80, 72);
+  background-color: #615048;
 }
 
 .button-link-decoration:focus {
-  background-color: rgb(97, 80, 72);
+  background-color: #615048;
 }
 
 .button-active:hover {
-  background-color: rgb(108, 158, 66);
+  background-color: #6c9e42;
 }
 
 .button-active:focus {
-  background-color: rgb(108, 158, 66);
+  background-color: #6c9e42;
 }
 
 .button-locked {
-  background-color: rgb(229, 229, 229);
+  background-color: #e5e5e5;
 }
 
 .button-subscribe {
@@ -197,24 +198,24 @@ img {
   line-height: 36px;
   width: 232px;
   min-height: 52px;
-  background-color: rgb(130, 179, 211);
+  background-color: #82b3d3;
   border-radius: 0 4px 4px 0;
   padding-bottom: 6px;
 }
 
 .button-navigation-list-link {
   position: relative;
-  background-color: rgb(117, 97, 87);
+  transform: translateX(-3px);
+  background-color: #756157;
   min-width: 160px;
   min-height: 36px;
   padding: 8px 30px;
-  transform: translateX(-3px);
 }
 
 .button-apply {
   min-width: 191px;
   min-height: 36px;
-  background-color: rgb(130, 179, 211);
+  background-color: #82b3d3;
 }
 
 .button-reset {
@@ -224,7 +225,7 @@ img {
 }
 
 .button-reset:focus {
-  outline: 3px solid rgb(131, 179, 211);
+  outline: 3px solid #83b3d3;
 }
 
 .button-reset:focus:not(:focus-visible) {
@@ -232,26 +233,26 @@ img {
 }
 
 .button-reset:focus-visible {
-  outline: 3px solid rgb(131, 179, 211);
+  outline: 3px solid #83b3d3;
 }
 
 .button-catalog-more-details {
-  background-color: rgb(117, 97, 87);
+  background-color: #756157;
 }
 
 .button-action {
-  background-color: rgb(130, 179, 211);
   min-width: 140px;
   min-height: 36px;
+  background-color: #82b3d3;
 }
 
 .button-active {
-  background-color: rgb(125, 181, 79);
+  background-color: #7db54f;
 }
 
 .button-large-to-catalog {
   display: block;
-  background-color: rgb(117, 97, 87);
+  background-color: #756157;
   min-width: 376px;
   min-height: 52px;
   font-size: 20px;
@@ -260,16 +261,16 @@ img {
 }
 
 .modal-button-find {
+  grid-column: 1/-1;
   font-size: 20px;
   min-width: 577px;
   min-height: 60px;
-  background-color: rgb(131, 179, 211);
-  grid-column: 1/-1;
+  background-color: #83b3d3;
 }
 
 .modal-button-find:hover,
 .modal-button-find:focus {
-  background-color: rgb(104, 162, 202);
+  background-color: #68a2ca;
 }
 
 .modal-button-find:active {
@@ -282,8 +283,8 @@ img {
 /* Header */
 .page-header {
   margin-bottom: -8px;
-  z-index: 2;
   padding-bottom: 2px;
+  z-index: 2;
 }
 
 .navigation {
@@ -302,14 +303,14 @@ img {
 }
 
 .navigation-current::after {
-  content: "";
   position: absolute;
-  height: 2px;
-  background-color: rgb(117, 98, 87);
+  content: "";
   left: 12px;
   right: 12px;
   bottom: 0;
   top: 63px;
+  height: 2px;
+  background-color: #756257;
 }
 
 .navigation-list-button {
@@ -325,18 +326,18 @@ img {
 
 .navigation-search:hover,
 .navigation-favorite:hover {
-  color: rgb(131, 179, 211);
+  color: #83b3d3;
 }
 
 .navigation-favorite:focus,
 .navigation-search:focus {
-  outline: 3px solid rgb(131, 179, 211);
+  outline: 3px solid #83b3d3;
 }
 
 
 .navigation-search:active,
 .navigation-favorite:active {
-  color: rgb(211, 211, 211);
+  color: #d3d3d3;
 }
 
 .navigation-svg {
@@ -350,24 +351,24 @@ img {
 }
 
 .navigation-favorite::after {
+  position: absolute;
   content: "12";
+  top: 8px;
+  right: 2px;
   font-family: "PT Sans", sans-serif;
-  border-radius: 10px;
-  background-color: rgb(125, 181, 79);
-  color: rgb(255, 255, 255);
   font-size: 10px;
   line-height: 10px;
   text-align: center;
   padding: 5px;
-  position: absolute;
-  top: 8px;
-  right: 2px;
+  border-radius: 10px;
+  background-color: #7db54f;
+  color: #ffffff;
 }
 
 .navigation-list-link {
-  display: block;
   position: relative;
-  color: rgb(0, 0, 0);
+  display: block;
+  color: #000000;
   text-decoration: none;
   line-height: 24px;
   font-size: 20px;
@@ -376,17 +377,17 @@ img {
 }
 
 .navigation-list-link:hover::after {
-  content: "";
   position: absolute;
-  background-color: rgb(117, 98, 87);
-  height: 2px;
+  content: "";
   left: 12px;
   right: 12px;
   top: 63px;
+  background-color: #756257;
+  height: 2px;
 }
 
 .navigation-list-link:focus {
-  outline: 2px solid rgb(104, 162, 202);
+  outline: 2px solid #68a2ca;
 }
 
 .navigation-list-link:active {
@@ -416,7 +417,7 @@ img {
 }
 
 .header-logo-link:focus {
-  outline: 3px solid rgb(131, 179, 211);
+  outline: 3px solid #83b3d3;
 }
 
 /* Вопрос! Логотип съезжает вниз при переполнении хедера */
@@ -428,7 +429,6 @@ img {
 /* Main */
 .main-general {
   flex-grow: 1;
-
 }
 
 .hero {
@@ -505,21 +505,21 @@ img {
   font-style: normal;
   line-height: 40px;
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: #000000;
   width: 330px;
 }
 
 .phone:focus {
-  color: rgb(117, 97, 87);
-  outline: 3px solid rgb(131, 179, 211);
+  color: #756157;
+  outline: 3px solid #83b3d3;
 }
 
 .phone:hover {
-  color: rgb(117, 97, 87);
+  color: #756157;
 }
 
 .phone:active {
-  color: rgba(117, 97, 87, 0.3);
+  color: #7561574d;
 }
 
 .phone:visited {
@@ -541,20 +541,20 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(131, 179, 211);
+  color: #83b3d3;
 }
 
 .social-button:focus {
-  outline: 3px solid rgb(131, 179, 211);
+  outline: 3px solid #83b3d3;
 }
 
 .htmlacademy-logo-link {
-  color: rgb(0, 0, 0);
+  color: #000000;
 }
 
 .htmlacademy-logo-link:focus {
-  outline: 3px solid rgb(131, 179, 211);
-  color: rgb(117, 97, 87);
+  outline: 3px solid #83b3d3;
+  color: #756157;
 }
 
 .footer-logo {
@@ -563,7 +563,7 @@ img {
 }
 
 .footer-logo:hover {
-  color: rgb(104, 162, 202);
+  color: #68a2ca;
 }
 
 .footer-logo:active {
@@ -575,7 +575,7 @@ img {
 }
 
 .htmlacademy-logo:hover {
-  color: rgb(117, 97, 87);
+  color: #756157;
 }
 
 .htmlacademy-logo:active {
@@ -592,7 +592,7 @@ img {
 }
 
 .newsletter-with-background {
-  background-color: rgb(130, 179, 211);
+  background-color: #82b3d3;
   background-image: url("../images/subscribe.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -602,11 +602,10 @@ img {
   margin: 0;
   margin-bottom: 20px;
   letter-spacing: 2px;
-
   transform: translate(4px, -3px);
 }
 
-/* Вопрос! Не выходит выровнять титульник в рассылке по горизонтали (текс в макете шире) */
+/* Вопрос! Не выходит выровнять титульник в рассылке по горизонтали (текст в макете шире) */
 
 .newsletter-description {
   margin: 0;
@@ -624,7 +623,7 @@ img {
   line-height: 24px;
   min-width: 452px;
   min-height: 52px;
-  background-color: rgb(242, 242, 242);
+  background-color: #f2f2f2;
   border-radius: 4px 0 0 4px;
   border: none;
   padding-left: 20px;
@@ -640,17 +639,11 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
   min-width: 400px;
   margin-top: auto;
   margin-bottom: auto;
   padding: 10px;
   aspect-ratio: 80/77;
-}
-
-.reasons-list-item:last-child {
-  display: flex;
-  flex-direction: row-reverse;
 }
 
 .reasons-list {
@@ -661,6 +654,10 @@ img {
   padding: 0;
 }
 
+.reasons-list-item:last-child {
+  display: flex;
+  flex-direction: row-reverse;
+}
 
 .title-reasons {
   position: relative;
@@ -668,14 +665,15 @@ img {
   margin-bottom: 30px;
   padding-bottom: 32px;
 }
+/* Вопрос! Переполнение списка преимуществ и услуг */
 
 .title-reasons::after {
   position: absolute;
   content: "";
-  height: 2px;
-  background-color: rgba(0, 0, 0, 0.3);
   bottom: 0;
   left: 50%;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
   width: 60px;
   transform: translateX(-50%);
 }
@@ -705,7 +703,7 @@ img {
 
 .card-primary {
   display: flex;
-  background-color: rgb(130, 179, 211);
+  background-color: #82b3d3;
   width: 100%;
 }
 
@@ -741,7 +739,7 @@ img {
 .filter {
   display: flex;
   flex-direction: column;
-  background-color: rgb(130, 179, 211);
+  background-color: #82b3d3;
   background-image: url("../images/catalog/filter.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -755,6 +753,7 @@ img {
 .forms-filters {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .checkbox-infrastructure {
@@ -782,27 +781,27 @@ img {
 }
 
 .control-mark {
-  display: block;
   position: absolute;
+  left: -2px;
+  top: 2px;
+  display: block;
   width: 20px;
   height: 20px;
   border-radius: 4px;
-  border: 1px solid rgb(255, 255, 255);
-  background-color: rgba(255, 255, 255, 1);
-  left: -2px;
-  top: 2px;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
 }
 
 .forms-control-input[type="checkbox"]:checked + .control-mark::before {
-  content: "";
   position: absolute;
-  background-image: url("../images/icons/check-mark.svg");
-  background-repeat: no-repeat;
+  content: "";
   top: 50%;
   left: 50%;
-  transform: translateY(-50%) translateX(-50%);
   height: 10px;
   width: 12px;
+  background-image: url("../images/icons/check-mark.svg");
+  background-repeat: no-repeat;
+  transform: translateY(-50%) translateX(-50%);
 }
 
 .forms-housing .control-mark {
@@ -810,15 +809,15 @@ img {
 }
 
 .forms-control-input[type="radio"]:checked + .control-mark::before {
-  content: "";
   position: absolute;
-  background-color: rgb(63, 94, 114);
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
+  content: "";
   top: 50%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
+  background-color: #3f5e72;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
 }
 
 .forms-input-points:hover {
@@ -863,22 +862,22 @@ img {
 }
 
 .price-from::after {
-  content: "от";
   position: absolute;
+  content: "от";
   top: 12px;
   right: 20px;
   line-height: 21px;
-  color: rgb(0, 0, 0);
+  color: #000000;
   opacity: 0.4;
 }
 
 .price-to::after {
-  content: "до";
   position: absolute;
+  content: "до";
   top: 12px;
   right: 20px;
   line-height: 21px;
-  color: rgb(0, 0, 0);
+  color: #000000;
   opacity: 0.4;
 }
 
@@ -889,16 +888,16 @@ img {
 }
 
 .forms-hotel-filters-price-control {
-  width: 143px;
-  padding: 12px 20px;
-  border-radius: 4px;
-  border: none;
-  background-color: rgb(242, 242, 242);
   font-size: 18px;
   font-family: "PT Sans", sans-serif;
   line-height: 24px;
   font-weight: 700;
+  width: 143px;
+  padding: 12px 20px;
   padding-right: 40px;
+  border-radius: 4px;
+  border: none;
+  background-color: #f2f2f2;
 }
 
 .forms-hotel-filters-price-control::-webkit-outer-spin-button,
@@ -914,12 +913,10 @@ img {
   flex-wrap: wrap;
   width: 288px;
 }
-
 /* Вопрос! Фиксированная ширина контейнера для переполнения. */
 
 .range-wrapper-inputs {
   display: flex;
-  justify-content: flex-end;
   gap: 2px;
   margin-bottom: 37px;
   flex-wrap: wrap;
@@ -928,7 +925,7 @@ img {
 .range-scale {
   position: relative;
   height: 4px;
-  background-color: rgb(128, 128, 128);
+  background-color: #808080;
   border-radius: 4px;
   transform: rotate(180deg);
   width: 287px;
@@ -937,7 +934,7 @@ img {
 .range-bar {
   position: absolute;
   height: 4px;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
 }
 
 .forms-filters-scale-toogle {
@@ -945,18 +942,18 @@ img {
   width: 20px;
   height: 20px;
   border-radius: 5px;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
   cursor: pointer;
   border: none;
 }
 
 .forms-filters-scale-toogle:active {
-  background-color: rgb(211, 211, 211);
+  background-color: #d3d3d3;
 }
 
 .forms-filters-scale-toogle:hover,
 .forms-filters-scale-toogle:focus {
-  outline: 2px solid rgb(104, 162, 202);
+  outline: 2px solid #68a2ca;
 }
 
 
@@ -971,8 +968,6 @@ img {
   top: 50%;
   transform: translateY(-50%)
 }
-
-
 
 .input-checkbox-point {
   line-height: 23px;
@@ -1006,7 +1001,7 @@ img {
 
 .breadcrumbs-list-link {
   display: block;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -1015,7 +1010,7 @@ img {
 }
 
 .breadcrumbs-list-link:focus {
-  outline: 2px solid rgb(104, 162, 202);
+  outline: 2px solid #68a2ca;
 }
 
 .breadcrumbs-list-link:active {
@@ -1028,19 +1023,19 @@ img {
 }
 
 .class-home:not(:last-child)::after {
-  content: "";
   position: absolute;
+  content: "";
+  top: 5px;
+  left: 23px;
   background-image: url("../images/icons/breadcrumbs-vector-1.svg");
   background-repeat: no-repeat;
   background-position: center;
   min-width: 8px;
   min-height: 11px;
-  top: 5px;
-  left: 23px;
 }
 
 .class-home:focus {
-  outline: 3px solid rgb(131, 179, 211);
+  outline: 3px solid #83b3d3;
 }
 
 /* End Хлебные крошки */
@@ -1075,45 +1070,45 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid rgb(229, 229, 229);
+  border: 3px solid #e5e5e5;
   width: 48px;
   height: 48px;
   border-radius: 4px;
 }
 
 .view-list-link:hover {
-  border-color: rgb(0, 0, 0);
+  border-color: #000000;
 }
 
 .view-list-link:focus,
 .view-list-link:focus-visible {
-  border: 3px solid rgb(104, 162, 202);
+  border: 3px solid #68a2ca;
   outline: none;
 }
 
 .view-list-link:active {
-  border-color: rgb(0, 0, 0);
+  border-color: #000000;
 }
 
 .view-card-list-link {
+  display: block;
   background-image: url("../images/icons/view-cards.svg");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
 }
 
 .view-slider-list-link {
+  display: block;
   background-image: url("../images/icons/view-slider.svg");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
 }
 
 .view-list-list-link {
+  display: block;
   background-image: url("../images/icons/view-list.svg");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
 }
 
 .select-sort-list {
@@ -1123,7 +1118,7 @@ img {
   min-width: 292px;
   min-height: 49px;
   padding: 14px 20px;
-  border: 2px solid rgb(229, 229, 229);
+  border: 2px solid #e5e5e5;
   border-radius: 4px;
   padding-right: 32px;
   appearance: none;
@@ -1139,14 +1134,12 @@ img {
 
 .select-sort-list:hover {
   border-radius: 4px;
-  outline: 3px solid rgb(131, 179, 211);
+  outline: 3px solid #83b3d3;
 }
 
 .select-list-sort-label {
   margin-right: 70px;
 }
-
-
 
 /* End Сортировка */
 
@@ -1175,7 +1168,7 @@ img {
   padding: 20px;
   gap: 16px 20px;
   border-radius: 4px;
-  border: 1px solid rgb(230, 230, 230);
+  border: 1px solid #e6e6e6;
 }
 
 .catalog-card-type {
@@ -1205,8 +1198,8 @@ img {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
-  border: 4px solid rgb(242, 242, 242);
-  background-color: rgb(242, 242, 242);
+  border: 4px solid #f2f2f2;
+  background-color: #f2f2f2;
   padding: 3px 17px;
   border-radius: 4px;
 }
@@ -1245,16 +1238,16 @@ img {
 
 /* Пагинация */
 .pagination {
+  display: block;
   margin-bottom: 60px;
-  position: relative;
 }
 
 .pagination-list::before {
-  content: "";
   position: absolute;
-  height: 1px;
-  background-color: rgb(230, 230, 230);
+  content: "";
   top: -40px;
+  height: 1px;
+  background-color: #e6e6e6;
   min-width: 1060px;
 }
 
@@ -1273,7 +1266,7 @@ img {
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
-  background-color: rgb(130, 179, 211);
+  background-color: #82b3d3;
   border: none;
   border-radius: 4px;
   min-width: 60px;
@@ -1287,13 +1280,13 @@ img {
 }
 
 .current-pagination {
-  background-color: rgb(242, 242, 242);
-  color: rgb(0, 0, 0)
+  background-color: #f2f2f2;
+  color: #000000
 }
 
 .empty-pagination {
-  color: rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
+  color: #000000;
+  background-color: #ffffff;
 }
 
 /* End Пагинация */
@@ -1314,7 +1307,7 @@ img {
   position: relative;
   margin: auto;
   padding: 64px 70px;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
   min-width: 717px;
   border-radius: 4px;
 }
@@ -1332,24 +1325,24 @@ img {
   width: 53px;
   height: 53px;
   border: 1px solid transparent;
-  background-color: rgb(242, 242, 242);
+  background-color: #f2f2f2;
   border-radius: 50%;
   cursor: pointer;
   transform: translate(11px, 4px);
 }
 
 .modal-close-button:hover {
-  background-color: rgb(230, 230, 230);
+  background-color: #e6e6e6;
 }
 
 .modal-close-button:focus {
-  outline: 2px solid rgb(131, 179, 211);
-  background-color: rgb(230, 230, 230);
+  outline: 2px solid #83b3d3;
+  background-color: #e6e6e6;
 }
 
 .modal-close-button:active {
-  background-color: rgb(230, 230, 230);
-  color: rgb(128, 128, 128);
+  background-color: #e6e6e6;
+  color: #808080;
 }
 
 .modal-form-reservation {
@@ -1402,19 +1395,19 @@ img {
   font-weight: 700;
   min-width: 440px;
   height: 48px;
-  background-color: rgb(242, 242, 242);
+  background-color: #f2f2f2;
   border: none;
   border-radius: 4px;
   padding: 12px 36px 12px 20px;
 }
 
 .modal-date-input:focus {
-  outline: 3px solid rgb(131, 179, 211);
-  background-color: rgb(230, 230, 230);
+  outline: 3px solid #83b3d3;
+  background-color: #e6e6e6;
 }
 
 .modal-date-input:hover {
-  background-color: rgb(230, 230, 230);
+  background-color: #e6e6e6;
 }
 
 .button-calendar {
@@ -1427,11 +1420,11 @@ img {
 }
 
 .button-calendar:hover {
-  color: rgb(4, 144, 237);
+  color: #0490ed;
 }
 
 .button-calendar:focus {
-  outline: 2px solid rgb(131, 179, 211);
+  outline: 2px solid #83b3d3;
   opacity: 1;
 }
 
@@ -1447,19 +1440,19 @@ img {
   text-align: center;
   appearance: none;
   border: none;
-  background-color: rgb(242, 242, 242);
+  background-color: #f2f2f2;
   width: 30px;
   min-height: 48px;
 }
 
 .modal-category-input:focus {
-  border: 3px solid rgb(131, 179, 211);
+  border: 3px solid #83b3d3;
   outline: none;
-  background-color: rgb(230, 230, 230);
+  background-color: #e6e6e6;
 }
 
 .modal-category-input:hover {
-  background-color: rgb(230, 230, 230);
+  background-color: #e6e6e6;
 }
 
 .button-toogle-lower {
@@ -1485,12 +1478,12 @@ img {
 
 .minus-svg:hover,
 .plus-svg:hover {
-  color: rgb(0, 0, 0);
+  color: #000000;
 }
 
 .minus-svg:focus,
 .plus-svg:focus {
-  outline: 3px solid rgb(130, 179, 211);
+  outline: 3px solid #82b3d3;
 }
 
 .minus-svg:active,
@@ -1512,21 +1505,22 @@ img {
 
 .button-tooltip {
   position: absolute;
+  top: -38px;
+  left: 115px;
   width: 26px;
   height: 26px;
   border-radius: 50%;
   border: none;
-  background-color: rgb(104, 162, 202);
+  background-color: #68a2ca;
   background-image: url("../images/icons/tooltip.svg");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
-  top: -38px;
-  left: 115px;
 }
+/* Вопрос! От чего позиционируется кнопка тултипа и сам тултип. */
 
 .button-tooltip:hover {
-  background-color: rgb(131, 179, 211);
+  background-color: #83b3d3;
 }
 
 .button-tooltip:hover + .tooltip-text,
@@ -1548,8 +1542,8 @@ img {
 
 .tooltip-text {
   display: none;
-  background-color: rgb(51, 51, 51);
-  color: rgb(255, 255, 255);
+  background-color: #333333;
+  color: #ffffff;
   font-size: 16px;
   line-height: 20px;
   padding: 19px 18px 18px 22px;
@@ -1563,14 +1557,14 @@ img {
 
 /* Уголок тултипа */
 .tooltip-text::before {
-  content: "";
   position: absolute;
+  content: "";
+  top: -9px;
+  left: 118px;
   width: 19px;
   height: 9px;
   background-image: url("../images/dark-triangle-tooltip.svg");
   background-repeat: no-repeat;
-  top: -9px;
-  left: 118px;
 }
 
 /* End Уголок тултипа */
