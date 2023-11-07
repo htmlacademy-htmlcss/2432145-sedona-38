@@ -32,6 +32,7 @@ body {
   color: rgb(51, 51, 51);
   background-color: rgb(243, 243, 243);
   margin: 0;
+  min-width: 1280px;
   height: 100%;
 }
 
@@ -64,26 +65,15 @@ body {
   width: 100%;
 }
 
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
 /* End Basic */
 
 
 /* Modificators */
-.test-class-outline-blue {
-  outline: 2px solid blue;
-}
-
-.test-class-outline-green {
-  outline: 2px solid greenyellow;
-}
-
-.test-class-outline-orange {
-  outline: 2px solid orangered;
-}
-
-.test-class-outline-yellow {
-  outline: 2px solid yellow;
-}
-
 .title-h1,
 .title-h2,
 .title-h3 {
@@ -122,7 +112,9 @@ body {
   color: rgb(255, 255, 255);
 }
 
-.text-error {
+
+.text-error,
+.field:invalid {
   color: rgb(255, 87, 87);
 }
 
@@ -272,6 +264,7 @@ body {
   min-width: 577px;
   min-height: 60px;
   background-color: rgb(131, 179, 211);
+  grid-column: 1/-1;
 }
 
 .modal-button-find:hover,
@@ -295,7 +288,6 @@ body {
 
 .navigation {
   display: flex;
-  align-items: center;
   gap: 31px;
 }
 
@@ -426,6 +418,9 @@ body {
 .header-logo-link:focus {
   outline: 3px solid rgb(131, 179, 211);
 }
+
+/* Вопрос! Логотип съезжает вниз при переполнении хедера */
+/* Вопрос! Фавиконка */
 
 /* End Header */
 
@@ -559,6 +554,7 @@ body {
 
 .htmlacademy-logo-link:focus {
   outline: 3px solid rgb(131, 179, 211);
+  color: rgb(117, 97, 87);
 }
 
 .footer-logo {
@@ -579,7 +575,7 @@ body {
 }
 
 .htmlacademy-logo:hover {
-  color: rgba(117, 97, 87, 1);
+  color: rgb(117, 97, 87);
 }
 
 .htmlacademy-logo:active {
@@ -605,6 +601,9 @@ body {
 .newsletter-title {
   margin: 0;
   margin-bottom: 20px;
+  letter-spacing: 2px;
+
+  transform: translate(4px, -3px);
 }
 
 /* Вопрос! Не выходит выровнять титульник в рассылке по горизонтали (текс в макете шире) */
@@ -997,6 +996,7 @@ body {
 /* Хлебные крошки */
 .breadcrumbs-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   list-style-type: none;
   margin: 0;
@@ -1057,12 +1057,14 @@ body {
 .sorting-search-title {
   margin: 0;
   margin-right: auto;
+  padding-right: 5px;
 }
 
 .view-list {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -1086,6 +1088,7 @@ body {
 .view-list-link:focus,
 .view-list-link:focus-visible {
   border: 3px solid rgb(104, 162, 202);
+  outline: none;
 }
 
 .view-list-link:active {
@@ -1159,7 +1162,7 @@ body {
   gap: 20px 20px;
   padding: 0;
   margin: 0;
-  margin-bottom: 81px;
+  margin-bottom: 77px;
   list-style-type: none;
 }
 
@@ -1351,11 +1354,12 @@ body {
 
 .modal-form-reservation {
   display: grid;
-  grid-template-columns: 247px 242px;
+  grid-template-columns: 247px 1fr;
   min-width: 577px;
 }
 
 .modal-wrapper-date {
+  position: relative;
   display: flex;
   width: 577px;
   align-items: center;
@@ -1413,21 +1417,17 @@ body {
   background-color: rgb(230, 230, 230);
 }
 
-.modal-date-label {
-  position: relative;
-}
-
 .button-calendar {
   position: absolute;
   padding: 5px;
   border: 1px solid transparent;
   cursor: pointer;
-  right: 84px;
+  right: 16px;
   opacity: 0.3;
 }
 
 .button-calendar:hover {
-  opacity: 1;
+  color: rgb(4, 144, 237);
 }
 
 .button-calendar:focus {
@@ -1449,7 +1449,7 @@ body {
   border: none;
   background-color: rgb(242, 242, 242);
   width: 30px;
-  height: 48px;
+  min-height: 48px;
 }
 
 .modal-category-input:focus {
@@ -1502,6 +1502,8 @@ body {
 .modal-input-group {
   display: flex;
 }
+
+/* Вопрос! Выходит выровнять только с флексом второй инпут с лейблом Дети */
 
 .modal-input-title.adult-title {
   margin-right: 46px;
