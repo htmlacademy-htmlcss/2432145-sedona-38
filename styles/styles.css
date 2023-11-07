@@ -105,10 +105,6 @@ img {
   margin-bottom: 88px;
 }
 
-.text-uppercase {
-  text-transform: uppercase;
-}
-
 .text-white {
   color: #ffffff;
 }
@@ -117,10 +113,6 @@ img {
 .text-error,
 .field:invalid {
   color: #ff5757;
-}
-
-.text-align-center {
-  text-align: center;
 }
 
 .input-decoration:focus {
@@ -438,6 +430,8 @@ img {
 .reasons-title {
   margin: 0;
   margin-bottom: 25px;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .reasons {
@@ -450,16 +444,20 @@ img {
 }
 
 .services-title {
+  text-transform: uppercase;
+  text-align: center;
   margin: 0;
   margin-bottom: 20px;
 }
 
 .services-title-low {
+ text-align: center;
   margin: 0;
   margin-bottom: 64px;
 }
 
 .services-title-card {
+  text-transform: uppercase;
   margin: 0;
   margin-bottom: 30px;
 }
@@ -473,12 +471,15 @@ img {
 }
 
 .total-title {
+  text-align: center;
+  text-transform: uppercase;
   margin: 0;
   margin-bottom: 20px;
 }
 
 .total-title-low {
   margin-bottom: 54px;
+  text-align: center;
 }
 
 
@@ -589,6 +590,7 @@ img {
 .newsletter {
   padding-top: 96px;
   padding-bottom: 104px;
+  text-align: center;
 }
 
 .newsletter-with-background {
@@ -603,6 +605,8 @@ img {
   margin-bottom: 20px;
   letter-spacing: 2px;
   transform: translate(4px, -3px);
+  text-transform: uppercase;
+  text-align: center;
 }
 
 /* Вопрос! Не выходит выровнять титульник в рассылке по горизонтали (текст в макете шире) */
@@ -610,6 +614,7 @@ img {
 .newsletter-description {
   margin: 0;
   margin-bottom: 54px;
+  text-align: center;
 }
 
 .newsletter-form {
@@ -646,12 +651,17 @@ img {
   aspect-ratio: 80/77;
 }
 
+.reasons-title-low {
+  text-align: center;
+}
+
 .reasons-list {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 .reasons-list-item:last-child {
@@ -659,11 +669,13 @@ img {
   flex-direction: row-reverse;
 }
 
+
 .title-reasons {
   position: relative;
   margin: 0;
   margin-bottom: 30px;
   padding-bottom: 32px;
+  text-transform: uppercase;
 }
 /* Вопрос! Переполнение списка преимуществ и услуг */
 
@@ -678,10 +690,13 @@ img {
   transform: translateX(-50%);
 }
 
+.reasons-primary-decoration {
+  color: #ffffff;
+}
+
 .reasons-primary-decoration::after {
   background-color: rgba(255, 255, 255, 0.3);
 }
-
 
 .reasons-description {
   margin: 0;
@@ -693,6 +708,7 @@ img {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 .image-service {
@@ -1053,6 +1069,7 @@ img {
   margin: 0;
   margin-right: auto;
   padding-right: 5px;
+  text-transform: uppercase;
 }
 
 .view-list {
@@ -1202,6 +1219,7 @@ img {
   background-color: #f2f2f2;
   padding: 3px 17px;
   border-radius: 4px;
+  text-transform: uppercase;
 }
 
 .catalog-stars {
@@ -1313,6 +1331,7 @@ img {
 }
 
 .modal-title {
+  text-transform: uppercase;
   margin: 0;
   margin-bottom: 64px;
   padding-right: 40px;
