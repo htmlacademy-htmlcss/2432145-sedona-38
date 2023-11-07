@@ -1409,7 +1409,7 @@ img {
 }
 
 .modal-date-input:focus {
-  outline: 2px solid rgb(131, 179, 211);
+  outline: 3px solid rgb(131, 179, 211);
   background-color: rgb(230, 230, 230);
 }
 
