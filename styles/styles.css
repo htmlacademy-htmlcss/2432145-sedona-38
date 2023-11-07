@@ -1499,10 +1499,6 @@ img {
   outline: none;
 }
 
-.modal-input-group {
-  display: flex;
-}
-
 /* Вопрос! Выходит выровнять только с флексом второй инпут с лейблом Дети */
 
 .modal-input-title.adult-title {
