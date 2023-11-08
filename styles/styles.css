@@ -865,6 +865,11 @@ img {
   margin-bottom: 40px;
 }
 
+.breadcrumbs-title {
+  font-size: 16px;
+  line-height: 21px;
+}
+
 .breadcrumbs-list-link {
   display: block;
   color: #ffffff;
