@@ -29,9 +29,10 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  color: rgb(51, 51, 51);
-  background-color: rgb(243, 243, 243);
+  color: #333333;
+  background-color: #f3f3f3;
   margin: 0;
+  min-width: 1280px;
   height: 100%;
 }
 
@@ -42,7 +43,7 @@ body {
   max-width: 1200px;
   min-height: 100%;
   margin: 0 auto;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
 }
 
 .visually-hidden {
@@ -64,30 +65,21 @@ body {
   width: 100%;
 }
 
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Вопрос! Почему max-width портит переполнение в хедере-логотип ужимается. */
+
 /* End Basic */
 
 
 /* Modificators */
-.test-class-outline-blue {
-  outline: 2px solid blue;
-}
-
-.test-class-outline-green {
-  outline: 2px solid greenyellow;
-}
-
-.test-class-outline-orange {
-  outline: 2px solid orangered;
-}
-
-.test-class-outline-yellow {
-  outline: 2px solid yellow;
-}
-
 .title-h1,
 .title-h2,
 .title-h3 {
-  color: rgb(0, 0, 0);
+  color: #000000;
   font-weight: 700;
 }
 
@@ -111,23 +103,17 @@ body {
   font-size: 22px;
   line-height: 26px;
   margin: 0;
-  margin-bottom: 100px;
-}
-
-.text-uppercase {
-  text-transform: uppercase;
+  margin-bottom: 88px;
 }
 
 .text-white {
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 
-.text-error {
-  color: rgb(255, 87, 87);
-}
 
-.text-align-center {
-  text-align: center;
+.text-error,
+.field:invalid {
+  color: #ff5757;
 }
 
 .input-decoration:focus {
@@ -151,7 +137,7 @@ body {
   font-family: "PT Sans", sans-serif;
   border: 1px solid transparent;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   text-align: center;
   padding: 8px 10px;
   text-transform: uppercase;
@@ -167,58 +153,62 @@ body {
 }
 
 .button:disabled {
-  color: rgb(255, 255, 255);
-  background-color: rgb(229, 229, 229);
+  color: #ffffff;
+  background-color: #e5e5e5;
 
 }
 
 .button-primary-decoration:hover {
-  background-color: rgb(104, 162, 202);
+  background-color: #68a2ca;
 }
 
 .button-primary-decoration:focus {
-  background-color: rgb(104, 162, 202);
+  background-color: #68a2ca;
 }
 
 .button-link-decoration:hover {
-  background-color: rgb(97, 80, 72);
+  background-color: #615048;
 }
 
 .button-link-decoration:focus {
-  background-color: rgb(97, 80, 72);
+  background-color: #615048;
 }
 
 .button-active:hover {
-  background-color: rgb(108, 158, 66);
+  background-color: #6c9e42;
 }
 
 .button-active:focus {
-  background-color: rgb(108, 158, 66);
+  background-color: #6c9e42;
 }
 
 .button-locked {
-  background-color: rgb(229, 229, 229);
+  background-color: #e5e5e5;
 }
 
 .button-subscribe {
+  font-size: 20px;
+  line-height: 36px;
   width: 232px;
   min-height: 52px;
-  background-color: rgb(130, 179, 211);
+  background-color: #82b3d3;
   border-radius: 0 4px 4px 0;
+  padding-bottom: 6px;
 }
 
 .button-navigation-list-link {
-  background-color: rgb(117, 97, 87);
+  position: relative;
+  transform: translateX(-3px);
+  background-color: #756157;
   min-width: 160px;
   min-height: 36px;
-  padding: 8px 50px;
-  position: relative;
+  padding: 8px 30px;
 }
 
 .button-apply {
   min-width: 191px;
   min-height: 36px;
-  background-color: rgb(130, 179, 211);
+  background-color: #82b3d3;
 }
 
 .button-reset {
@@ -228,7 +218,7 @@ body {
 }
 
 .button-reset:focus {
-  outline: 3px solid rgb(131, 179, 211);
+  outline: 3px solid #83b3d3;
 }
 
 .button-reset:focus:not(:focus-visible) {
@@ -236,26 +226,26 @@ body {
 }
 
 .button-reset:focus-visible {
-  outline: 3px solid rgb(131, 179, 211);
+  outline: 3px solid #83b3d3;
 }
 
 .button-catalog-more-details {
-  background-color: rgb(117, 97, 87);
+  background-color: #756157;
 }
 
 .button-action {
-  background-color: rgb(130, 179, 211);
   min-width: 140px;
   min-height: 36px;
+  background-color: #82b3d3;
 }
 
 .button-active {
-  background-color: rgb(125, 181, 79);
+  background-color: #7db54f;
 }
 
 .button-large-to-catalog {
   display: block;
-  background-color: rgb(117, 97, 87);
+  background-color: #756157;
   min-width: 376px;
   min-height: 52px;
   font-size: 20px;
@@ -264,15 +254,16 @@ body {
 }
 
 .modal-button-find {
+  grid-column: 1/-1;
   font-size: 20px;
   min-width: 577px;
   min-height: 60px;
-  background-color: rgb(131, 179, 211);
+  background-color: #83b3d3;
 }
 
 .modal-button-find:hover,
 .modal-button-find:focus {
-  background-color: rgb(104, 162, 202);
+  background-color: #68a2ca;
 }
 
 .modal-button-find:active {
@@ -285,14 +276,14 @@ body {
 /* Header */
 .page-header {
   margin-bottom: -8px;
+  padding-bottom: 2px;
   z-index: 2;
-  padding-bottom: 4px;
 }
 
 .navigation {
   display: flex;
-  align-items: center;
-  gap: 28px;
+  flex-wrap: wrap;
+  gap: 31px;
 }
 
 .navigation-list {
@@ -301,19 +292,15 @@ body {
   padding: 0;
 }
 
-.navigation-current {
-  position: relative;
-}
-
 .navigation-current::after {
-  content: "";
   position: absolute;
-  height: 2px;
-  background-color: rgb(117, 98, 87);
+  content: "";
   left: 12px;
   right: 12px;
   bottom: 0;
-  top: 62px;
+  top: 63px;
+  height: 2px;
+  background-color: #756257;
 }
 
 .navigation-list-button {
@@ -322,21 +309,25 @@ body {
   padding: 22px 12px;
 }
 
+
 .navigation-search {
   cursor: pointer;
-  margin-right: 6px;
 }
 
 .navigation-search:hover,
-.navigation-search:focus,
-.navigation-favorite:hover,
-.navigation-favorite:focus {
-  color: rgb(131, 179, 211);
+.navigation-favorite:hover {
+  color: #83b3d3;
 }
+
+.navigation-favorite:focus,
+.navigation-search:focus {
+  outline: 3px solid #83b3d3;
+}
+
 
 .navigation-search:active,
 .navigation-favorite:active {
-  color: rgb(211, 211, 211);
+  color: #d3d3d3;
 }
 
 .navigation-svg {
@@ -346,265 +337,119 @@ body {
 .navigation-favorite {
   position: relative;
   cursor: pointer;
-  margin-right: 20px;
+  margin-right: 25px;
 }
 
 .navigation-favorite::after {
+  position: absolute;
   content: "12";
+  top: 8px;
+  right: 2px;
   font-family: "PT Sans", sans-serif;
-  border-radius: 10px;
-  background-color: rgb(125, 181, 79);
-  color: rgb(255, 255, 255);
   font-size: 10px;
   line-height: 10px;
   text-align: center;
-  padding: 4px;
-  position: absolute;
-  top: 10px;
-  right: 2px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #7db54f;
+  color: #ffffff;
 }
 
 .navigation-list-link {
   position: relative;
-  color: rgb(0, 0, 0);
+  display: block;
+  color: #000000;
   text-decoration: none;
   line-height: 24px;
   font-size: 20px;
   font-weight: 700;
   padding: 20px 16px;
-  display: block;
 }
 
 .navigation-list-link:hover::after {
-  content: "";
   position: absolute;
-  background-color: rgb(117, 98, 87);
-  height: 2px;
+  content: "";
   left: 12px;
   right: 12px;
-  bottom: 0;
-  top: 62px;
+  top: 63px;
+  background-color: #756257;
+  height: 2px;
+}
 
+.navigation-list-link:focus {
+  outline: 2px solid #68a2ca;
+}
+
+.navigation-list-link:active {
+  opacity: 0.6;
 }
 
 .navigation-list-menu {
   display: flex;
   flex-grow: 1;
+  margin-left: -2px;
+}
+
+.navigation-list-menu .navigation-list-item {
+  margin-bottom: 6px;
 }
 
 .navigation-list-user {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin-bottom: 4px;
+  margin-right: -4px;
 }
 
 .logo-image {
   display: block;
+  width: 140px;
 }
+
+.header-logo-link:focus {
+  outline: 3px solid #83b3d3;
+}
+
+/* Вопрос! Логотип съезжает вниз при переполнении хедера */
+/* Вопрос! Фавиконка */
 
 /* End Header */
 
 
 /* Main */
+/* Main-index */
 .main-general {
   flex-grow: 1;
-
 }
 
 .hero {
-  margin-bottom: 69px;
+  margin-bottom: 65px;
+}
+
+/* Услуги и преимущества */
+.reasons {
+  margin-bottom: 64px;
 }
 
 .reasons-title {
   margin: 0;
   margin-bottom: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 10px;
 }
 
-.reasons {
-  margin-bottom: 64px;
+.reasons-title-low {
+  text-align: center;
+  padding: 0 10px;
 }
 
-.services {
-  margin: 0;
-  margin-bottom: 96px;
-}
-
-.services-title {
-  margin: 0;
-  margin-bottom: 20px;
-}
-
-.services-title-low {
-  margin: 0;
-  margin-bottom: 64px;
-}
-
-.services-title-card {
-  margin: 0;
-  margin-bottom: 30px;
-}
-
-.services-description-card {
-  margin: 0;
-}
-
-.total {
-  margin-bottom: 96px;
-}
-
-.total-title {
-  margin: 0;
-  margin-bottom: 25px;
-}
-
-.total-title-low {
-  margin-bottom: 54px;
-}
-
-
-/* End Main */
-
-
-/* Footer */
-.page-footer {
-  padding-top: 40px;
-  padding-bottom: 30px;
-}
-
-.page-footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 auto;
-  gap: 22px;
-}
-
-.phone {
-  font-size: 40px;
-  font-style: normal;
-  line-height: 40px;
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  width: 330px;
-}
-
-.phone:focus {
-  color: rgb(117, 97, 87);
-}
-
-.phone:hover {
-  color: rgb(117, 97, 87);
-}
-
-.phone:active {
-  color: rgba(117, 97, 87, 0.3);
-}
-
-.phone:visited {
-  text-decoration: none;
-}
-
-
-.social-list {
-  display: flex;
-  justify-content: space-between;
-  list-style-type: none;
-  padding: 0;
-  gap: 25px;
-  margin: 0;
-}
-
-.social-button {
-  padding: 11px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgb(131, 179, 211);
-}
-
-.htmlacademy-logo-link {
-  color: rgb(0, 0, 0);
-}
-
-.footer-logo {
-  display: block;
-  margin: 0;
-}
-
-.footer-logo:hover {
-  color: rgb(104, 162, 202);
-}
-
-.footer-logo:active {
-  color: rgba(104, 162, 202, 0.3);
-}
-
-.htmlacademy-logo {
-  display: block;
-}
-
-.htmlacademy-logo:hover {
-  color: rgba(117, 97, 87, 1);
-}
-
-.htmlacademy-logo:active {
-  color: rgba(117, 97, 87, 0.3);
-}
-
-/* End Footer */
-
-
-/* Рассылка */
-.newsletter {
-  padding-top: 96px;
-  padding-bottom: 104px;
-}
-
-.newsletter-with-background {
-  background-color: rgb(130, 179, 211);
-  background-image: url("../images/subscribe.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.newsletter-title {
-  margin: 0;
-  margin-bottom: 20px;
-}
-
-.newsletter-description {
-  margin: 0;
-  margin-bottom: 54px;
-}
-
-.newsletter-form {
-  display: flex;
-  justify-content: center;
-}
-
-.input-newsletter {
-  font-family: "PT Sans", sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  min-width: 452px;
-  min-height: 52px;
-  background-color: rgb(242, 242, 242);
-  border-radius: 4px 0 0 4px;
-  border: none;
-  padding-left: 20px;
-}
-
-/* End Рассылка */
-
-
-/* Услуги и преимущества */
 .reasons-and-services-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
   min-width: 400px;
   margin-top: auto;
   margin-bottom: auto;
@@ -618,6 +463,12 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  text-align: center;
+}
+
+.reasons-list-item:last-child {
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 
@@ -625,28 +476,64 @@ body {
   position: relative;
   margin: 0;
   margin-bottom: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 32px;
+  text-transform: uppercase;
 }
+
+/* Вопрос! Переполнение списка преимуществ и услуг */
 
 .title-reasons::after {
   position: absolute;
   content: "";
-  height: 2px;
-  background-color: rgba(0, 0, 0, 0.3);
   bottom: 0;
   left: 50%;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
   width: 60px;
   transform: translateX(-50%);
+}
+
+.reasons-primary-decoration {
+  color: #ffffff;
 }
 
 .reasons-primary-decoration::after {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-
 .reasons-description {
+  width: 380px;
   margin: 0;
 }
+
+.services {
+  margin: 0;
+  margin-bottom: 96px;
+}
+
+.services-title {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.services-title-low {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 64px;
+}
+
+.services-title-card {
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.services-description-card {
+  margin: 0;
+}
+
 
 .services-list {
   display: flex;
@@ -654,6 +541,7 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 .image-service {
@@ -664,7 +552,7 @@ body {
 
 .card-primary {
   display: flex;
-  background-color: rgb(130, 179, 211);
+  background-color: #82b3d3;
   width: 100%;
 }
 
@@ -686,28 +574,59 @@ body {
 
 /* End Услуги и преимущества */
 
+.total {
+  margin-bottom: 94px;
+  padding: 0 10px;
+}
 
+.total-title {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.total-title-low {
+  margin-bottom: 54px;
+  text-align: center;
+}
+
+/* End Main-index */
+
+/* Main-catalog */
 /* Фильтр */
+.inner-header {
+  margin-left: -4px;
+}
+
+.inner-header-title {
+  margin: 0;
+  margin-bottom: 8px;
+}
+
 .filter {
   display: flex;
   flex-direction: column;
-  background-color: rgb(130, 179, 211);
+  background-color: #82b3d3;
   background-image: url("../images/catalog/filter.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   padding-top: 35px;
   padding-bottom: 70px;
-  margin-bottom: 55px;
+  padding-left: 9px;
+  margin-bottom: 49px;
 
 }
 
 .forms-filters {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .checkbox-infrastructure {
-  margin-right: 70px;
+  margin-right: 68px;
+  margin-left: -2px;
 }
 
 .radio-housing {
@@ -730,27 +649,27 @@ body {
 }
 
 .control-mark {
-  display: block;
   position: absolute;
+  left: -2px;
+  top: 2px;
+  display: block;
   width: 20px;
   height: 20px;
   border-radius: 4px;
-  border: 1px solid rgb(255, 255, 255);
-  background-color: rgba(255, 255, 255, 1);
-  left: 2px;
-  top: 2px;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
 }
 
 .forms-control-input[type="checkbox"]:checked + .control-mark::before {
-  content: "";
   position: absolute;
-  background-image: url("../images/icons/check-mark.svg");
-  background-repeat: no-repeat;
+  content: "";
   top: 50%;
   left: 50%;
-  transform: translateY(-50%) translateX(-50%);
   height: 10px;
   width: 12px;
+  background-image: url("../images/icons/check-mark.svg");
+  background-repeat: no-repeat;
+  transform: translateY(-50%) translateX(-50%);
 }
 
 .forms-housing .control-mark {
@@ -758,24 +677,19 @@ body {
 }
 
 .forms-control-input[type="radio"]:checked + .control-mark::before {
-  content: "";
   position: absolute;
-  background-color: rgb(63, 94, 114);
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
+  content: "";
   top: 50%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
+  background-color: #3f5e72;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
 }
 
 .forms-input-points:hover {
   opacity: 0.6;
-}
-
-.inner-header-title {
-  margin: 0;
-  margin-bottom: 8px;
 }
 
 .forms-group {
@@ -788,6 +702,7 @@ body {
   font-weight: 700;
   line-height: 24px;
   margin-bottom: 32px;
+  padding: 0;
 }
 
 .forms-filters-list {
@@ -797,7 +712,7 @@ body {
 }
 
 .forms-filters-list-item {
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 .forms-filters-list-item:nth-last-child(1) {
@@ -815,22 +730,22 @@ body {
 }
 
 .price-from::after {
-  content: "от";
   position: absolute;
+  content: "от";
   top: 12px;
   right: 20px;
   line-height: 21px;
-  color: rgb(0, 0, 0);
+  color: #000000;
   opacity: 0.4;
 }
 
 .price-to::after {
-  content: "до";
   position: absolute;
+  content: "до";
   top: 12px;
   right: 20px;
   line-height: 21px;
-  color: rgb(0, 0, 0);
+  color: #000000;
   opacity: 0.4;
 }
 
@@ -841,19 +756,16 @@ body {
 }
 
 .forms-hotel-filters-price-control {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 143px;
-  padding: 12px 20px;
-  border-radius: 4px;
-  border: none;
-  background-color: rgb(242, 242, 242);
   font-size: 18px;
   font-family: "PT Sans", sans-serif;
   line-height: 24px;
   font-weight: 700;
-
+  width: 143px;
+  padding: 12px 20px;
+  padding-right: 40px;
+  border-radius: 4px;
+  border: none;
+  background-color: #f2f2f2;
 }
 
 .forms-hotel-filters-price-control::-webkit-outer-spin-button,
@@ -864,25 +776,34 @@ body {
   appearance: none;
 }
 
+.range {
+  display: flex;
+  flex-wrap: wrap;
+  width: 288px;
+}
+
+/* Вопрос! Фиксированная ширина контейнера для переполнения. */
+
 .range-wrapper-inputs {
   display: flex;
-  justify-content: space-between;
   gap: 2px;
-  margin-bottom: 42px;
+  margin-bottom: 44px;
+  flex-wrap: wrap;
 }
 
 .range-scale {
   position: relative;
   height: 4px;
-  background-color: rgb(128, 128, 128);
+  background-color: #808080;
   border-radius: 4px;
   transform: rotate(180deg);
+  width: 287px;
 }
 
 .range-bar {
   position: absolute;
   height: 4px;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
 }
 
 .forms-filters-scale-toogle {
@@ -890,21 +811,19 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 5px;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
   cursor: pointer;
   border: none;
 }
 
 .forms-filters-scale-toogle:active {
-  background-color: rgb(211, 211, 211);
+  background-color: #d3d3d3;
 }
 
 .forms-filters-scale-toogle:hover,
 .forms-filters-scale-toogle:focus {
-  outline: 2px solid rgb(104, 162, 202);
+  outline: 2px solid #68a2ca;
 }
-
-
 
 .toogle-from {
   right: 0;
@@ -917,8 +836,6 @@ body {
   transform: translateY(-50%)
 }
 
-
-
 .input-checkbox-point {
   line-height: 23px;
 }
@@ -930,17 +847,17 @@ body {
 .forms-buttons-apply-reset-container {
   display: flex;
   flex-direction: column;
-  row-gap: 32px;
-  align-self: flex-end;
+  row-gap: 30px;
   margin-top: 55px;
+  transform: translate(-2px);
 }
 
 /* End Фильтр */
 
-
 /* Хлебные крошки */
 .breadcrumbs-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   list-style-type: none;
   margin: 0;
@@ -949,37 +866,42 @@ body {
 }
 
 .breadcrumbs-list-link {
-  color: rgb(255, 255, 255);
   display: block;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .breadcrumbs-list-link:hover {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.breadcrumbs-list-item:active {
-  color: rgba(255, 255, 255, 0.3);
+.breadcrumbs-list-link:focus {
+  outline: 2px solid #68a2ca;
 }
 
-.breadcrumbs-list-item:hover {
-  color: rgba(255, 255, 255, 0.6);
+.breadcrumbs-list-link:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .class-home {
   position: relative;
-  margin-right: 26px;
+  margin-right: 17px;
 }
 
-.class-home::after {
-  content: "";
+.class-home:not(:last-child)::after {
   position: absolute;
+  content: "";
+  top: 5px;
+  left: 23px;
   background-image: url("../images/icons/breadcrumbs-vector-1.svg");
   background-repeat: no-repeat;
   background-position: center;
   min-width: 8px;
   min-height: 11px;
-  top: 5px;
-  left: 26px;
+}
+
+.class-home:focus {
+  outline: 3px solid #83b3d3;
 }
 
 /* End Хлебные крошки */
@@ -988,22 +910,23 @@ body {
 /* Сортировка */
 .sorting-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 37px;
 }
 
 .sorting-search-title {
   margin: 0;
   margin-right: auto;
+  padding-right: 5px;
+  text-transform: uppercase;
 }
 
 .view-list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -1014,57 +937,61 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid rgb(229, 229, 229);
+  border: 3px solid #e5e5e5;
   width: 48px;
   height: 48px;
   border-radius: 4px;
 }
 
 .view-list-link:hover {
-  border-color: rgb(0, 0, 0);
+  border-color: #000000;
 }
 
 .view-list-link:focus,
 .view-list-link:focus-visible {
-  border: 3px solid rgb(104, 162, 202);
+  border: 3px solid #68a2ca;
+  outline: none;
 }
 
 .view-list-link:active {
-  border-color: rgb(0, 0, 0);
+  border-color: #000000;
 }
 
 .view-card-list-link {
+  display: block;
   background-image: url("../images/icons/view-cards.svg");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
 }
 
 .view-slider-list-link {
+  display: block;
   background-image: url("../images/icons/view-slider.svg");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
 }
 
 .view-list-list-link {
+  display: block;
   background-image: url("../images/icons/view-list.svg");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
 }
 
 .select-sort-list {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
   min-width: 292px;
   min-height: 49px;
   padding: 14px 20px;
-  border: 2px solid rgb(229, 229, 229);
+  border: 2px solid #e5e5e5;
   border-radius: 4px;
   padding-right: 32px;
   appearance: none;
   background-image: url("../images/icons/arrow-select.svg");
   background-repeat: no-repeat;
-  background-position: right 20px center;
+  background-position: right 14px center;
   cursor: pointer;
 }
 
@@ -1074,26 +1001,28 @@ body {
 
 .select-sort-list:hover {
   border-radius: 4px;
-  outline: 3px solid rgb(131, 179, 211);
+  outline: 3px solid #83b3d3;
 }
 
 .select-list-sort-label {
   margin-right: 70px;
 }
 
-
-
 /* End Сортировка */
 
 
 /* Каталог */
+.catalog-header {
+  margin-left: 4px;
+}
+
 .catalog-list {
   display: grid;
   grid-template-columns: repeat(3, 340px);
-  gap: 20px;
+  gap: 20px 20px;
   padding: 0;
   margin: 0;
-  margin-bottom: 80px;
+  margin-bottom: 77px;
   list-style-type: none;
 }
 
@@ -1106,7 +1035,7 @@ body {
   padding: 20px;
   gap: 16px 20px;
   border-radius: 4px;
-  border: 1px solid rgb(230, 230, 230);
+  border: 1px solid #e6e6e6;
 }
 
 .catalog-card-type {
@@ -1136,10 +1065,11 @@ body {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
-  border: 4px solid rgb(242, 242, 242);
-  background-color: rgb(242, 242, 242);
-  padding: 5px 17px;
+  border: 4px solid #f2f2f2;
+  background-color: #f2f2f2;
+  padding: 3px 17px;
   border-radius: 4px;
+  text-transform: uppercase;
 }
 
 .catalog-stars {
@@ -1176,16 +1106,17 @@ body {
 
 /* Пагинация */
 .pagination {
-  margin-bottom: 60px;
   position: relative;
+  display: block;
+  margin-bottom: 60px;
 }
 
 .pagination-list::before {
-  content: "";
   position: absolute;
+  content: "";
+  top: -40px;
   height: 1px;
-  background-color: rgb(230, 230, 230);
-  top: -35px;
+  background-color: #e6e6e6;
   min-width: 1060px;
 }
 
@@ -1204,7 +1135,7 @@ body {
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
-  background-color: rgb(130, 179, 211);
+  background-color: #82b3d3;
   border: none;
   border-radius: 4px;
   min-width: 60px;
@@ -1218,16 +1149,168 @@ body {
 }
 
 .current-pagination {
-  background-color: rgb(242, 242, 242);
-  color: rgb(0, 0, 0)
+  background-color: #f2f2f2;
+  color: #000000
 }
 
 .empty-pagination {
-  color: rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
+  color: #000000;
+  background-color: #ffffff;
 }
 
 /* End Пагинация */
+
+/* End Main-catalog */
+
+/* Рассылка */
+.newsletter {
+  padding: 96px 10px 104px 10px;
+  text-align: center;
+}
+
+.newsletter-with-background {
+  background-color: #82b3d3;
+  background-image: url("../images/subscribe.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.newsletter-title {
+  margin: 0;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  transform: translate(4px, -3px);
+  text-transform: uppercase;
+}
+
+/* Вопрос! Не выходит выровнять титульник в рассылке по горизонтали (текст в макете шире) */
+
+.newsletter-description {
+  margin: 0;
+  margin-bottom: 54px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+}
+
+.input-newsletter {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  min-width: 452px;
+  min-height: 52px;
+  background-color: #f2f2f2;
+  border-radius: 4px 0 0 4px;
+  border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* End Рассылка */
+
+/* End Main */
+
+
+/* Footer */
+.page-footer {
+  padding-top: 45px;
+  padding-bottom: 30px;
+}
+
+.page-footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  gap: 22px;
+}
+
+.phone {
+  font-size: 40px;
+  font-style: normal;
+  line-height: 40px;
+  text-decoration: none;
+  color: #000000;
+  width: 330px;
+}
+
+.phone:focus {
+  color: #756157;
+  outline: 3px solid #83b3d3;
+}
+
+.phone:hover {
+  color: #756157;
+}
+
+.phone:active {
+  color: #7561574d;
+}
+
+.phone:visited {
+  text-decoration: none;
+}
+
+
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  gap: 6px;
+  margin: 0;
+}
+
+.social-button {
+  padding: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #83b3d3;
+}
+
+.social-button:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.htmlacademy-logo-link {
+  color: #000000;
+}
+
+.htmlacademy-logo-link:focus {
+  outline: 3px solid #83b3d3;
+  color: #756157;
+}
+
+.footer-logo {
+  display: block;
+  margin: 0;
+}
+
+.footer-logo:hover {
+  color: #68a2ca;
+}
+
+.footer-logo:active {
+  color: rgba(104, 162, 202, 0.3);
+}
+
+.htmlacademy-logo {
+  display: block;
+}
+
+.htmlacademy-logo:hover {
+  color: #756157;
+}
+
+.htmlacademy-logo:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+/* End Footer */
 
 /* Модальное окно */
 .modal-container {
@@ -1241,20 +1324,20 @@ body {
   z-index: 9;
 }
 
-.modal {
+.modal-reservation {
   position: relative;
   margin: auto;
   padding: 64px 70px;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
+  min-width: 717px;
+  border-radius: 4px;
 }
 
 .modal-title {
+  text-transform: uppercase;
   margin: 0;
   margin-bottom: 64px;
-}
-
-.modal-reservation {
-  min-width: 717px;
+  padding-right: 40px;
 }
 
 .modal-close-button {
@@ -1264,32 +1347,34 @@ body {
   width: 53px;
   height: 53px;
   border: 1px solid transparent;
-  background-color: rgb(242, 242, 242);
+  background-color: #f2f2f2;
   border-radius: 50%;
   cursor: pointer;
+  transform: translate(11px, 4px);
 }
 
 .modal-close-button:hover {
-  background-color: rgb(230, 230, 230);
+  background-color: #e6e6e6;
 }
 
 .modal-close-button:focus {
-  outline: 2px solid rgb(131, 179, 211);
-  background-color: rgb(230, 230, 230);
+  outline: 2px solid #83b3d3;
+  background-color: #e6e6e6;
 }
 
 .modal-close-button:active {
-  background-color: rgb(230, 230, 230);
-  color: rgb(128, 128, 128);
+  background-color: #e6e6e6;
+  color: #808080;
 }
 
 .modal-form-reservation {
   display: grid;
-  grid-template-columns: 247px 242px;
+  grid-template-columns: 247px 1fr;
   min-width: 577px;
 }
 
 .modal-wrapper-date {
+  position: relative;
   display: flex;
   width: 577px;
   align-items: center;
@@ -1321,7 +1406,7 @@ body {
   margin: 0;
   margin-left: 158px;
   margin-bottom: 23px;
-
+  max-width: 335px;
 }
 
 
@@ -1332,18 +1417,19 @@ body {
   font-weight: 700;
   min-width: 440px;
   height: 48px;
-  background-color: rgb(242, 242, 242);
+  background-color: #f2f2f2;
   border: none;
   border-radius: 4px;
   padding: 12px 36px 12px 20px;
 }
 
-.modal-date-input::placeholder {
-  font-weight: 400;
+.modal-date-input:focus {
+  outline: 3px solid #83b3d3;
+  background-color: #e6e6e6;
 }
 
-.modal-date-label {
-  position: relative;
+.modal-date-input:hover {
+  background-color: #e6e6e6;
 }
 
 .button-calendar {
@@ -1351,16 +1437,16 @@ body {
   padding: 5px;
   border: 1px solid transparent;
   cursor: pointer;
-  right: 84px;
+  right: 16px;
   opacity: 0.3;
 }
 
 .button-calendar:hover {
-  opacity: 1;
+  color: #0490ed;
 }
 
-.button-calendar:hover,
 .button-calendar:focus {
+  outline: 2px solid #83b3d3;
   opacity: 1;
 }
 
@@ -1376,14 +1462,24 @@ body {
   text-align: center;
   appearance: none;
   border: none;
-  background-color: rgb(242, 242, 242);
+  background-color: #f2f2f2;
   width: 30px;
-  height: 48px;
+  min-height: 48px;
+}
+
+.modal-category-input:focus {
+  border: 3px solid #83b3d3;
+  outline: none;
+  background-color: #e6e6e6;
+}
+
+.modal-category-input:hover {
+  background-color: #e6e6e6;
 }
 
 .button-toogle-lower {
-  width: 40px;
-  height: 48px;
+  min-width: 40px;
+  min-height: 48px;
   padding: 0;
   border-radius: 4px 0 0 4px;
 }
@@ -1396,30 +1492,26 @@ body {
 }
 
 .button-toogle-greater {
-  width: 40px;
-  height: 48px;
+  min-width: 40px;
+  min-height: 48px;
   padding: 0;
   border-radius: 0 4px 4px 0;
 }
 
 .minus-svg:hover,
 .plus-svg:hover {
-  color: rgb(0, 0, 0);
+  color: #000000;
 }
 
 .minus-svg:focus,
 .plus-svg:focus {
-  outline: 3px solid rgb(130, 179, 211);
+  outline: 3px solid #82b3d3;
 }
 
 .minus-svg:active,
 .plus-svg:active {
   opacity: 0.2;
   outline: none;
-}
-
-.modal-input-group {
-  display: flex;
 }
 
 .modal-input-title.adult-title {
@@ -1433,22 +1525,23 @@ body {
 
 .button-tooltip {
   position: absolute;
+  top: -38px;
+  left: 115px;
   width: 26px;
   height: 26px;
   border-radius: 50%;
   border: none;
-  background-color: rgb(104, 162, 202);
-  ;
+  background-color: #68a2ca;
   background-image: url("../images/icons/tooltip.svg");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
-  top: -40px;
-  left: 110px;
 }
 
+/* Вопрос! От чего позиционируется кнопка тултипа и сам тултип. */
+
 .button-tooltip:hover {
-  background-color: rgb(131, 179, 211);
+  background-color: #83b3d3;
 }
 
 .button-tooltip:hover + .tooltip-text,
@@ -1470,27 +1563,29 @@ body {
 
 .tooltip-text {
   display: none;
-  background-color: rgb(51, 51, 51);
-  color: rgb(255, 255, 255);
+  background-color: #333333;
+  color: #ffffff;
   font-size: 16px;
   line-height: 20px;
-  padding: 15px 18px 18px 22px;
+  padding: 19px 18px 18px 22px;
   border-radius: 10px;
   width: 256px;
+  min-height: 143px;
   z-index: 8;
+  transform: translateY(3px);
 }
 
 
 /* Уголок тултипа */
 .tooltip-text::before {
-  content: "";
   position: absolute;
+  content: "";
+  top: -9px;
+  left: 118px;
   width: 19px;
   height: 9px;
   background-image: url("../images/dark-triangle-tooltip.svg");
   background-repeat: no-repeat;
-  top: -9px;
-  left: 114px;
 }
 
 /* End Уголок тултипа */
@@ -1506,3 +1601,5 @@ body {
 .modal-window-close {
   display: none;
 }
+
+/* End Модальное окно */
