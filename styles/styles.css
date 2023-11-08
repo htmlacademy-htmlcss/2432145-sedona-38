@@ -430,7 +430,6 @@ img {
 /* Услуги и преимущества */
 .reasons {
   margin-bottom: 64px;
-  word-break: break-all;
 }
 
 .reasons-title {
@@ -465,7 +464,6 @@ img {
   margin: 0;
   padding: 0;
   text-align: center;
-  word-break: break-all;
 }
 
 .reasons-list-item:last-child {
@@ -579,7 +577,6 @@ img {
 .total {
   margin-bottom: 94px;
   padding: 0 10px;
-  word-break: break-all;
 }
 
 .total-title {
@@ -1167,7 +1164,6 @@ img {
 /* Рассылка */
 .newsletter {
   padding: 96px 10px 104px 10px;
-  word-break: break-all;
   text-align: center;
 }
 
@@ -1519,8 +1515,6 @@ img {
   outline: none;
 }
 
-/* Вопрос! Выходит выровнять только с флексом второй инпут с лейблом Дети */
-
 .modal-input-title.adult-title {
   margin-right: 46px;
 }
@@ -1608,3 +1602,5 @@ img {
 .modal-window-close {
   display: none;
 }
+
+/* End Модальное окно */
