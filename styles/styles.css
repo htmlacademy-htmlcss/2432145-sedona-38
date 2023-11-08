@@ -787,7 +787,7 @@ img {
 .range-wrapper-inputs {
   display: flex;
   gap: 2px;
-  margin-bottom: 37px;
+  margin-bottom: 44px;
   flex-wrap: wrap;
 }
 
@@ -1106,6 +1106,7 @@ img {
 
 /* Пагинация */
 .pagination {
+  position: relative;
   display: block;
   margin-bottom: 60px;
 }
@@ -1180,7 +1181,6 @@ img {
   letter-spacing: 2px;
   transform: translate(4px, -3px);
   text-transform: uppercase;
-  text-align: center;
 }
 
 /* Вопрос! Не выходит выровнять титульник в рассылке по горизонтали (текст в макете шире) */
@@ -1188,7 +1188,6 @@ img {
 .newsletter-description {
   margin: 0;
   margin-bottom: 54px;
-  text-align: center;
 }
 
 .newsletter-form {
