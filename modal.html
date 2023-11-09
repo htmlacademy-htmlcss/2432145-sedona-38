@@ -284,39 +284,38 @@
               </div>
               <div class="modal-field-group">
                 <div class="modal-wrapper-category">
-                  <span class="modal-input-title adult-title">Взрослые:</span>
-                  <label class="modal-adult" for="adult">
-                  </label>
-                  <button class="button button-toggle-lower" type="button" tabindex="-1">
-                    <span class="visually-hidden">Меньше.</span>
-                    <svg class="minus-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
-                      tabindex="0" width="20" height="20" fill="none" viewBox="0 0 20 20">
-                      <path fill="currentColor" d="M3 9v2h14V9H3Z" />
-                    </svg>
-                  </button>
-                  <input class="modal-category-input" type="number" name="adult-input" value="2" max="99" id="adult">
-                  <button class="button button-toggle-greater" type="button" tabindex="-1">
-                    <span class="visually-hidden">Больше.</span>
-                    <svg class="plus-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
-                      tabindex="0" width="20" height="20" fill="none" viewBox="0 0 20 20">
-                      <path fill="currentColor" d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" />
-                    </svg>
-                  </button>
+                  <label class="modal-adult" for="adult">Взрослые:</label>
+                  <div class="modal-input-wrapper">
+                    <button class="button button-toggle-lower" type="button" tabindex="-1">
+                      <span class="visually-hidden">Меньше.</span>
+                      <svg class="minus-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+                        tabindex="0" width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill="currentColor" d="M3 9v2h14V9H3Z" />
+                      </svg>
+                    </button>
+                    <input class="modal-category-input" type="number" name="adult-input" value="2" max="99" id="adult">
+                    <button class="button button-toggle-greater" type="button" tabindex="-1">
+                      <span class="visually-hidden">Больше.</span>
+                      <svg class="plus-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+                        tabindex="0" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                        <path fill="currentColor" d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
               </div>
               <div class="modal-field-group">
                 <div class="modal-wrapper-category">
-                  <span class="modal-input-title children-title">Дети:</span>
-                  <span class="modal-children">
-                    <label class="modal-children" for="children">
-                    </label>
-                    <span class="tooltip">
+                  <div class="modal-children">
+                    <label class="modal-children" for="children">Дети:</label>
+                    <div class="tooltip">
                       <button class="button-tooltip" type="button" aria-labelledby="tooltip-label-date"></button>
                       <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей,
                         которые будут с вами, возраст которых от 6 до
                         18 лет. Дети до 6 лет размещаются бесплатно.</span>
-                    </span>
-                  </span>
+                    </div>
+                  </div>
+                  <div class="modal-input-wrapper">
                     <button class="button button-toggle-lower" type="button" tabindex="-1">
                       <span class="visually-hidden">Меньше.</span>
                       <svg class="minus-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
@@ -333,6 +332,7 @@
                         <path fill="currentColor" d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" />
                       </svg>
                     </button>
+                  </div>
                 </div>
               </div>
               <button class="button modal-button-find" type="submit">Найти</button>
