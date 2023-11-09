@@ -70,8 +70,6 @@ img {
   object-fit: contain;
 }
 
-/* Вопрос! Почему max-width портит переполнение в хедере-логотип ужимается. */
-
 /* End Basic */
 
 
@@ -196,7 +194,7 @@ img {
   padding-bottom: 6px;
 }
 
-.button-navigation-list-link {
+.button-navigation-link {
   position: relative;
   transform: translateX(-3px);
   background-color: #756157;
@@ -217,6 +215,10 @@ img {
   background-color: transparent;
 }
 
+.button-reset:hover {
+  opacity: 0.3;
+}
+
 .button-reset:focus {
   outline: 3px solid #83b3d3;
 }
@@ -229,7 +231,11 @@ img {
   outline: 3px solid #83b3d3;
 }
 
-.button-catalog-more-details {
+.button-reset:disabled {
+  opacity: 0.1;
+}
+
+.button-catalog-details {
   background-color: #756157;
 }
 
@@ -243,7 +249,7 @@ img {
   background-color: #7db54f;
 }
 
-.button-large-to-catalog {
+.button-large-catalog {
   display: block;
   background-color: #756157;
   min-width: 376px;
@@ -282,7 +288,6 @@ img {
 
 .navigation {
   display: flex;
-  flex-wrap: wrap;
   gap: 31px;
 }
 
@@ -322,6 +327,7 @@ img {
 .navigation-favorite:focus,
 .navigation-search:focus {
   outline: 3px solid #83b3d3;
+  color: #83b3d3;
 }
 
 
@@ -386,8 +392,14 @@ img {
 
 .navigation-list-menu {
   display: flex;
+  flex-wrap: wrap;
   flex-grow: 1;
+  max-width: 594px;
   margin-left: -2px;
+}
+
+.navigation-list-user .navigation-list-item:nth-child(3) {
+  margin-top: 12px;
 }
 
 .navigation-list-menu .navigation-list-item {
@@ -397,22 +409,17 @@ img {
 .navigation-list-user {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   margin-bottom: 4px;
   margin-right: -4px;
 }
 
 .logo-image {
   display: block;
-  width: 140px;
 }
 
 .header-logo-link:focus {
   outline: 3px solid #83b3d3;
 }
-
-/* Вопрос! Логотип съезжает вниз при переполнении хедера */
-/* Вопрос! Фавиконка */
 
 /* End Header */
 
@@ -445,15 +452,15 @@ img {
   padding: 0 10px;
 }
 
-.reasons-and-services-container {
+.reasons-services-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 400px;
+  width: 400px;
   margin-top: auto;
   margin-bottom: auto;
-  padding: 10px;
+  padding: 81px 10px;
   aspect-ratio: 80/77;
 }
 
@@ -480,8 +487,6 @@ img {
   text-transform: uppercase;
 }
 
-/* Вопрос! Переполнение списка преимуществ и услуг */
-
 .title-reasons::after {
   position: absolute;
   content: "";
@@ -502,7 +507,6 @@ img {
 }
 
 .reasons-description {
-  width: 380px;
   margin: 0;
 }
 
@@ -711,11 +715,11 @@ img {
   padding: 0;
 }
 
-.forms-filters-list-item {
+.forms-filters-item {
   margin-bottom: 16px;
 }
 
-.forms-filters-list-item:nth-last-child(1) {
+.forms-filters-item:nth-last-child(1) {
   margin-bottom: 0;
 }
 
@@ -725,7 +729,7 @@ img {
   padding: 0;
 }
 
-.forms-filters-price-control {
+.forms-price-control {
   position: relative;
 }
 
@@ -749,13 +753,13 @@ img {
   opacity: 0.4;
 }
 
-.forms-group-toogle-svg {
+.forms-group-toggle-svg {
   position: absolute;
   top: 83px;
   left: 0;
 }
 
-.forms-hotel-filters-price-control {
+.forms-price-description {
   font-size: 18px;
   font-family: "PT Sans", sans-serif;
   line-height: 24px;
@@ -768,8 +772,8 @@ img {
   background-color: #f2f2f2;
 }
 
-.forms-hotel-filters-price-control::-webkit-outer-spin-button,
-.forms-hotel-filters-price-control::-webkit-inner-spin-button {
+.forms-price-description::-webkit-outer-spin-button,
+.forms-price-description::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
   -moz-appearance: textfield;
@@ -781,8 +785,6 @@ img {
   flex-wrap: wrap;
   width: 288px;
 }
-
-/* Вопрос! Фиксированная ширина контейнера для переполнения. */
 
 .range-wrapper-inputs {
   display: flex;
@@ -806,7 +808,7 @@ img {
   background-color: #ffffff;
 }
 
-.forms-filters-scale-toogle {
+.forms-filters-toggle {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -816,22 +818,22 @@ img {
   border: none;
 }
 
-.forms-filters-scale-toogle:active {
+.forms-filters-toggle:active {
   background-color: #d3d3d3;
 }
 
-.forms-filters-scale-toogle:hover,
-.forms-filters-scale-toogle:focus {
+.forms-filters-toggle:hover,
+.forms-filters-toggle:focus {
   outline: 2px solid #68a2ca;
 }
 
-.toogle-from {
+.toggle-from {
   right: 0;
   top: 50%;
   transform: translateY(-50%)
 }
 
-.toogle-to {
+.toggle-to {
   top: 50%;
   transform: translateY(-50%)
 }
@@ -840,11 +842,11 @@ img {
   line-height: 23px;
 }
 
-.hotel-filters-housing-point {
+.filters-housing-point {
   line-height: 23px;
 }
 
-.forms-buttons-apply-reset-container {
+.filter-buttons-wrapper {
   display: flex;
   flex-direction: column;
   row-gap: 30px;
@@ -863,6 +865,11 @@ img {
   margin: 0;
   padding: 0;
   margin-bottom: 40px;
+}
+
+.breadcrumbs-title {
+  font-size: 16px;
+  line-height: 21px;
 }
 
 .breadcrumbs-list-link {
@@ -943,6 +950,10 @@ img {
   border-radius: 4px;
 }
 
+.view-current {
+  border-color: #000000;
+}
+
 .view-list-link:hover {
   border-color: #000000;
 }
@@ -957,21 +968,21 @@ img {
   border-color: #000000;
 }
 
-.view-card-list-link {
+.view-card-link {
   display: block;
   background-image: url("../images/icons/view-cards.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.view-slider-list-link {
+.view-slider-link {
   display: block;
   background-image: url("../images/icons/view-slider.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.view-list-list-link {
+.view-lists-link {
   display: block;
   background-image: url("../images/icons/view-list.svg");
   background-repeat: no-repeat;
@@ -1004,7 +1015,7 @@ img {
   outline: 3px solid #83b3d3;
 }
 
-.select-list-sort-label {
+.select-sort-label {
   margin-right: 70px;
 }
 
@@ -1183,14 +1194,12 @@ img {
   text-transform: uppercase;
 }
 
-/* Вопрос! Не выходит выровнять титульник в рассылке по горизонтали (текст в макете шире) */
-
 .newsletter-description {
   margin: 0;
   margin-bottom: 54px;
 }
 
-.newsletter-form {
+.newsletter-forms {
   display: flex;
   justify-content: center;
 }
@@ -1274,6 +1283,7 @@ img {
 
 .social-button:focus {
   outline: 3px solid #83b3d3;
+  color: #68a2ca;
 }
 
 .htmlacademy-logo-link {
@@ -1385,6 +1395,21 @@ img {
   display: flex;
   align-items: center;
   margin-bottom: 48px;
+  justify-content: space-between;
+}
+
+.modal-input-wrapper {
+  display: flex;
+}
+
+.modal-children {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-left: 87px;
+  margin-right: auto;
 }
 
 
@@ -1477,7 +1502,7 @@ img {
   background-color: #e6e6e6;
 }
 
-.button-toogle-lower {
+.button-toggle-lower {
   min-width: 40px;
   min-height: 48px;
   padding: 0;
@@ -1491,7 +1516,7 @@ img {
   margin: auto;
 }
 
-.button-toogle-greater {
+.button-toggle-greater {
   min-width: 40px;
   min-height: 48px;
   padding: 0;
@@ -1514,21 +1539,12 @@ img {
   outline: none;
 }
 
-.modal-input-title.adult-title {
-  margin-right: 46px;
-}
-
-.modal-input-title.children-title {
-  margin-left: 88px;
-  margin-right: 82px;
-}
 
 .button-tooltip {
-  position: absolute;
-  top: -38px;
-  left: 115px;
   width: 26px;
   height: 26px;
+  margin-left: 11px;
+  margin-top: 4px;
   border-radius: 50%;
   border: none;
   background-color: #68a2ca;
@@ -1537,8 +1553,6 @@ img {
   background-position: center;
   cursor: pointer;
 }
-
-/* Вопрос! От чего позиционируется кнопка тултипа и сам тултип. */
 
 .button-tooltip:hover {
   background-color: #83b3d3;
@@ -1554,15 +1568,15 @@ img {
 }
 
 .tooltip {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  margin-top: 27px;
-  transform: translateX(-186px)
+  position: relative;
 }
 
 .tooltip-text {
   display: none;
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 66%;
+  transform: translateX(-50%);
   background-color: #333333;
   color: #ffffff;
   font-size: 16px;
@@ -1572,7 +1586,6 @@ img {
   width: 256px;
   min-height: 143px;
   z-index: 8;
-  transform: translateY(3px);
 }
 
 
