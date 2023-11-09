@@ -40,6 +40,7 @@
                 </button>
               </li>
               <li class="navigation-list-item">
+                <span class="favorite-count">12</span>
                 <button class="navigation-list-button navigation-favorite" type="submit">
                   <span class="visually-hidden">Избранное.</span>
                   <svg class="navigation-svg" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
@@ -144,13 +145,15 @@
                 <legend class="forms-group-title">Стоимость, ₽:</legend>
                 <div class="range">
                   <div class="range-wrapper-inputs">
-                    <label class="forms-price-control price-from">
+                    <label class="forms-price-control">
                       <span class="visually-hidden">Минимальная цена.</span>
+                      <span class="price-from">от</span>
                       <input class="forms-price-description input-decoration" type="number" name="min-price" value="0"
                         required>
                     </label>
-                    <label class="forms-price-control price-to">
+                    <label class="forms-price-control">
                       <span class="visually-hidden">Максимальная цена.</span>
+                      <span class="price-to">до</span>
                       <input class="forms-price-description input-decoration" type="number" name="max-price"
                         value="9000" required>
                     </label>
@@ -177,7 +180,7 @@
             <!-- End Фильтр -->
           </div>
         </section>
-        <section>
+        <section class="sorting">
           <div class="container">
             <header class="catalog-header">
               <!-- Сортировка -->
@@ -264,22 +267,22 @@
             <h2 class="visually-hidden">Пагинация.</h2>
             <ul class="pagination-list">
               <li>
-                <button class="button-pagination current-pagination" type="button">1</button>
+                <a class="button-pagination current-pagination" href="#">1</a>
               </li>
               <li>
-                <button class="button-pagination text-white button-primary-decoration" type="button">2</button>
+                <a class="button-pagination text-white button-primary-decoration" href="#">2</a>
               </li>
               <li>
-                <button class="button-pagination text-white button-primary-decoration" type="button">3</button>
+                <a class="button-pagination text-white button-primary-decoration" href="#">3</a>
               </li>
               <li>
-                <button class="button-pagination text-white button-primary-decoration" type="button">4</button>
+                <a class="button-pagination text-white button-primary-decoration" href="#">4</a>
               </li>
               <li>
-                <button class="button-pagination empty-pagination" type="button">...</button>
+                <a class="button-pagination empty-pagination" href="#">...</a>
               </li>
               <li>
-                <button class="button-pagination text-white button-primary-decoration" type="button">10</button>
+                <a class="button-pagination text-white button-primary-decoration" href="#">10</a>
               </li>
             </ul>
           </div>
