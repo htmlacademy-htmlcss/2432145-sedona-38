@@ -70,8 +70,6 @@ img {
   object-fit: contain;
 }
 
-/* Вопрос! Почему max-width портит переполнение в хедере-логотип ужимается. */
-
 /* End Basic */
 
 
@@ -217,6 +215,10 @@ img {
   background-color: transparent;
 }
 
+.button-reset:hover {
+  opacity: 0.3;
+}
+
 .button-reset:focus {
   outline: 3px solid #83b3d3;
 }
@@ -227,6 +229,10 @@ img {
 
 .button-reset:focus-visible {
   outline: 3px solid #83b3d3;
+}
+
+.button-reset:disabled {
+  opacity: 0.1;
 }
 
 .button-catalog-more-details {
@@ -282,7 +288,6 @@ img {
 
 .navigation {
   display: flex;
-  flex-wrap: wrap;
   gap: 31px;
 }
 
@@ -322,6 +327,7 @@ img {
 .navigation-favorite:focus,
 .navigation-search:focus {
   outline: 3px solid #83b3d3;
+  color: #83b3d3;
 }
 
 
@@ -386,8 +392,14 @@ img {
 
 .navigation-list-menu {
   display: flex;
+  flex-wrap: wrap;
   flex-grow: 1;
+  max-width: 594px;
   margin-left: -2px;
+}
+
+.navigation-list-user .navigation-list-item:nth-child(3) {
+  margin-top: 12px;
 }
 
 .navigation-list-menu .navigation-list-item {
@@ -397,22 +409,17 @@ img {
 .navigation-list-user {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   margin-bottom: 4px;
   margin-right: -4px;
 }
 
 .logo-image {
   display: block;
-  width: 140px;
 }
 
 .header-logo-link:focus {
   outline: 3px solid #83b3d3;
 }
-
-/* Вопрос! Логотип съезжает вниз при переполнении хедера */
-/* Вопрос! Фавиконка */
 
 /* End Header */
 
@@ -450,10 +457,10 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 400px;
+  width: 400px;
   margin-top: auto;
   margin-bottom: auto;
-  padding: 10px;
+  padding: 81px 10px;
   aspect-ratio: 80/77;
 }
 
@@ -480,8 +487,6 @@ img {
   text-transform: uppercase;
 }
 
-/* Вопрос! Переполнение списка преимуществ и услуг */
-
 .title-reasons::after {
   position: absolute;
   content: "";
@@ -502,7 +507,6 @@ img {
 }
 
 .reasons-description {
-  width: 380px;
   margin: 0;
 }
 
@@ -749,7 +753,7 @@ img {
   opacity: 0.4;
 }
 
-.forms-group-toogle-svg {
+.forms-group-toggle-svg {
   position: absolute;
   top: 83px;
   left: 0;
@@ -782,8 +786,6 @@ img {
   width: 288px;
 }
 
-/* Вопрос! Фиксированная ширина контейнера для переполнения. */
-
 .range-wrapper-inputs {
   display: flex;
   gap: 2px;
@@ -806,7 +808,7 @@ img {
   background-color: #ffffff;
 }
 
-.forms-filters-scale-toogle {
+.forms-filters-scale-toggle {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -816,22 +818,22 @@ img {
   border: none;
 }
 
-.forms-filters-scale-toogle:active {
+.forms-filters-scale-toggle:active {
   background-color: #d3d3d3;
 }
 
-.forms-filters-scale-toogle:hover,
-.forms-filters-scale-toogle:focus {
+.forms-filters-scale-toggle:hover,
+.forms-filters-scale-toggle:focus {
   outline: 2px solid #68a2ca;
 }
 
-.toogle-from {
+.toggle-from {
   right: 0;
   top: 50%;
   transform: translateY(-50%)
 }
 
-.toogle-to {
+.toggle-to {
   top: 50%;
   transform: translateY(-50%)
 }
@@ -946,6 +948,10 @@ img {
   width: 48px;
   height: 48px;
   border-radius: 4px;
+}
+
+.view-current {
+  border-color: #000000;
 }
 
 .view-list-link:hover {
@@ -1188,8 +1194,6 @@ img {
   text-transform: uppercase;
 }
 
-/* Вопрос! Не выходит выровнять титульник в рассылке по горизонтали (текст в макете шире) */
-
 .newsletter-description {
   margin: 0;
   margin-bottom: 54px;
@@ -1279,6 +1283,7 @@ img {
 
 .social-button:focus {
   outline: 3px solid #83b3d3;
+  color: #68a2ca;
 }
 
 .htmlacademy-logo-link {
@@ -1390,7 +1395,7 @@ img {
   display: flex;
   align-items: center;
   margin-bottom: 48px;
-}
+  }
 
 
 .modal-field-group:nth-child(1),
@@ -1482,7 +1487,7 @@ img {
   background-color: #e6e6e6;
 }
 
-.button-toogle-lower {
+.button-toggle-lower {
   min-width: 40px;
   min-height: 48px;
   padding: 0;
@@ -1496,7 +1501,7 @@ img {
   margin: auto;
 }
 
-.button-toogle-greater {
+.button-toggle-greater {
   min-width: 40px;
   min-height: 48px;
   padding: 0;
@@ -1529,7 +1534,7 @@ img {
 }
 
 .button-tooltip {
-  position: absolute;
+position: absolute;
   top: -38px;
   left: 115px;
   width: 26px;
@@ -1542,8 +1547,6 @@ img {
   background-position: center;
   cursor: pointer;
 }
-
-/* Вопрос! От чего позиционируется кнопка тултипа и сам тултип. */
 
 .button-tooltip:hover {
   background-color: #83b3d3;
@@ -1567,7 +1570,7 @@ img {
 }
 
 .tooltip-text {
-  display: none;
+    display: none;
   background-color: #333333;
   color: #ffffff;
   font-size: 16px;
