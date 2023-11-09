@@ -153,7 +153,6 @@ img {
 .button:disabled {
   color: #ffffff;
   background-color: #e5e5e5;
-
 }
 
 .button-primary-decoration:hover {
@@ -273,7 +272,7 @@ img {
 }
 
 .modal-button-find:active {
-  color: rgba(255, 255, 255, 0.3)
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /* End Кнопки */
@@ -569,7 +568,7 @@ img {
 }
 
 .card-accent {
-  background-color: rgba(131, 179, 211, 0.20);
+  background-color: rgba(131, 179, 211, 0.2);
 }
 
 .card-reverse {
@@ -619,7 +618,6 @@ img {
   padding-bottom: 70px;
   padding-left: 9px;
   margin-bottom: 49px;
-
 }
 
 .forms-filters {
@@ -649,7 +647,6 @@ img {
   position: relative;
   display: block;
   padding-left: 34px;
-
 }
 
 .control-mark {
@@ -772,6 +769,7 @@ img {
   background-color: #f2f2f2;
 }
 
+
 .forms-price-description::-webkit-outer-spin-button,
 .forms-price-description::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -830,12 +828,12 @@ img {
 .toggle-from {
   right: 0;
   top: 50%;
-  transform: translateY(-50%)
+  transform: translateY(-50%);
 }
 
 .toggle-to {
   top: 50%;
-  transform: translateY(-50%)
+  transform: translateY(-50%);
 }
 
 .input-checkbox-point {
@@ -1056,7 +1054,6 @@ img {
 .catalog-card-price {
   text-align: right;
   margin: 0;
-
 }
 
 
@@ -1114,7 +1111,6 @@ img {
 /* End Каталог */
 
 
-
 /* Пагинация */
 .pagination {
   position: relative;
@@ -1161,7 +1157,7 @@ img {
 
 .current-pagination {
   background-color: #f2f2f2;
-  color: #000000
+  color: #000000;
 }
 
 .empty-pagination {
