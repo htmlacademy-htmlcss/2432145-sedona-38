@@ -783,8 +783,11 @@ img {
 .forms-price-description::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-  -moz-appearance: textfield;
   appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .range {
