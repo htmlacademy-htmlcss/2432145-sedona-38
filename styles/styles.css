@@ -671,7 +671,7 @@ img {
   background-color: #ffffff;
 }
 
-.forms-control-input[type="checkbox"]:checked + .control-mark::before {
+.input-mark[type="checkbox"]:checked + .control-mark::before {
   position: absolute;
   content: "";
   top: 50%;
@@ -687,7 +687,7 @@ img {
   border-radius: 50%;
 }
 
-.forms-control-input[type="radio"]:checked + .control-mark::before {
+.input-mark[type="radio"]:checked + .control-mark::before {
   position: absolute;
   content: "";
   top: 50%;
