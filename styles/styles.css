@@ -60,8 +60,7 @@ body {
 
 .container {
   max-width: 1060px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   width: 100%;
 }
 
@@ -419,8 +418,7 @@ img {
 .navigation-list-user {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 4px;
-  margin-right: -4px;
+  margin: 0 -4px 4px 0;
 }
 
 .logo-image {
@@ -468,8 +466,7 @@ img {
   justify-content: center;
   align-items: center;
   width: 400px;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin: auto 0;
   padding: 81px 10px;
   aspect-ratio: 80/77;
 }
@@ -636,8 +633,7 @@ img {
 }
 
 .checkbox-infrastructure {
-  margin-right: 69px;
-  margin-left: 2px;
+  margin: 0 69px 0 2px;
 }
 
 .radio-housing {
@@ -657,6 +653,10 @@ img {
   display: block;
   padding-left: 34px;
   cursor: pointer;
+}
+
+.forms-input-points:hover {
+  opacity: 0.6;
 }
 
 .control-mark {
@@ -697,10 +697,6 @@ img {
   border-radius: 50%;
   width: 10px;
   height: 10px;
-}
-
-.forms-input-points:hover {
-  opacity: 0.6;
 }
 
 .forms-group {
@@ -861,8 +857,7 @@ input[type="number"] {
   display: flex;
   flex-direction: column;
   row-gap: 30px;
-  margin-top: 54px;
-  margin-right: -2px;
+  margin: 54px -2px 0 0;
   transform: translate(-2px);
 }
 
@@ -1406,8 +1401,7 @@ input[type="number"] {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
-  margin-left: 87px;
-  margin-right: auto;
+  margin: 0 auto 0 87px;
 }
 
 
@@ -1494,13 +1488,7 @@ input[type="number"] {
   min-height: 48px;
   padding: 0;
   border-radius: 4px 0 0 4px;
-}
-
-.minus-svg,
-.plus-svg {
-  display: block;
-  color: rgba(117, 97, 87, 0.3);
-  margin: auto;
+  background-color: #f2f2f2;
 }
 
 .button-toggle-greater {
@@ -1508,6 +1496,14 @@ input[type="number"] {
   min-height: 48px;
   padding: 0;
   border-radius: 0 4px 4px 0;
+  background-color: #f2f2f2;
+}
+
+.minus-svg,
+.plus-svg {
+  display: block;
+  color: rgba(117, 97, 87, 0.3);
+  margin: auto;
 }
 
 .minus-svg:hover,
