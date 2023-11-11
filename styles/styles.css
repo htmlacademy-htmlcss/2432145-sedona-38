@@ -1078,7 +1078,7 @@ input[type="number"] {
 
 .catalog-stars {
   display: block;
-  background-image: url("../images/catalog/rate_star_1.svg");
+  background-image: url("../images/catalog/rate-star-1.svg");
   background-position: center;
   background-repeat: space no-repeat;
   min-height: 17px;
