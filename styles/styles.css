@@ -50,7 +50,7 @@ body {
   position: absolute;
   clip: rect(0 0 0);
   -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -1051,10 +1051,12 @@ input[type="number"] {
   margin: 0;
 }
 
+.catalog-link-image {
+  grid-column: 1/span 2;
+}
 
 .catalog-card-image {
   display: block;
-  grid-column: 1/span 2;
 }
 
 
