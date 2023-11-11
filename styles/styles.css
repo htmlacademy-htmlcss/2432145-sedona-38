@@ -34,6 +34,7 @@ body {
   margin: 0;
   min-width: 1280px;
   height: 100%;
+  overflow-x: hidden;
 }
 
 .page-container {
@@ -472,6 +473,24 @@ img {
   aspect-ratio: 80/77;
 }
 
+.services-housing {
+  background-image: url("../images/icons/housing-reasons.svg");
+  background-repeat: no-repeat;
+  background-position: 162px 83px;
+}
+
+.services-food {
+  background-image: url("../images/icons/food-reasons.svg");
+  background-repeat: no-repeat;
+  background-position: 162px 83px;
+}
+
+.services-souvenirs {
+  background-image: url("../images/icons/souvenirs-reasons.svg");
+  background-repeat: no-repeat;
+  background-position: 162px 83px;
+}
+
 .reasons-list {
   display: flex;
   flex-wrap: wrap;
@@ -541,7 +560,7 @@ img {
 
 .services-title-card {
   text-transform: uppercase;
-  margin: 0 0 30px 0;
+  margin: 105px 0 30px 0;
 }
 
 .services-description-card {
