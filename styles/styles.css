@@ -47,16 +47,17 @@ body {
 }
 
 .visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0);
+  clip: rect(0 0 0 0);
   -webkit-clip-path: inset(100%);
+  position: absolute;
   clip-path: inset(100%);
+  margin: -1px;
+  border: 0;
+  padding: 0;
   width: 1px;
   height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .container {
@@ -996,7 +997,6 @@ input[type="number"] {
   padding: 14px 32px 14px 20px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
-  padding-right: 32px;
   appearance: none;
   background-image: url("../images/icons/arrow-select.svg");
   background-repeat: no-repeat;
@@ -1058,7 +1058,6 @@ input[type="number"] {
 .catalog-card-image {
   display: block;
 }
-
 
 .catalog-card-title {
   margin: 0;
