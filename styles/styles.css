@@ -32,9 +32,8 @@ body {
   color: #333333;
   background-color: #f3f3f3;
   margin: 0;
-  min-width: 1280px;
+  min-width: 1200px;
   height: 100%;
-  overflow-x: hidden;
 }
 
 .page-container {
@@ -476,19 +475,19 @@ img {
 .services-housing {
   background-image: url("../images/icons/housing-reasons.svg");
   background-repeat: no-repeat;
-  background-position: 162px 83px;
+  background-position: 50% 26%;
 }
 
 .services-food {
   background-image: url("../images/icons/food-reasons.svg");
   background-repeat: no-repeat;
-  background-position: 162px 83px;
+  background-position: 50% 26%;
 }
 
 .services-souvenirs {
   background-image: url("../images/icons/souvenirs-reasons.svg");
   background-repeat: no-repeat;
-  background-position: 162px 83px;
+  background-position: 50% 26%;
 }
 
 .reasons-list {
